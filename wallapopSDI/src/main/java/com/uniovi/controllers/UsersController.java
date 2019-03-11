@@ -1,6 +1,11 @@
 package com.uniovi.controllers;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -11,6 +16,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.uniovi.entities.User;
 import com.uniovi.services.RolesService;
@@ -33,8 +39,17 @@ public class UsersController {
 
 	@RequestMapping("/user/list")
 	public String getListado(Model model) {
-		model.addAttribute("usersList", usersService.getUsers());
+		List<User> listaUsers =usersService.getUsers();
+		model.addAttribute("usersList", listaUsers);
+		Page<User> usersPage = new PageImpl<User>(new LinkedList<User>());
+		
 		return "user/list";
+	}
+	@RequestMapping("/user/list/delete")
+	public String delete(@RequestParam List<Long> idsUsers) {
+		idsUsers.forEach(id-> usersService.deleteUser(id));
+		
+		return "redirect:/user/list";
 	}
 
 	@RequestMapping(value = "/user/add")
