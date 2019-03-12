@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="fragments/head" />
+<body>
+
+	<nav th:replace="fragments/nav" />
+
+	<div class="container">
+		<h2 th:text="#{add.offers}">Agregar Oferta</h2>
+		<form class="form-horizontal" method="post" action="/user/offer/add">
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="name" th:text="#{name}">Nombre:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" name="name"
+							placeholder="Ejemplo Nintendo Switch" required="true" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="description" th:text="#{description}">Descripcion:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" name="description"
+							placeholder="Ejemplo Como nueva, siempre ha dormido en garaje" required="true" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="price" th:text="#{price}">Price:</label>
+					<div class="col-sm-10">
+						<input type="number" class="form-control" name="price"
+							placeholder="Ejemplo 1000€" required="true" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-primary" th:text="#{send}">Enviar</button>
+					</div>
+				</div>
+			</form>
+	</div>
+	<footer th:replace="fragments/footer" />
+</body>
+</html>
