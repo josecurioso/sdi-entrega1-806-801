@@ -22,8 +22,8 @@ public class User {
 	private String passwordConfirm;
 	
 	
-	//@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-	//private Set<Mark> ofertas;
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+	private Set<Offer> offers;
 
 
 
@@ -107,6 +107,14 @@ public class User {
 
 	public void setRole(String role) {
 		this.role = role;
+	}
+	
+	public Set<Offer> getOffers() {
+		return this.offers;
+	}
+	
+	public void setOffers(Set<Offer> offers) {
+		this.offers = offers;
 	}
 
 }

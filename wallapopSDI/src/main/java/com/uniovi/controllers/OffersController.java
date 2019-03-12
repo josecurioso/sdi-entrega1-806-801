@@ -70,7 +70,7 @@ public class OffersController {
 	@RequestMapping("/offer/list/update") //Updates the offer list
 	public String updateList(Model model, Pageable pageable,Principal principal) {
 		Page<Offer> offers = offersService.getOffers(pageable);
-		model.addAttribute("markList", offers.getContent());
+		model.addAttribute("offersList", offers.getContent());
 		return "offer/list :: tableOffers";
 	}
 
@@ -79,13 +79,15 @@ public class OffersController {
 		String email = principal.getName(); // Es el email
 		User user = usersService.getUserByEmail(email);
 		Page<Offer> offers = offersService.getOffersForUser(pageable, user);
-		model.addAttribute("markList", offers.getContent());
+		model.addAttribute("offersList", offers.getContent());
 		return "offer/listown :: tableOffers";
 	}
 
 	@RequestMapping(value = "/user/offer/add", method = RequestMethod.POST) // Adds the offer
-	public String setOfferAdd(@ModelAttribute Offer offer) {
-		offersService.addOffer(offer);
+	public String setOfferAdd(@ModelAttribute Offer offer, Principal principal) {
+		String email = principal.getName(); // Es el email
+		User user = usersService.getUserByEmail(email);
+		offersService.addOffer(offer, user);
 		return "redirect:/user/offer/list";
 	}
 
@@ -96,8 +98,12 @@ public class OffersController {
 	}
 
 	@RequestMapping("/offer/delete/{id}") //Deletes an offer
-	public String deleteOffer(@PathVariable Long id) {
-		offersService.deleteOffer(id);
+	public String deleteOffer(@PathVariable Long id, Principal principal) {
+		String email = principal.getName(); // Es el email
+		Offer offer = offersService.getOffer(id);
+		if(offer.getUser().getEmail().equals(email)) {
+			offersService.deleteOffer(id);
+		}
 		return "redirect:/user/offer/list";
 	}
 
@@ -105,7 +111,15 @@ public class OffersController {
 	public String buyOffer(@PathVariable Long id, Principal principal) {
 		String email = principal.getName(); // Es el email
 		User user = usersService.getUserByEmail(email);
-		//offersService.buyOffer(id, user);
+		Offer offer = offersService.getOffer(id);
+		if(user.getMoney() >= offer.getPrice()) {
+			if(offer.getSold())
+				System.out.println("The offer is already sold"); // error offer sold
+			offersService.buyOffer(offer, user);
+		}
+		else {
+			// not enough money
+		}
 		return "redirect:/offer/list";
 	}
 }

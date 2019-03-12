@@ -51,7 +51,7 @@ public class OffersService {
 		return offers;
 	}
 
-	public Page<Offer> searchOffersByDescriptionAndNameForUser(Pageable pageable,String searchText, User user) {
+	public Page<Offer> searchOffersByDescriptionAndNameForUser(Pageable pageable, String searchText, User user) {
 		Page<Offer> offers = new PageImpl<Offer>(new LinkedList<Offer>());
 		
 		searchText = "%"+searchText+"%";
@@ -63,25 +63,32 @@ public class OffersService {
 		Page<Offer> offers = new PageImpl<Offer>(new LinkedList<Offer>());
 		
 		searchText = "%"+searchText+"%";
-		offers = offersRepository.searchByDescriptionAndName(pageable,searchText);
+		offers = offersRepository.searchByDescriptionAndName(pageable, searchText);
 		return offers;
 	}
 	
-	public void addOffer(Offer mark) {
+	public void addOffer(Offer offer, User user) {
 		// Si en Id es null le asignamos el ultimo + 1 de la lista
-		offersRepository.save(mark);
+		offer.setUser(user);
+		user.getOffers().add(offer);
+		offersRepository.save(offer);
 	}
 
 	public void deleteOffer(Long id) {
 		offersRepository.deleteById(id);
 	}
 	
-	/*
-	public void buyOffer(Long id, User user) {
-		Offer offer = offersRepository.findById(id);
-		offer.setBuyer(user);
+	
+	public void buyOffer(Offer offer, User user) {
+		System.out.println(user.getMoney());
+		user.setMoney(user.getMoney()-offer.getPrice());
+		System.out.println(user.getMoney());
+
+		System.out.println(offer.getSold());
+		offer.setSold(true);
+		System.out.println(offer.getSold());
 	}
-	*/
+	
 	
 
 }
