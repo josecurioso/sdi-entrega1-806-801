@@ -1,5 +1,6 @@
 package com.uniovi.tests;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
@@ -15,23 +16,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.uniovi.tests.pageobject.PO_HomeView;
 import com.uniovi.tests.pageobject.PO_LoginView;
 import com.uniovi.tests.pageobject.PO_NavView;
-import com.uniovi.tests.pageobject.PO_PrivateView;
 import com.uniovi.tests.pageobject.PO_Properties;
 import com.uniovi.tests.pageobject.PO_RegisterView;
 import com.uniovi.tests.pageobject.PO_View;
 import com.uniovi.utils.SeleniumUtils;
-//Ordenamos las pruebas por el nombre del método
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
 public class Sdi806_lab_springTests {
 	// En Windows (Debe ser la versión 65.0.1 y desactivar las actualizacioens
 	// automáticas)):
-	static String PathFirefox65 = "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe";
-	static String Geckdriver024 = "C:\\Users\\UO257809\\Desktop\\PL-SDI-Sesión5-material\\geckodriver024win64.exe";
+	static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
+	static String Geckdriver024 = "C:\\Users\\Pedro\\Desktop\\SDI\\PL-SDI-Sesión5-material\\geckodriver024win64.exe";
 
 	// Común a Windows y a MACOSX
 	static WebDriver driver = getDriver(PathFirefox65, Geckdriver024);
@@ -119,27 +119,27 @@ public class Sdi806_lab_springTests {
 	public void PR07() {
 		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
 		PO_LoginView.fillForm(driver, "a" , "a" );
-		PO_LoginView.checkKey(driver, "Error.empty",
+		PO_LoginView.checkKey(driver, "Error.login.incorrect",
 		PO_Properties.getSPANISH() );
 	}
 	@Test
 	public void PR08() {
 		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
 		PO_LoginView.fillForm(driver, "marta@gmail.com" , "noesesta" );
-		PO_LoginView.checkKey(driver, "Error.login.password",
+		PO_LoginView.checkKey(driver, "Error.login.incorrect",
 		PO_Properties.getSPANISH() );
 	}
 	@Test
 	public void PR09() {
 		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
 		PO_LoginView.fillForm(driver, "no@existe.com" , "noexiste" );
-		PO_LoginView.checkKey(driver, "Error.login.email",
+		PO_LoginView.checkKey(driver, "Error.login.incorrect",
 		PO_Properties.getSPANISH() );
 	}
 	
 	//logout
 	@Test
-	public void PR010() {
+	public void PR10() {
 		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
 		PO_LoginView.fillForm(driver, "marta@gmail.com" , "123456" );
 		PO_View.checkElement(driver, "id", "offers-menu");
@@ -147,12 +147,71 @@ public class Sdi806_lab_springTests {
 		PO_View.checkElement(driver, "text", "Identificate");
 	}
 	@Test
-	public void PR011() {
+	public void PR11() {
+		(new WebDriverWait(driver, 200)).until(ExpectedConditions.invisibilityOfElementLocated(By.id("logout")));
+
+	}
+	@Test
+	public void PR12() {
 		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
-		PO_LoginView.fillForm(driver, "marta@gmail.com" , "123456" );
-		PO_View.checkElement(driver, "id", "offers-menu");
-		PO_NavView.clickOption(driver, "logout", "class", "btn btn-primary");
-		PO_View.checkElement(driver, "text", "Identificate");
+		PO_LoginView.fillForm(driver, "admin@gmail.com" , "admin" );
+		List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'admin-menu')]/a");
+		elementos.get(0).click();
+		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/list')]");
+		elementos.get(0).click();
+	
+		List<WebElement> elementos2 = SeleniumUtils.EsperaCargaPagina(driver, "free",
+		"//tbody/tr", PO_View.getTimeout());
+		assertEquals(elementos2.size() , 7);
+	}
+	@Test
+	public void PR13() {
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "admin@gmail.com" , "admin" );
+		List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'admin-menu')]/a");
+		elementos.get(0).click();
+		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/list')]");
+		elementos.get(0).click();
+	
+		List<WebElement> elementos2 = SeleniumUtils.EsperaCargaPagina(driver, "free",
+		"//tbody/tr", PO_View.getTimeout());
+		assertEquals(elementos2.size() , 7);
+		PO_View.checkElement(driver, "text", "lucas@gmail.com");
+		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/delete/1')]");
+		elementos.get(0).click();
+		(new WebDriverWait(driver, 200)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//a[contains(@href, 'user/delete/1')]")));
+	}
+	@Test
+	public void PR14() {
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "admin@gmail.com" , "admin" );
+		List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'admin-menu')]/a");
+		elementos.get(0).click();
+		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/list')]");
+		elementos.get(0).click();
+		PO_View.checkElement(driver, "text", "ed@gmail.com");
+		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/delete/6')]");
+		elementos.get(0).click();
+		(new WebDriverWait(driver, 200)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//a[contains(@href, 'user/delete/6')]")));
+	}
+	@Test
+	public void PR15() {
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "admin@gmail.com" , "admin" );
+		List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'admin-menu')]/a");
+		elementos.get(0).click();
+		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/list')]");
+		elementos.get(0).click();
+	
+		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/delete/5')]");
+		elementos.get(0).click();
+		(new WebDriverWait(driver, 200)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//a[contains(@href, 'user/delete/5')]")));
+		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/delete/4')]");
+		elementos.get(0).click();
+		(new WebDriverWait(driver, 200)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//a[contains(@href, 'user/delete/4')]")));
+		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/delete/3')]");
+		elementos.get(0).click();
+		(new WebDriverWait(driver, 200)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//a[contains(@href, 'user/delete/3')]")));
 	}
 	
 //	

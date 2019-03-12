@@ -22,12 +22,6 @@ public class Offer {
 	@JoinColumn(name = "user_id")
 	private User user;
 
-	private Boolean sold;
-	
-	@ManyToOne
-	@JoinColumn(name = "buyer_id")
-	private User buyer;
-
 	public Offer() {
 
 	}
@@ -39,17 +33,14 @@ public class Offer {
 		this.description = description;
 		this.price = price;
 		this.date = new Date();
-		this.sold = false;
 	}
 
-	public Offer(String name, String description, Double price, User user) {
+	public Offer(String name, String description, Double price) {
 		super();
 		this.name = name;
 		this.description = description;
 		this.price = price;
-		this.user = user;
 		this.date = new Date();
-		this.sold = false;
 	}
 
 	public Long getId() {
@@ -84,40 +75,16 @@ public class Offer {
 		this.price = price;
 	}
 
+	@Override
+	public String toString() {
+		return "Offer [name=" + name + ", description=" + description + ", price=" + price + ", date=" + date + "]";
+	}
+
 	public User getUser() {
 		return user;
 	}
 
 	public void setUser(User user) {
 		this.user = user;
-	}
-
-	public User getBuyer() {
-		return buyer;
-	}
-
-	public void setBuyer(User buyer) {
-		this.buyer = buyer;
-	}
-
-	public Date getDate() {
-		return date;
-	}
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
-
-	public Boolean getSold() {
-		return sold;
-	}
-
-	public void setSold(boolean sold) {
-		this.sold = sold;
-	}
-
-	@Override
-	public String toString() {
-		return "Offer [name=" + name + ", description=" + description + ", price=" + price + ", date=" + date + "]";
 	}
 }

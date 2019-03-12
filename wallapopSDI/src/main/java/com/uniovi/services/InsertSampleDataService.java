@@ -7,7 +7,6 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.yaml.snakeyaml.error.Mark;
 
 import com.uniovi.entities.Offer;
 import com.uniovi.entities.User;
@@ -39,25 +38,15 @@ public class InsertSampleDataService {
 		User user6 = new User("ed@gmail.com", "Edward", "Núñez");
 		 user6.setPassword("123456");
 		user6.setRole(rolesService.getRoles()[1]);
-
-		
-		Set user2Offers = new HashSet<Offer>() {
-			{
-				add(new Offer("Nintendo", "consola", 100.0, user2));
-				add(new Offer("Portátil", "ordenador", 600.0, user2));
-			}
-		};
-		user2.setOffers(user2Offers);
-		
-
-		Set user3Offers = new HashSet<Offer>() {
-			{
-				add(new Offer("Oneplus 5T", "movil", 400.0, user3));
-				add(new Offer("Cristiano Ronaldo", "sabe jugar al futbol", 100000000.0, user3));
-			}
-		};
-		user3.setOffers(user3Offers);
-		
+//		Set user1Marks = new HashSet<Mark>() {
+//			{
+//				add(new Mark("Nota A1", 10.0, user1));
+//				add(new Mark("Nota A2", 9.0, user1));
+//				add(new Mark("Nota A3", 7.0, user1));
+//				add(new Mark("Nota A4", 6.5, user1));
+//			}
+//		};
+//		user1.setMarks(user1Marks);
 //		Set user2Marks = new HashSet<Mark>() {
 //			{
 //				add(new Mark("Nota B1", 5.0, user2));
@@ -84,8 +73,8 @@ public class InsertSampleDataService {
 //			}
 //		};
 //		user4.setMarks(user4Marks);
-		usersService.addUser(user1);
 		usersService.addUser(user2);
+		usersService.addUser(user1);
 		usersService.addUser(user3);
 		usersService.addUser(user4);
 		usersService.addUser(user5);

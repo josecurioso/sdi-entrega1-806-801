@@ -20,6 +20,9 @@
 						placeholder="Entre el Password"  />
 				</div>
 			</div>
+			<div id="errors" th:if="${(param.error != null) }" th:text="#{Error.login.incorrect}">
+    				Input is incorrect
+			</div>
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
 					<button type="submit" class="btn btn-primary" th:text="#{login}">Login</button>
