@@ -8,12 +8,12 @@
 		<form class="navbar-form" action="/user/offer/list">
 			<div class="form-group">
 				<input name="searchText" type="text" class="form-control" size="50"
-					placeholder="Buscar por nombre de oferta o descripci�n">
+					placeholder="Buscar por nombre de oferta o descripción">
 			</div>
 			<button type="submit" class="btn btn-default" th:text="#{search}">Buscar</button>
 		</form>
 
-		<p th:text="#{offers.list.description}">Las ofertas que has hecho son las siguientes:</p>
+		<p th:text="#{useroffers.list.description}">Las ofertas que has hecho son las siguientes:</p>
 		<button type="button" id="updateButton" class="btn btn-default"
 			th:text="#{update}">Actualizar</button>
 		<script th:inline="javascript">
@@ -46,13 +46,33 @@
 						<td th:text="${offer.id}"></td>
 						<td th:text="${offer.name}"></td>
 						<td th:text="${offer.date}"></td>
-						<td th:text="${offer.price}"></td>							
-						<div th:switch="${offer.sold}"> 
-						  <td th:case="false"><a sec:authorize="hasRole('ROLE_USER')"
-							th:href="${'/offer/delete/' + offer.id}" th:text="#{delete}">eliminar</a></td>
-						<td th:case="true"><a th:href="#" th:text="#{sold}">Vendido</a>
+						<td th:text="${offer.price}"></td>	
+						
+						<td>
+						<div th:if="${offer.sold}">
+								<p th:text="#{sold}">Vendido</p>
+							</div>
+							<div th:unless="${offer.sold}">
+								<button type="button" th:id="${'deleteButton' + offer.id}"
+											class="btn btn-default" th:text="#{delete}">Eliminar</button>
+								<script th:inline="javascript">
+								/*<![CDATA[*/
+								 $( "#deleteButton[[${offer.id}]]" ).click(function() {
+								 $.get( "/offer/delete/[[${offer.id}]]", function( data ) {
+								 	var numberPage = [[${param.page}]];
+								 	var urlUpdate = '/user/offer/list/update';
+									 if ( numberPage != null ){
+									 	urlUpdate += "?page="+numberPage[0];
+									 }
+									$("#tableOffers").load(urlUpdate);
+								 });
+								 });
+								 /*]]>*/
+								</script>
+							</div>
+						
+						
 						</td>
-						</div>
 					</tr>
 				</tbody>
 			</table>

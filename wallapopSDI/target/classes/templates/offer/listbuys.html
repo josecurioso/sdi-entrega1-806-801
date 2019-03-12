@@ -4,8 +4,8 @@
 <body>
 	<nav th:replace="fragments/nav" />
 	<div class="container">
-		<h2 th:text="#{myoffers}">Mis Ofertas</h2>
-		<form class="navbar-form" action="/user/offer/list">
+		<h2 th:text="#{mybuys}">Mis Ofertas</h2>
+		<form class="navbar-form" action="/user/buys/list">
 			<div class="form-group">
 				<input name="searchText" type="text" class="form-control" size="50"
 					placeholder="Buscar por nombre de oferta o descripción">
@@ -13,7 +13,7 @@
 			<button type="submit" class="btn btn-default" th:text="#{search}">Buscar</button>
 		</form>
 
-		<p th:text="#{useroffers.list.description}">Las ofertas que has hecho son las siguientes:</p>
+		<p th:text="#{buys.list.description}">Las ofertas que has hecho son las siguientes:</p>
 		<button type="button" id="updateButton" class="btn btn-default"
 			th:text="#{update}">Actualizar</button>
 		<script th:inline="javascript">
@@ -21,7 +21,7 @@
 				
 				 $( "#updateButton" ).click(function() {
 				 var numberPage = [[${param.page}]];
-				 var urlUpdate = '/user/offer/list/update';
+				 var urlUpdate = '/user/buys/list/update';
 				 if (numberPage != null ){
 				 urlUpdate += "?page="+numberPage[0];
 				 }
@@ -38,7 +38,6 @@
 						<th th:text="#{name}">Name</th>
 						<th th:text="#{date}">Date</th>
 						<th th:text="#{price}">Price</th>
-						<th class="col-md-1"></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -46,33 +45,7 @@
 						<td th:text="${offer.id}"></td>
 						<td th:text="${offer.name}"></td>
 						<td th:text="${offer.date}"></td>
-						<td th:text="${offer.price}"></td>	
-						
-						<td>
-						<div th:if="${offer.sold}">
-								<p th:text="#{sold}">Vendido</p>
-							</div>
-							<div th:unless="${offer.sold}">
-								<button type="button" th:id="${'deleteButton' + offer.id}"
-											class="btn btn-default" th:text="#{delete}">Eliminar</button>
-								<script th:inline="javascript">
-								/*<![CDATA[*/
-								 $( "#deleteButton[[${offer.id}]]" ).click(function() {
-								 $.get( "/offer/delete/[[${offer.id}]]", function( data ) {
-								 	var numberPage = [[${param.page}]];
-								 	var urlUpdate = '/user/offer/list/update';
-									 if ( numberPage != null ){
-									 	urlUpdate += "?page="+numberPage[0];
-									 }
-									$("#tableOffers").load(urlUpdate);
-								 });
-								 });
-								 /*]]>*/
-								</script>
-							</div>
-						
-						
-						</td>
+						<td th:text="${offer.price}"></td>
 					</tr>
 				</tbody>
 			</table>

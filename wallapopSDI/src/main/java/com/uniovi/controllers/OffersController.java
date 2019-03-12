@@ -66,6 +66,24 @@ public class OffersController {
 
 		return "offer/listown";
 	}
+	
+	@RequestMapping("/user/buys/list") //List all the buys for a user
+	public String getBuysListForUser(Model model, Pageable pageable, Principal principal,
+			@RequestParam(value = "", required = false) String searchText) {
+		
+		String email = principal.getName(); //Es el email
+		User user = usersService.getUserByEmail(email);
+		Page<Offer> offers = new PageImpl<Offer>(new LinkedList<Offer>());
+		if (searchText != null && !searchText.isEmpty()) {
+			offers = offersService.searchBuysByDescriptionAndNameForUser(pageable, searchText, user);
+		} else {
+			offers = offersService.getBuysForUser(pageable, user);
+		}
+		model.addAttribute("offersList", offers.getContent());
+		model.addAttribute("page", offers);
+
+		return "offer/listbuys";
+	}
 
 	@RequestMapping("/offer/list/update") //Updates the offer list
 	public String updateList(Model model, Pageable pageable,Principal principal) {
@@ -81,6 +99,15 @@ public class OffersController {
 		Page<Offer> offers = offersService.getOffersForUser(pageable, user);
 		model.addAttribute("offersList", offers.getContent());
 		return "offer/listown :: tableOffers";
+	}
+
+	@RequestMapping("/user/buys/list/update") //Updates the buys list for a user
+	public String updateBuysListForUser(Model model, Pageable pageable, Principal principal) {
+		String email = principal.getName(); // Es el email
+		User user = usersService.getUserByEmail(email);
+		Page<Offer> offers = offersService.getBuysForUser(pageable, user);
+		model.addAttribute("offersList", offers.getContent());
+		return "offer/listbuys :: tableOffers";
 	}
 
 	@RequestMapping(value = "/user/offer/add", method = RequestMethod.POST) // Adds the offer
@@ -113,9 +140,12 @@ public class OffersController {
 		User user = usersService.getUserByEmail(email);
 		Offer offer = offersService.getOffer(id);
 		if(user.getMoney() >= offer.getPrice()) {
-			if(offer.getSold())
+			if(!offer.getSold()) {
+				offersService.buyOffer(offer, user);
+			}
+			else {
 				System.out.println("The offer is already sold"); // error offer sold
-			offersService.buyOffer(offer, user);
+			}
 		}
 		else {
 			// not enough money

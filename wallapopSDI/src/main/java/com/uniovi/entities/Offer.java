@@ -22,7 +22,11 @@ public class Offer {
 	@JoinColumn(name = "user_id")
 	private User user;
 
-	private boolean sold;
+	private Boolean sold;
+	
+	@ManyToOne
+	@JoinColumn(name = "buyer_id")
+	private User buyer;
 
 	public Offer() {
 
@@ -88,6 +92,14 @@ public class Offer {
 		this.user = user;
 	}
 
+	public User getBuyer() {
+		return buyer;
+	}
+
+	public void setBuyer(User buyer) {
+		this.buyer = buyer;
+	}
+
 	public Date getDate() {
 		return date;
 	}
@@ -96,7 +108,7 @@ public class Offer {
 		this.date = date;
 	}
 
-	public boolean getSold() {
+	public Boolean getSold() {
 		return sold;
 	}
 

@@ -17,10 +17,10 @@
 						class="caret"></span>
 				</a>
 					<ul class="dropdown-menu">
-						<li sec:authorize="hasRole('ROLE_USER')"><a
-							href="/user/offer/add" th:text="#{add.offers}"></a></li>
+						<li sec:authorize="hasRole('ROLE_USER')"><a	href="/user/offer/add" th:text="#{add.offers}"></a></li>
 						<li><a href="/offer/list" th:text="#{list.offers}"></a></li>
 						<li sec:authorize="hasRole('ROLE_USER')"><a href="/user/offer/list" th:text="#{list.offers.user}"></a></li>
+						<li sec:authorize="hasRole('ROLE_USER')"><a href="/user/buys/list" th:text="#{list.buys.user}"></a></li>
 					</ul></li>
 					
 				<li id="admin-menu" class="dropdown"><a class="dropdown-toggle"

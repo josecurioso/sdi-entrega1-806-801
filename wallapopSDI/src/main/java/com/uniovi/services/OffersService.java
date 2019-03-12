@@ -1,23 +1,20 @@
 package com.uniovi.services;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.Pageable;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Set;
 
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.uniovi.entities.Offer;
 import com.uniovi.entities.User;
 import com.uniovi.repositories.OffersRepository;
+import com.uniovi.repositories.UsersRepository;
 
 @Service
 public class OffersService {
@@ -27,6 +24,9 @@ public class OffersService {
 
 	@Autowired
 	private OffersRepository offersRepository;
+	
+	@Autowired
+	private UsersRepository usersRepository;
 
 	public Page<Offer> getOffers(Pageable pageable) {
 		Page<Offer> offers = offersRepository.findAll(pageable);
@@ -51,6 +51,13 @@ public class OffersService {
 		return offers;
 	}
 
+	public Page<Offer> getBuysForUser(Pageable pageable, User user) {
+		Page<Offer> offers = new PageImpl<Offer>(new LinkedList<Offer>());
+		
+		offers = offersRepository.findAllBuysByUser(pageable, user);
+		return offers;
+	}
+
 	public Page<Offer> searchOffersByDescriptionAndNameForUser(Pageable pageable, String searchText, User user) {
 		Page<Offer> offers = new PageImpl<Offer>(new LinkedList<Offer>());
 		
@@ -64,6 +71,14 @@ public class OffersService {
 		
 		searchText = "%"+searchText+"%";
 		offers = offersRepository.searchByDescriptionAndName(pageable, searchText);
+		return offers;
+	}
+
+	public Page<Offer> searchBuysByDescriptionAndNameForUser(Pageable pageable, String searchText, User user) {
+		Page<Offer> offers = new PageImpl<Offer>(new LinkedList<Offer>());
+		
+		searchText = "%"+searchText+"%";
+		offers = offersRepository.searchBuysByDescriptionNameAndUser(pageable,searchText, user);
 		return offers;
 	}
 	
@@ -80,13 +95,13 @@ public class OffersService {
 	
 	
 	public void buyOffer(Offer offer, User user) {
-		System.out.println(user.getMoney());
-		user.setMoney(user.getMoney()-offer.getPrice());
-		System.out.println(user.getMoney());
-
-		System.out.println(offer.getSold());
+		user.setMoney(user.getMoney() - offer.getPrice());
 		offer.setSold(true);
-		System.out.println(offer.getSold());
+		offer.setBuyer(user);
+		user.getBuys().add(offer);
+
+		offersRepository.save(offer);
+		usersRepository.save(user);
 	}
 	
 	

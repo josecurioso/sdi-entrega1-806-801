@@ -8,7 +8,7 @@
 		<form class="navbar-form" action="/offer/list">
 			<div class="form-group">
 				<input name="searchText" type="text" class="form-control" size="50"
-					placeholder="Buscar por nombre de oferta o descripci�n">
+					placeholder="Buscar por nombre de oferta o descripción">
 			</div>
 			<button type="submit" class="btn btn-default" th:text="#{search}">Buscar</button>
 		</form>
@@ -52,11 +52,11 @@
 								<p th:text="#{sold}">Vendido</p>
 							</div>
 							<div th:unless="${offer.sold}">
-								<button type="button" th:id="${'noresendButton' + offer.id}"
+								<button type="button" th:id="${'buyButton' + offer.id}"
 											class="btn btn-default" th:text="#{buy}">Comprar</button>
 								<script th:inline="javascript">
 								/*<![CDATA[*/
-								 $( "#resendButton[[${offer.id}]]" ).click(function() {
+								 $( "#buyButton[[${offer.id}]]" ).click(function() {
 								 $.get( "/offer/buy/[[${offer.id}]]", function( data ) {
 								 	var numberPage = [[${param.page}]];
 								 	var urlUpdate = '/offer/list/update';
