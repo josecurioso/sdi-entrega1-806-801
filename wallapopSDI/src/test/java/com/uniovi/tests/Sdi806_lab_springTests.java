@@ -30,8 +30,8 @@ import com.uniovi.utils.SeleniumUtils;
 public class Sdi806_lab_springTests {
 	// En Windows (Debe ser la versión 65.0.1 y desactivar las actualizacioens
 	// automáticas)):
-	static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
-	static String Geckdriver024 = "C:\\Users\\Pedro\\Desktop\\SDI\\PL-SDI-Sesión5-material\\geckodriver024win64.exe";
+	static String PathFirefox65 = "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe";
+	static String Geckdriver024 = "C:\\Users\\UO257809\\Desktop\\PL-SDI-Sesión5-material\\geckodriver024win64.exe";
 
 	// Común a Windows y a MACOSX
 	static WebDriver driver = getDriver(PathFirefox65, Geckdriver024);
@@ -102,19 +102,59 @@ public class Sdi806_lab_springTests {
 		PO_View.checkElement(driver, "text", "Registráte como usuario");
 	}
 	
-//	
-//	//PR05. Prueba del formulario de registro. registro con datos correctos
-//	@Test
-//	public void PR05() {
-//	//Vamos al formulario de registro
-//	PO_NavView.clickOption(driver, "signup", "class", "btn btn-primary");
-//	//Rellenamos el formulario.
-//	PO_RegisterView.fillForm(driver, "77777778A", "Josefo", "Perez", "77777",
-//	"77777");
-//	//Comprobamos que entramos en la sección privada
-//	PO_View.checkElement(driver, "text", "Notas del usuario");
-//	}
-//	
+	
+	@Test
+	public void PR05() {
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "admin@gmail.com" , "admin" );
+		PO_NavView.checkElement(driver, "id", "admin-menu");
+	}
+	@Test
+	public void PR06() {
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "marta@gmail.com" , "123456" );
+		PO_View.checkElement(driver, "id", "offers-menu");
+	}
+	@Test
+	public void PR07() {
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "a" , "a" );
+		PO_LoginView.checkKey(driver, "Error.empty",
+		PO_Properties.getSPANISH() );
+	}
+	@Test
+	public void PR08() {
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "marta@gmail.com" , "noesesta" );
+		PO_LoginView.checkKey(driver, "Error.login.password",
+		PO_Properties.getSPANISH() );
+	}
+	@Test
+	public void PR09() {
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "no@existe.com" , "noexiste" );
+		PO_LoginView.checkKey(driver, "Error.login.email",
+		PO_Properties.getSPANISH() );
+	}
+	
+	//logout
+	@Test
+	public void PR010() {
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "marta@gmail.com" , "123456" );
+		PO_View.checkElement(driver, "id", "offers-menu");
+		PO_NavView.clickOption(driver, "logout", "class", "btn btn-primary");
+		PO_View.checkElement(driver, "text", "Identificate");
+	}
+	@Test
+	public void PR011() {
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "marta@gmail.com" , "123456" );
+		PO_View.checkElement(driver, "id", "offers-menu");
+		PO_NavView.clickOption(driver, "logout", "class", "btn btn-primary");
+		PO_View.checkElement(driver, "text", "Identificate");
+	}
+	
 //	
 //	//PR06. Prueba del formulario de registro. DNI repetido en la BD, Nombre corto, .... pagination  pagination-centered, Error.signup.dni.length
 //	@Test

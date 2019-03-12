@@ -12,7 +12,7 @@
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav" sec:authorize="isAuthenticated()">
 				<li><a href="/home" th:text="#{home}"></a></li>
-				<li id="marks-menu" class="dropdown"><a class="dropdown-toggle"
+				<li id="offers-menu" class="dropdown"><a class="dropdown-toggle"
 					data-toggle="dropdown" href="#" th:text="#{manage.marks}"> <span
 						class="caret"></span>
 				</a>
@@ -22,14 +22,12 @@
 						<li><a href="/mark/list" th:text="#{list.marks}"></a></li>
 					</ul></li>
 					
-				<li id="users-menu" class="dropdown"><a class="dropdown-toggle"
+				<li id="admin-menu" class="dropdown"><a class="dropdown-toggle"
 					data-toggle="dropdown" href="#"
 					sec:authorize="hasRole('ROLE_ADMIN')" th:text="#{manage.users}">
 						<span class="caret"></span>
 				</a>
 					<ul class="dropdown-menu">
-						<li><a href="/user/add" th:text="#{add.users}">Agregar
-								usuario</a></li>
 						<li><a href="/user/list" th:text="#{list.users}">Ver
 								Usuarios</a></li>
 					</ul></li>
