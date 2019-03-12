@@ -13,13 +13,14 @@
 			<ul class="nav navbar-nav" sec:authorize="isAuthenticated()">
 				<li><a href="/home" th:text="#{home}"></a></li>
 				<li id="offers-menu" class="dropdown"><a class="dropdown-toggle"
-					data-toggle="dropdown" href="#" th:text="#{manage.marks}"> <span
+					data-toggle="dropdown" href="#" th:text="#{offers}"> <span
 						class="caret"></span>
 				</a>
 					<ul class="dropdown-menu">
-						<li sec:authorize="hasRole('ROLE_ADMIN')"><a
-							href="/mark/add" th:text="#{add.marks}"></a></li>
-						<li><a href="/mark/list" th:text="#{list.marks}"></a></li>
+						<li sec:authorize="hasRole('ROLE_USER')"><a
+							href="/user/offer/add" th:text="#{add.offers}"></a></li>
+						<li><a href="/offer/list" th:text="#{list.offers}"></a></li>
+						<li sec:authorize="hasRole('ROLE_USER')"><a href="/user/offer/list" th:text="#{list.offers.user}"></a></li>
 					</ul></li>
 					
 				<li id="admin-menu" class="dropdown"><a class="dropdown-toggle"

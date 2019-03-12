@@ -96,7 +96,6 @@ public class UsersController {
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Model model ,String error) {
-		if((User) model))
 		return "login";
 	}
 
