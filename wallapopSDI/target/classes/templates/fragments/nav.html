@@ -29,7 +29,7 @@
 						<span class="caret"></span>
 				</a>
 					<ul class="dropdown-menu">
-						<li><a href="/user/list" th:text="#{list.users}">Ver
+						<li><a id="listUsers" href="/user/list" th:text="#{list.users}">Ver
 								Usuarios</a></li>
 					</ul></li>
 			</ul>
@@ -59,7 +59,7 @@
 					th:text="#{login.message}"> <span
 						class="glyphicon glyphicon-log-in"></span> Identifícate
 				</a></li>
-				<li sec:authorize="isAuthenticated()"><a href="/logout"> <span
+				<li sec:authorize="isAuthenticated()"><a href="/logout" id="logout"> <span
 						class="glyphicon glyphicon-log-out"></span> Desconectar
 				</a></li>
 			</ul>

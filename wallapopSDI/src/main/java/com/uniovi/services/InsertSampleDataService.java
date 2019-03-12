@@ -84,8 +84,8 @@ public class InsertSampleDataService {
 //			}
 //		};
 //		user4.setMarks(user4Marks);
-		usersService.addUser(user1);
 		usersService.addUser(user2);
+		usersService.addUser(user1);
 		usersService.addUser(user3);
 		usersService.addUser(user4);
 		usersService.addUser(user5);

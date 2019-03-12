@@ -99,7 +99,9 @@ public class OffersService {
 		offer.setSold(true);
 		offer.setBuyer(user);
 		user.getBuys().add(offer);
-
+		offer.getBuyer().setMoney(offer.getBuyer().getMoney() + offer.getPrice());
+		
+		usersRepository.save(offer.getBuyer());
 		offersRepository.save(offer);
 		usersRepository.save(user);
 	}
