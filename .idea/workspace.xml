@@ -5,51 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90b97fb4-9265-4d70-80b8-03a66bbf6624" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/UsersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/messages_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_es.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.uniovi/sdi806-lab-spring/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.uniovi/sdi806-lab-spring/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/CustomConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/CustomConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/SDIWallapopApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/SDIWallapopApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/controllers/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/controllers/OffersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/controllers/OffersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/controllers/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/controllers/UsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/entities/Offer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/entities/Offer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/repositories/OffersRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/repositories/OffersRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/repositories/UsersRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/repositories/UsersRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/OffersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/OffersService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/RolesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/RolesService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/SecurityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/SecurityService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/UserDetailsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/UsersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/UsersService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/validators/LoginValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/validators/LoginValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/validators/SignUpFormValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/validators/SignUpFormValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/messages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/messages_es.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/SDIWallapopApplication_Tests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/SDIWallapopApplication_Tests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_HomeView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_HomeView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_LoginView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_LoginView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_NavView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_NavView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_PrivateView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_PrivateView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_Properties.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_Properties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_RegisterView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_RegisterView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_View.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_View.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/utils/SeleniumUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/utils/SeleniumUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/messages.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/messages_en.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/messages_es.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user/list.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -107,11 +79,84 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+            <state relative-caret-position="314">
+              <caret line="39" column="74" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
+              <folding>
+                <element signature="e#2045#2052#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/messages_en.properties">
+          <provider editor-type-id="ResourceBundle" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="845">
+              <caret line="88" column="31" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/messages_es.properties">
+          <provider editor-type-id="ResourceBundle" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="780">
+              <caret line="85" column="30" lean-forward="true" selection-start-line="85" selection-start-column="30" selection-end-line="87" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
+          <provider editor-type-id="ResourceBundle" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="879">
+              <caret line="87" column="38" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/UsersController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+              <folding>
+                <element signature="e#3234#3235#0" expanded="true" />
+                <element signature="e#3255#3256#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="31">
+              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -127,8 +172,27 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>eliminar</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/UsersController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/messages_es.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/messages_en.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/messages.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/user/list.html" />
+        <option value="$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java" />
+      </list>
+    </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -247,10 +311,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="870" />
-    <option name="y" value="300" />
-    <option name="width" value="2100" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1696" />
+    <option name="y" value="487" />
+    <option name="width" value="1964" />
     <option name="height" value="1500" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -321,7 +385,72 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="fragments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="offer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="Resource Bundle 'messages'" type="a6c14932:ResourceBundleNode" />
+            </path>
+            <path>
+              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="uniovi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="uniovi" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -331,12 +460,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="hsqldb" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/selenium-server-standalone-3.141.59.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -373,12 +508,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552495668941</updated>
-      <workItem from="1552495672072" duration="827000" />
+      <workItem from="1552495672072" duration="4277000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="827000" />
+    <option name="totallyTimeSpent" value="4277000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -390,7 +525,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
+    <frame x="819" y="0" width="1748" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Capture Tool" order="0" />
@@ -399,7 +534,7 @@
       <window_info id="Image Layers" order="3" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.13439363" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.1735782" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="0" weight="0.32969603" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32969603" />
@@ -411,15 +546,15 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32969603" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Database Console" order="9" weight="0.32969603" />
-      <window_info anchor="bottom" id="Find" order="10" />
-      <window_info anchor="bottom" id="Run" order="11" visible="true" weight="0.4793453" />
+      <window_info anchor="bottom" id="Find" order="10" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Run" order="11" visible="true" weight="0.21803921" />
       <window_info anchor="bottom" id="Debug" order="12" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="15" weight="0.32969603" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Database" order="2" visible="true" weight="0.17415507" />
+      <window_info anchor="right" id="Database" order="2" weight="0.25947866" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Bean Validation" order="5" weight="0.32962227" />
@@ -469,18 +604,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/messages_en.properties">
-      <provider editor-type-id="ResourceBundle" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/messages_es.properties">
-      <provider editor-type-id="ResourceBundle" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/tests/pageobject/PO_HomeView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -512,9 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cb646768-c3d7-4023-aa25-0bc4910cdbee/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE-sources.jar!/org/springframework/web/bind/annotation/RequestParam.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
@@ -522,10 +642,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.14/tomcat-embed-core-9.0.14-sources.jar!/javax/servlet/http/HttpSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/offer/list.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/offer/listown.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cb646768-c3d7-4023-aa25-0bc4910cdbee/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        <state relative-caret-position="314">
+          <caret line="39" column="74" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
+          <folding>
+            <element signature="e#2045#2052#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/UsersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+          <folding>
+            <element signature="e#3234#3235#0" expanded="true" />
+            <element signature="e#3255#3256#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/messages_en.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="845">
+          <caret line="88" column="31" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/messages_es.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="85" column="30" lean-forward="true" selection-start-line="85" selection-start-column="30" selection-end-line="87" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="879">
+          <caret line="87" column="38" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
         </state>
       </provider>
     </entry>

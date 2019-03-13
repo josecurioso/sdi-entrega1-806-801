@@ -30,10 +30,12 @@
 				<li><a href="/offer/list" th:text="#{list.offers}"></a></li>
 				<li sec:authorize="hasRole('ROLE_USER')"><a href="/user/offer/list" th:text="#{list.offers.user}"></a></li>
 				<li sec:authorize="hasRole('ROLE_USER')"><a href="/user/buys/list" th:text="#{list.buys.user}"></a></li>
-						
-						
-				
-				 	
+
+
+				<li><a id="users-menu" href="/user/list" th:text="#{list.users}">Ver
+					Usuarios</a></li>
+
+				<!--
 				<li id="admin-menu" class="dropdown"><a class="dropdown-toggle"
 					data-toggle="dropdown" href="#"
 					sec:authorize="hasRole('ROLE_ADMIN')" th:text="#{manage.users}">
@@ -43,6 +45,7 @@
 						<li><a id="listUsers" href="/user/list" th:text="#{list.users}">Ver
 								Usuarios</a></li>
 					</ul></li>
+				-->
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown"><a id="btnLanguage" href=" #"

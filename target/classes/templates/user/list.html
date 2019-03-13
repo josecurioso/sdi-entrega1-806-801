@@ -14,32 +14,26 @@
 			<table class="table table-hover">
 				<thead>
 					<tr>
-						<th th:text="#{email}">DNI</th>
-						<th th:text="#{name}">Nombre</th>
-						<th th:text="#{lastname}">Apellidos</th>
+						<th th:text="#{email}"></th>
+						<th th:text="#{name}"></th>
+						<th th:text="#{lastname}"></th>
 						<th class="col-md-1"></th>
-						<th class="col-md-1"></th>
-						<th class="col-md-1"></th>
-						<th class="col-md-1"></th>
-						<th class="col-md-1"></th>
+						<th><input  type="submit" th:value="#{delete.selected}"></th>
 					</tr>
 				</thead>
 				<tbody>
 				
 					<tr th:each="user : ${usersList}">
-						<td th:text="${user.email}">71888888X</td>
-						<td th:text="${user.name}">Nombre del alumno</td>
-						<td th:text="${user.lastName}">Apellidos del alumno</td>
-						<td><a th:href="${'/user/details/' + user.id}" th:text="#{details}">detalles</a></td>
-						<td><a th:href="${'/user/edit/' + user.id}" th:text="#{modify}">modificar</a></td>
-						<td><a th:href="${'/user/delete/' + user.id}" th:text="#{delete}">eliminar</a>
-						<td><input type="checkbox" name="idsUsers" th:value="${user.id}">  </input></td>
+						<td th:text="${user.email}"></td>
+						<td th:text="${user.name}"></td>
+						<td th:text="${user.lastName}"></td>
+						<td><a th:href="${'/user/delete/' + user.id}" th:text="#{delete}"></a>
+						<td><input type="checkbox" name="idsUsers" th:value="${user.id}"> </td>
 						
 					</tr>
 				
 				</tbody>
 			</table>
-			<input  type="submit" value="Eliminar seleccionados">
 			</form>
 		</div>
 	</div>
