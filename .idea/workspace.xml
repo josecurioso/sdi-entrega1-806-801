@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90b97fb4-9265-4d70-80b8-03a66bbf6624" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_es.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/details.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/controllers/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/controllers/UsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/details.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user/list.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,13 +43,6 @@
         <item name="PUBLIC: database" type="5208c322:HsqlImplModel$Database" />
         <item name="PUBLIC: schema" type="d266ad14:HsqlImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="HSQLDB (Local)" type="feb32156:DbDataSourceImpl" />
-        <item name="PUBLIC: database" type="5208c322:HsqlImplModel$Database" />
-        <item name="PUBLIC: schema" type="d266ad14:HsqlImplModel$Schema" />
-        <item name="OFFER: table" type="a936b57e:HsqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -75,15 +53,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cb646768-c3d7-4023-aa25-0bc4910cdbee/console.sql">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="314">
-              <caret line="39" column="74" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
+              <caret line="39" column="74" lean-forward="true" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
               <folding>
                 <element signature="e#2045#2052#0" expanded="true" />
               </folding>
@@ -91,20 +64,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+            <state relative-caret-position="323">
+              <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/list.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+            <state relative-caret-position="298">
+              <caret line="205" selection-start-line="205" selection-end-line="205" />
+              <caret line="204" selection-start-line="204" selection-end-line="204" />
+              <caret line="202" selection-start-line="202" selection-end-line="202" />
+              <caret line="203" selection-start-line="203" selection-end-line="203" />
+              <caret line="201" selection-start-line="201" selection-end-line="201" />
+              <caret line="200" selection-start-line="200" selection-end-line="200" />
+              <caret line="199" selection-start-line="199" selection-end-line="199" />
+              <caret line="198" selection-start-line="198" selection-end-line="198" />
+              <caret line="197" selection-start-line="197" selection-end-line="197" />
             </state>
           </provider>
         </entry>
@@ -153,19 +134,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cb646768-c3d7-4023-aa25-0bc4910cdbee/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://cb646768-c3d7-4023-aa25-0bc4910cdbee/database/PUBLIC/schema/PUBLIC/table/OFFER">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
-              <filtering enabled="true" />
+              <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -185,11 +157,12 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/UsersController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" />
         <option value="$PROJECT_DIR$/src/main/resources/messages_es.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/messages_en.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/messages.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/user/list.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/cb646768-c3d7-4023-aa25-0bc4910cdbee/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" />
         <option value="$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java" />
       </list>
     </option>
@@ -210,112 +183,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/sdi806-lab-spring.iml" />
-        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/encodings.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_4_0.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_8.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_8.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_8.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_2_0.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_3.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_7.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_7.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_11_1.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_11_1.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_14.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_14.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_14.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_2.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_11_1.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_4_Final.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_3_7_Final.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_14_Final.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_hsqldb_hsqldb_2_4_0.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_23_1_GA.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_5_Final.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_23_4.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_2_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_2_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_2_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_1_2_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_0_0_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_1_2_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_2_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_2_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_1_2_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_1_2_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_0_0_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_2_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_1_2_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_1_2_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_1_2_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_1_4_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_1_4_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_1_3_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_1_3_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_1_3_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_4_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_1_4_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_4_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_4_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_4_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_4_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_4_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_4_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_1_4_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_4_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_4_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_4_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_4_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_2_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_springsecurity4_3_0_2_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_11_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_2.xml" />
-        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" />
-        <option value="$PROJECT_DIR$/.idea/dataSources.xml" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1696" />
-    <option name="y" value="487" />
-    <option name="width" value="1964" />
-    <option name="height" value="1500" />
+    <option name="x" value="1228" />
+    <option name="width" value="2622" />
+    <option name="height" value="2111" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -489,7 +360,70 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.SDIWallapopApplicationTests">
+    <configuration name="SDIWallapopApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sdi806-lab-spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.uniovi.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.uniovi.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.uniovi.tests.SDIWallapopApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SDIWallapopApplicationTests.PR01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sdi806-lab-spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.uniovi.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.uniovi.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.uniovi.tests.SDIWallapopApplicationTests" />
+      <option name="METHOD_NAME" value="PR01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SDIWallapopApplicationTests.PR12" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sdi806-lab-spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.uniovi.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.uniovi.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.uniovi.tests.SDIWallapopApplicationTests" />
+      <option name="METHOD_NAME" value="PR12" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SDIWallapopApplicationTests.PR13" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sdi806-lab-spring" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.uniovi.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.uniovi.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.uniovi.tests.SDIWallapopApplicationTests" />
+      <option name="METHOD_NAME" value="PR13" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SDIWallapopApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="sdi806-lab-spring" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.uniovi.SDIWallapopApplication" />
@@ -497,6 +431,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SDIWallapopApplicationTests" />
+        <item itemvalue="JUnit.SDIWallapopApplicationTests.PR13" />
+        <item itemvalue="JUnit.SDIWallapopApplicationTests.PR12" />
+        <item itemvalue="JUnit.SDIWallapopApplicationTests.PR01" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -508,12 +450,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552495668941</updated>
-      <workItem from="1552495672072" duration="4277000" />
+      <workItem from="1552495672072" duration="6700000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="SDIWallapopApplicationTests - 2019.03.13 at 19h 26m 49s.xml">
+      <configuration name="SDIWallapopApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SDIWallapopApplicationTests - 2019.03.13 at 19h 27m 24s.xml">
+      <configuration name="SDIWallapopApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SDIWallapopApplicationTests - 2019.03.13 at 19h 28m 31s.xml">
+      <configuration name="SDIWallapopApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SDIWallapopApplicationTests_PR13 - 2019.03.13 at 19h 30m 27s.xml">
+      <configuration name="SDIWallapopApplicationTests.PR13" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SDIWallapopApplicationTests_PR13 - 2019.03.13 at 19h 30m 51s.xml">
+      <configuration name="SDIWallapopApplicationTests.PR13" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SDIWallapopApplicationTests_PR13 - 2019.03.13 at 19h 31m 10s.xml">
+      <configuration name="SDIWallapopApplicationTests.PR13" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SDIWallapopApplicationTests_PR13 - 2019.03.13 at 19h 36m 39s.xml">
+      <configuration name="SDIWallapopApplicationTests.PR13" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SDIWallapopApplicationTests_PR13 - 2019.03.13 at 19h 38m 18s.xml">
+      <configuration name="SDIWallapopApplicationTests.PR13" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SDIWallapopApplicationTests - 2019.03.13 at 19h 40m 35s.xml">
+      <configuration name="SDIWallapopApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SDIWallapopApplicationTests - 2019.03.13 at 19h 47m 35s.xml">
+      <configuration name="SDIWallapopApplicationTests" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4277000" />
+    <option name="totallyTimeSpent" value="6700000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -545,16 +519,16 @@
       <window_info anchor="bottom" id="Database Changes" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32969603" />
       <window_info anchor="bottom" id="Message" order="8" />
-      <window_info anchor="bottom" id="Database Console" order="9" weight="0.32969603" />
+      <window_info anchor="bottom" id="Database Console" order="9" weight="0.32941177" />
       <window_info anchor="bottom" id="Find" order="10" weight="0.32941177" />
-      <window_info active="true" anchor="bottom" id="Run" order="11" visible="true" weight="0.21803921" />
+      <window_info active="true" anchor="bottom" id="Run" order="11" visible="true" weight="0.46117648" />
       <window_info anchor="bottom" id="Debug" order="12" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="15" weight="0.32969603" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Database" order="2" weight="0.25947866" />
+      <window_info anchor="right" id="Database" order="2" visible="true" weight="0.25888625" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Bean Validation" order="5" weight="0.32962227" />
@@ -628,13 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://cb646768-c3d7-4023-aa25-0bc4910cdbee/database/PUBLIC/schema/PUBLIC/table/OFFER">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE-sources.jar!/org/springframework/web/bind/annotation/RequestParam.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
@@ -654,37 +621,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/offer/listown.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cb646768-c3d7-4023-aa25-0bc4910cdbee/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="39" column="74" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
-          <folding>
-            <element signature="e#2045#2052#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/UsersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
-          <folding>
-            <element signature="e#3234#3235#0" expanded="true" />
-            <element signature="e#3255#3256#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/messages_en.properties">
       <provider editor-type-id="ResourceBundle" />
@@ -710,17 +646,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://cb646768-c3d7-4023-aa25-0bc4910cdbee/database/PUBLIC/schema/PUBLIC/table/OFFER">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="39" column="74" lean-forward="true" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
+          <folding>
+            <element signature="e#2045#2052#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+        <state relative-caret-position="323">
+          <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/UsersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+          <folding>
+            <element signature="e#3234#3235#0" expanded="true" />
+            <element signature="e#3255#3256#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cb646768-c3d7-4023-aa25-0bc4910cdbee/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+        <state relative-caret-position="298">
+          <caret line="205" selection-start-line="205" selection-end-line="205" />
+          <caret line="204" selection-start-line="204" selection-end-line="204" />
+          <caret line="202" selection-start-line="202" selection-end-line="202" />
+          <caret line="203" selection-start-line="203" selection-end-line="203" />
+          <caret line="201" selection-start-line="201" selection-end-line="201" />
+          <caret line="200" selection-start-line="200" selection-end-line="200" />
+          <caret line="199" selection-start-line="199" selection-end-line="199" />
+          <caret line="198" selection-start-line="198" selection-end-line="198" />
+          <caret line="197" selection-start-line="197" selection-end-line="197" />
         </state>
       </provider>
     </entry>
