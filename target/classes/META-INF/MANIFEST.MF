@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: sdi806-lab-spring
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: jotaj
+Built-By: Jose
 Implementation-Vendor-Id: com.uniovi
-Build-Jdk: 1.8.0_161
+Build-Jdk: 1.8.0_131
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
  ot-starter-parent/sdi806-lab-spring
 Created-By: Maven Integration for Eclipse
