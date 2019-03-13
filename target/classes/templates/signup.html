@@ -5,7 +5,7 @@
 	<!-- Barra de Navegación superior -->
 	<nav th:replace="fragments/nav" />
 	<div class="container">
-		<h2>Registráte como usuario</h2>
+		<h2 th:text="#{signup.message}">Registráte como usuario</h2>
 		<form class="form-horizontal" method="post" action="/signup"
 			th:object="${user}">
 			<div class="form-group">

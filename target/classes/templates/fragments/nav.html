@@ -12,6 +12,7 @@
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav" sec:authorize="isAuthenticated()">
 				<li><a href="/home" th:text="#{home}"></a></li>
+				<!-- 
 				<li id="offers-menu" class="dropdown"><a class="dropdown-toggle"
 					data-toggle="dropdown" href="#" th:text="#{offers}"> <span
 						class="caret"></span>
@@ -22,7 +23,17 @@
 						<li sec:authorize="hasRole('ROLE_USER')"><a href="/user/offer/list" th:text="#{list.offers.user}"></a></li>
 						<li sec:authorize="hasRole('ROLE_USER')"><a href="/user/buys/list" th:text="#{list.buys.user}"></a></li>
 					</ul></li>
-					
+				
+				 -->
+				
+				<li id="offers-menu" sec:authorize="hasRole('ROLE_USER')"><a	href="/user/offer/add" th:text="#{add.offers}"></a></li>
+				<li><a href="/offer/list" th:text="#{list.offers}"></a></li>
+				<li sec:authorize="hasRole('ROLE_USER')"><a href="/user/offer/list" th:text="#{list.offers.user}"></a></li>
+				<li sec:authorize="hasRole('ROLE_USER')"><a href="/user/buys/list" th:text="#{list.buys.user}"></a></li>
+						
+						
+				
+				 	
 				<li id="admin-menu" class="dropdown"><a class="dropdown-toggle"
 					data-toggle="dropdown" href="#"
 					sec:authorize="hasRole('ROLE_ADMIN')" th:text="#{manage.users}">
@@ -56,11 +67,11 @@
 						class="glyphicon glyphicon-user"></span> Registrate
 				</a></li>
 				<li sec:authorize="!isAuthenticated()"><a href="/login"
-					th:text="#{login.message}"> <span
+					th:text="#{login}"> <span
 						class="glyphicon glyphicon-log-in"></span> Identifícate
 				</a></li>
 				<li sec:authorize="isAuthenticated()"><a href="/logout" id="logout"> <span
-						class="glyphicon glyphicon-log-out"></span> Desconectar
+						class="glyphicon glyphicon-log-out"></span><span th:text="#{logout}"> Desconectar  </span>
 				</a></li>
 			</ul>
 		</div>

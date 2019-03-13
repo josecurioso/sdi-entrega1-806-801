@@ -4,10 +4,10 @@
 <body>
 	<nav th:replace="fragments/nav" />
 	<div class="container">
-		<h2 th:text="#{identify}"></h2>
+		<h2 th:text="#{login.message}"></h2>
 		<form class="form-horizontal" method="post" action="/login">
 			<div class="form-group">
-				<label class="control-label col-sm-2" for="username" th:text="#{dni}"></label>
+				<label class="control-label col-sm-2" for="username" th:text="#{email}"></label>
 				<div class="col-sm-10">
 					<input type="text" class="form-control" name="username"
 						placeholder="Ejemplo: profSDI"  />

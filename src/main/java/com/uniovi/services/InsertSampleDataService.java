@@ -57,32 +57,30 @@ public class InsertSampleDataService {
 		};
 		user3.setOffers(user3Offers);
 
-//		Set user2Marks = new HashSet<Mark>() {
-//			{
-//				add(new Mark("Nota B1", 5.0, user2));
-//				add(new Mark("Nota B2", 4.3, user2));
-//				add(new Mark("Nota B3", 8.0, user2));
-//				add(new Mark("Nota B4", 3.5, user2));
-//			}
-//		};
-//		user2.setMarks(user2Marks);
-//		Set user3Marks = new HashSet<Mark>() {
-//			{
-//				;
-//				add(new Mark("Nota C1", 5.5, user3));
-//				add(new Mark("Nota C2", 6.6, user3));
-//				add(new Mark("Nota C3", 7.0, user3));
-//			}
-//		};
-//		user3.setMarks(user3Marks);
-//		Set user4Marks = new HashSet<Mark>() {
-//			{
-//				add(new Mark("Nota D1", 10.0, user4));
-//				add(new Mark("Nota D2", 8.0, user4));
-//				add(new Mark("Nota D3", 9.0, user4));
-//			}
-//		};
-//		user4.setMarks(user4Marks);
+		Set user4Offers = new HashSet<Offer>() {
+			{
+				add(new Offer("Hitchikers guide to the galaxy", "Douglas Adams book", 20.0, user4));
+				add(new Offer("Clean Code", "Robert C. Martin book", 40.0, user4));
+			}
+		};
+		user4.setOffers(user4Offers);
+
+		Set user5Offers = new HashSet<Offer>() {
+			{
+				add(new Offer("Tesla Model  S", "electric SUV", 90000.0, user5));
+				add(new Offer("Solid chat application", "fully decentralized as timbl likes it", 123.0, user5));
+			}
+		};
+		user5.setOffers(user5Offers);
+
+		Set user6Offers = new HashSet<Offer>() {
+			{
+				add(new Offer("Starship", "Rocket stage capable of propulsive landing on Mars", 10.0, user6));
+				add(new Offer("Super Heavy", "Booster suitable for the Starship second stage", 30.0, user6));
+			}
+		};
+		user6.setOffers(user6Offers);
+
 		usersService.addUser(user2);
 		usersService.addUser(user1);
 		usersService.addUser(user3);
