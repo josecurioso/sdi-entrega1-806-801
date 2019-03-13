@@ -3,7 +3,9 @@ package com.uniovi.tests;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -18,7 +20,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.beans.factory.annotation.Autowired;
 
+import com.uniovi.entities.Offer;
+import com.uniovi.entities.User;
+import com.uniovi.services.InsertSampleDataService;
+import com.uniovi.services.RolesService;
+import com.uniovi.services.UsersService;
 import com.uniovi.tests.pageobject.PO_LoginView;
 import com.uniovi.tests.pageobject.PO_NavView;
 import com.uniovi.tests.pageobject.PO_Properties;
@@ -30,17 +38,16 @@ import com.uniovi.utils.SeleniumUtils;
 public class SDIWallapopApplicationTests {
 	// En Windows (Debe ser la versión 65.0.1 y desactivar las actualizacioens
 	// automáticas)):
-
-
+	
 
 	// Luis
-//	static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
-//	static String Geckdriver024 = "C:\\Users\\Pedro\\Desktop\\SDI\\PL-SDI-Sesión5-material\\geckodriver024win64.exe";
-	// automáticas)):
+	static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
+	static String Geckdriver024 = "C:\\Users\\Pedro\\Desktop\\SDI\\PL-SDI-Sesión5-material\\geckodriver024win64.exe";
+	//automáticas)):
 
 	// Jose
-	static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
-	static String Geckdriver024 = "D:\\Escritorio\\geckodriver024win64.exe";
+//	static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
+//	static String Geckdriver024 = "D:\\Escritorio\\geckodriver024win64.exe";
 
 
 
@@ -55,9 +62,11 @@ public class SDIWallapopApplicationTests {
 		return driver;
 	}
 
+	
 	// Antes de cada prueba se navega al URL home de la aplicaciónn
 	@Before
 	public void setUp() {
+	
 		driver.navigate().to(URL);
 	}
 
@@ -184,13 +193,18 @@ public class SDIWallapopApplicationTests {
 		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/list')]");
 		elementos.get(0).click();
 	
-		List<WebElement> elementos2 = SeleniumUtils.EsperaCargaPagina(driver, "free",
+		List<WebElement> usersList = SeleniumUtils.EsperaCargaPagina(driver, "free",
 		"//tbody/tr", PO_View.getTimeout());
-		assertEquals(elementos2.size() , 7);
-		PO_View.checkElement(driver, "text", "lucas@gmail.com");
-		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/delete/1')]");
-		elementos.get(0).click();
-		//(new WebDriverWait(driver, 200)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//a[contains(@href, 'user/delete/1')]")));
+		assertTrue(usersList.size() == 6);//igual el num esta mal
+		
+		
+		
+		usersList.get(0).findElement(By.id("idsUsers")).click();	
+        
+        List<WebElement> listPage = PO_View.checkElement(driver, "free", "//*[contains(@id,'btnDelete')]");
+        listPage.get(0).click();
+        assertTrue(usersList.size() == 5);//esto seria 1 menos
+
 	}
 	@Test
 	public void PR14() {
@@ -200,10 +214,19 @@ public class SDIWallapopApplicationTests {
 		elementos.get(0).click();
 		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/list')]");
 		elementos.get(0).click();
-		PO_View.checkElement(driver, "text", "ed@gmail.com");
-		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/delete/6')]");
-		elementos.get(0).click();
-		(new WebDriverWait(driver, 200)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//a[contains(@href, 'user/delete/6')]")));
+	
+		List<WebElement> usersList = SeleniumUtils.EsperaCargaPagina(driver, "free",
+		"//tbody/tr", PO_View.getTimeout());
+		assertTrue(usersList.size() == 6);//igual el num esta mal
+		
+		
+		
+		usersList.get(usersList.size()).findElement(By.id("idsUsers")).click();	
+        
+        List<WebElement> listPage = PO_View.checkElement(driver, "free", "//*[contains(@id,'btnDelete')]");
+        listPage.get(0).click();
+        assertTrue(usersList.size() == 5);//esto seria 1 menos
+        
 	}
 	@Test
 	public void PR15() {
@@ -214,15 +237,20 @@ public class SDIWallapopApplicationTests {
 		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/list')]");
 		elementos.get(0).click();
 	
-		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/delete/5')]");
-		elementos.get(0).click();
-		(new WebDriverWait(driver, 200)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//a[contains(@href, 'user/delete/5')]")));
-		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/delete/4')]");
-		elementos.get(0).click();
-		(new WebDriverWait(driver, 200)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//a[contains(@href, 'user/delete/4')]")));
-		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/delete/3')]");
-		elementos.get(0).click();
-		(new WebDriverWait(driver, 200)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//a[contains(@href, 'user/delete/3')]")));
+		List<WebElement> usersList = SeleniumUtils.EsperaCargaPagina(driver, "free",
+		"//tbody/tr", PO_View.getTimeout());
+		assertTrue(usersList.size() == 6);//igual el num esta mal
+		
+		
+		
+		usersList.get(usersList.size()).findElement(By.id("idsUsers")).click();	
+		usersList.get(usersList.size()-1).findElement(By.id("idsUsers")).click();	
+		usersList.get(usersList.size()-2).findElement(By.id("idsUsers")).click();	
+        
+        List<WebElement> listPage = PO_View.checkElement(driver, "free", "//*[contains(@id,'btnDelete')]");
+        listPage.get(0).click();
+        assertTrue(usersList.size() == 5);//esto seria 1 menos
+        
 	}
 	
 //	

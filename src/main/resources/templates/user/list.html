@@ -18,7 +18,7 @@
 						<th th:text="#{name}"></th>
 						<th th:text="#{lastname}"></th>
 						<th class="col-md-1"></th>
-						<th><input type="submit" th:value="#{delete.selected}"></th>
+						<th><input id="btnDelete" type="submit" th:value="#{delete.selected}"></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -28,7 +28,7 @@
 						<td th:text="${user.name}"></td>
 						<td th:text="${user.lastName}"></td>
 						<td><a th:href="${'/user/delete/' + user.id}" th:text="#{delete}"></a>
-						<td><input type="checkbox" name="idsUsers" th:value="${user.id}"> </td>
+						<td><input type="checkbox" id="idsUsers" name="idsUsers" th:value="${user.id}"> </td>
 						
 					</tr>
 				
