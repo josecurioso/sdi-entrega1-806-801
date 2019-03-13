@@ -26,10 +26,10 @@
 				
 				 -->
 				
-				<li id="offers-menu" sec:authorize="hasRole('ROLE_USER')"><a	href="/user/offer/add" th:text="#{add.offers}"></a></li>
-				<li><a href="/offer/list" th:text="#{list.offers}"></a></li>
-				<li sec:authorize="hasRole('ROLE_USER')"><a href="/user/offer/list" th:text="#{list.offers.user}"></a></li>
-				<li sec:authorize="hasRole('ROLE_USER')"><a href="/user/buys/list" th:text="#{list.buys.user}"></a></li>
+				<li id="addOffer" sec:authorize="hasRole('ROLE_USER')"><a	href="/user/offer/add" th:text="#{add.offers}"></a></li>
+				<li id="listOffers"><a href="/offer/list" th:text="#{list.offers}"></a></li>
+				<li id="listMyOffers" sec:authorize="hasRole('ROLE_USER')"><a href="/user/offer/list" th:text="#{list.offers.user}"></a></li>
+				<li id="listMyBuys" sec:authorize="hasRole('ROLE_USER')"><a href="/user/buys/list" th:text="#{list.buys.user}"></a></li>
 
 
 				<li id="users-menu"><a href="/user/list" th:text="#{list.users}">Ver

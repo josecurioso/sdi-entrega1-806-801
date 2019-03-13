@@ -3,14 +3,26 @@ package com.uniovi.tests;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import java.util.List;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import com.uniovi.entities.Offer;
+import com.uniovi.entities.User;
+import com.uniovi.repositories.OffersRepository;
+import com.uniovi.repositories.UsersRepository;
+
+import com.uniovi.services.RolesService;
+import com.uniovi.services.UsersService;
+import com.uniovi.tests.pageobject.*;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,14 +31,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.uniovi.tests.pageobject.PO_LoginView;
-import com.uniovi.tests.pageobject.PO_NavView;
-import com.uniovi.tests.pageobject.PO_Properties;
-import com.uniovi.tests.pageobject.PO_RegisterView;
-import com.uniovi.tests.pageobject.PO_View;
 import com.uniovi.utils.SeleniumUtils;
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SDIWallapopApplicationTests {
 	// En Windows (Debe ser la versión 65.0.1 y desactivar las actualizacioens
 	// automáticas)):
@@ -48,6 +58,11 @@ public class SDIWallapopApplicationTests {
 	static WebDriver driver = getDriver(PathFirefox65, Geckdriver024);
 	static String URL = "http://localhost:8090";
 
+
+
+
+
+
 	public static WebDriver getDriver(String PathFirefox, String Geckdriver) {
 		System.setProperty("webdriver.firefox.bin", PathFirefox);
 		System.setProperty("webdriver.gecko.driver", Geckdriver);
@@ -58,6 +73,7 @@ public class SDIWallapopApplicationTests {
 	// Antes de cada prueba se navega al URL home de la aplicaciónn
 	@Before
 	public void setUp() {
+		//init();
 		driver.navigate().to(URL);
 	}
 
@@ -124,7 +140,7 @@ public class SDIWallapopApplicationTests {
 	public void PR06() {
 		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
 		PO_LoginView.fillForm(driver, "marta@gmail.com" , "123456" );
-		PO_View.checkElement(driver, "id", "offers-menu");
+		PO_View.checkElement(driver, "id", "addOffer");
 	}
 	@Test
 	public void PR07() {
@@ -153,7 +169,7 @@ public class SDIWallapopApplicationTests {
 	public void PR10() {
 		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
 		PO_LoginView.fillForm(driver, "marta@gmail.com" , "123456" );
-		PO_View.checkElement(driver, "id", "offers-menu");
+		PO_View.checkElement(driver, "id", "addOffer");
 		PO_NavView.clickOption(driver, "logout", "class", "btn btn-primary");
 		PO_View.checkElement(driver, "text", "Identificate");
 	}
@@ -213,7 +229,7 @@ public class SDIWallapopApplicationTests {
 		elementos.get(0).click();
 		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/list')]");
 		elementos.get(0).click();
-	
+
 		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/delete/5')]");
 		elementos.get(0).click();
 		(new WebDriverWait(driver, 200)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//a[contains(@href, 'user/delete/5')]")));
@@ -223,6 +239,72 @@ public class SDIWallapopApplicationTests {
 		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/delete/3')]");
 		elementos.get(0).click();
 		(new WebDriverWait(driver, 200)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//a[contains(@href, 'user/delete/3')]")));
+	}
+	@Test
+	public void PR16() {
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "lucas@gmail.com" , "123456" );
+		List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'addOffer')]/a");
+		elementos.get(0).click();
+
+		PO_View.checkElement(driver, "text", "Agregar Oferta");
+		PO_PrivateView.fillFormAddOffer(driver, "Prueba", "Descripción de prueba", "150");
+
+		PO_View.checkElement(driver, "text", "Mis ofertas");
+		PO_View.checkElement(driver, "id", "deleteButton17");
+	}
+	@Test
+	public void PR17() {
+		/*
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "lucas@gmail.com" , "123456" );
+		List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'addOffer')]/a");
+		elementos.get(0).click();
+
+		elementos = PO_View.checkElement(driver, "text", "Agregar Oferta");
+		PO_PrivateView.fillFormAddOffer(driver, "Prueba", "Descripción de prueba", "150");
+
+		elementos = PO_View.checkElement(driver, "text", "Mis ofertas");
+		PO_View.checkElement(driver, "id", "deleteButton17");
+		*/
+	}
+	@Test
+	public void PR18() {
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "lucas@gmail.com" , "123456" );
+		List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'listMyOffers')]/a");
+		elementos.get(0).click();
+
+		PO_View.checkElement(driver, "text", "Mis ofertas");
+
+		PO_View.checkElement(driver, "text", "Nintendo");
+		PO_View.checkElement(driver, "text", "Portátil");
+	}
+	@Test
+	public void PR19() {
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "lucas@gmail.com" , "123456" );
+		List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'listMyOffers')]/a");
+		elementos.get(0).click();
+
+		PO_View.checkElement(driver, "text", "Mis ofertas");
+		elementos = PO_View.checkElement(driver, "text", "Eliminar");
+		int temp = elementos.size();
+		elementos.get(0).click(); //Borramos el primero
+		assertTrue(elementos.size() == temp-1);
+	}
+	@Test
+	public void PR20() {
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "lucas@gmail.com" , "123456" );
+		List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'listMyOffers')]/a");
+		elementos.get(0).click();
+
+		PO_View.checkElement(driver, "text", "Mis ofertas");
+		elementos = PO_View.checkElement(driver, "text", "Eliminar");
+		int temp = elementos.size();
+		elementos.get(elementos.size()).click(); //Borramos el ultimo
+		assertTrue(elementos.size() == temp-1);
 	}
 	
 //	
