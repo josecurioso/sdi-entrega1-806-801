@@ -31,20 +31,25 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
+
 		http.csrf().disable().authorizeRequests()
-				.antMatchers("/css/**", "/img/**", "/script/**", "/", "/signup", "/login/**").permitAll()
+				.antMatchers("/css/**", "/img/**", "/script/**", "/", "/signup", "/login/**","/error/**").permitAll()
 				.antMatchers("/user/offer/**").hasAuthority("ROLE_USER")
 				.antMatchers("/user/buys/**").hasAuthority("ROLE_USER")
 				.antMatchers("/offer/list/**").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
 				.antMatchers("/offer/**").hasAnyAuthority("ROLE_USER")
-				.antMatchers("/user/list/**").hasAnyAuthority("ROLE_ADMIN")		
+				.antMatchers("/user/list/**").hasAnyAuthority("ROLE_ADMIN")
 				.antMatchers("/user/details/**").hasAnyAuthority("ROLE_ADMIN")		
 				.antMatchers("/user/edit/**").hasAnyAuthority("ROLE_ADMIN")				
 				.anyRequest().authenticated()
 				.and()
 				.formLogin().loginPage("/login").permitAll().defaultSuccessUrl("/home")
 				.and()
+	            .exceptionHandling().accessDeniedPage("/errors/403")
+				.and()
 				.logout().permitAll();
+
+		
 
 	}
 
