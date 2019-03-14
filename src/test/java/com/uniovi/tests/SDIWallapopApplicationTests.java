@@ -37,6 +37,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class SDIWallapopApplicationTests {
 	// En Windows (Debe ser la versión 65.0.1 y desactivar las actualizacioens
 	// automáticas)):
@@ -49,9 +51,12 @@ public class SDIWallapopApplicationTests {
 	// automáticas)):
 
 	// Jose
-	static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
-	static String Geckdriver024 = "D:\\Escritorio\\geckodriver024win64.exe";
+//	static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
+//	static String Geckdriver024 = "D:\\Escritorio\\geckodriver024win64.exe";
 
+    // Jose portatil
+	static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
+	static String Geckdriver024 = "D:\\Escritorio\\PL-SDI-Sesión5-material\\geckodriver024win64.exe";
 
 
 	// Común a Windows y a MACOSX
@@ -59,8 +64,17 @@ public class SDIWallapopApplicationTests {
 	static String URL = "http://localhost:8090";
 
 
+    @Autowired
+    private UsersService usersService;
 
+    @Autowired
+    private RolesService rolesService;
 
+    @Autowired
+    private UsersRepository usersRepository;
+
+    @Autowired
+    private OffersRepository offersRepository;
 
 
 	public static WebDriver getDriver(String PathFirefox, String Geckdriver) {
@@ -73,9 +87,82 @@ public class SDIWallapopApplicationTests {
 	// Antes de cada prueba se navega al URL home de la aplicaciónn
 	@Before
 	public void setUp() {
-		//init();
+        initDb();
 		driver.navigate().to(URL);
 	}
+
+
+    public void initDb() {
+	    usersRepository.deleteAll();
+
+        User user1 = new User("admin@gmail.com", "admin", "istrador");
+        user1.setPassword("admin");
+        user1.setRole(rolesService.getRoles()[2]);
+        User user2 = new User("lucas@gmail.com", "Lucas", "Núñez");
+        user2.setPassword("123456");
+        user2.setRole(rolesService.getRoles()[1]);
+        User user3 = new User("maria@gmail.com", "María", "Rodríguez");
+        user3.setPassword("123456");
+        user3.setRole(rolesService.getRoles()[1]);
+        User user4 = new User("marta@gmail.com", "Marta", "Almonte");
+        user4.setPassword("123456");
+        user4.setRole(rolesService.getRoles()[1]);
+        User user5 = new User("pela@gmail.com", "Pelayo", "Valdes");
+        user5.setPassword("123456");
+        user5.setRole(rolesService.getRoles()[1]);
+        User user6 = new User("ed@gmail.com", "Edward", "Núñez");
+        user6.setPassword("123456");
+        user6.setRole(rolesService.getRoles()[1]);
+
+        Set user2Offers = new HashSet<Offer>() {
+            {
+                add(new Offer("Nintendo", "consola", 100.0, user2));
+                add(new Offer("Portátil", "ordenador", 600.0, user2));
+            }
+        };
+        user2.setOffers(user2Offers);
+
+        Set user3Offers = new HashSet<Offer>() {
+            {
+                add(new Offer("Oneplus 5T", "movil", 400.0, user3));
+                add(new Offer("Cristiano Ronaldo", "sabe jugar al futbol", 100000000.0, user3));
+            }
+        };
+        user3.setOffers(user3Offers);
+
+        Set user4Offers = new HashSet<Offer>() {
+            {
+                add(new Offer("Hitchikers guide to the galaxy", "Douglas Adams book", 20.0, user4));
+                add(new Offer("Clean Code", "Robert C. Martin book", 40.0, user4));
+            }
+        };
+        user4.setOffers(user4Offers);
+
+        Set user5Offers = new HashSet<Offer>() {
+            {
+                add(new Offer("Tesla Model  S", "electric SUV", 90000.0, user5));
+                add(new Offer("Solid chat application", "fully decentralized as timbl likes it", 123.0, user5));
+            }
+        };
+        user5.setOffers(user5Offers);
+
+        Set user6Offers = new HashSet<Offer>() {
+            {
+                add(new Offer("Starship", "Rocket stage capable of propulsive landing on Mars", 10.0, user6));
+                add(new Offer("Super Heavy", "Booster suitable for the Starship second stage", 30.0, user6));
+            }
+        };
+        user6.setOffers(user6Offers);
+
+        usersService.addUser(user2);
+        usersService.addUser(user1);
+        usersService.addUser(user3);
+        usersService.addUser(user4);
+        usersService.addUser(user5);
+        usersService.addUser(user6);
+    }
+
+
 
 	// Después de cada prueba se borran las cookies del navegador
 	@After
@@ -94,8 +181,8 @@ public class SDIWallapopApplicationTests {
 		// Cerramos el navegador al finalizar las pruebas
 		driver.quit();
 	}
-	
-	
+
+
 	@Test
 	public void PR01() {
 		PO_NavView.clickOption(driver, "signup", "class", "btn btn-primary");
@@ -103,7 +190,7 @@ public class SDIWallapopApplicationTests {
 		"77777");
 		PO_View.checkElement(driver, "text", "Bienvenido a WallapopSDI");
 	}
-	
+
 	@Test
 	public void PR02() {
 		PO_NavView.clickOption(driver, "signup", "class", "btn btn-primary");
@@ -111,8 +198,8 @@ public class SDIWallapopApplicationTests {
 		"77777");
 		PO_View.checkElement(driver, "text", "Registrate");
 	}
-	
-	
+
+
 	@Test
 	public void PR03() {
 		PO_NavView.clickOption(driver, "signup", "class", "btn btn-primary");
@@ -120,7 +207,7 @@ public class SDIWallapopApplicationTests {
 		"777773434");
 		PO_View.checkElement(driver, "text", "Registrate");
 	}
-	
+
 	@Test
 	public void PR04() {
 		PO_NavView.clickOption(driver, "signup", "class", "btn btn-primary");
@@ -128,8 +215,8 @@ public class SDIWallapopApplicationTests {
 		"77777");
 		PO_View.checkElement(driver, "text", "Registrate");
 	}
-	
-	
+
+
 	@Test
 	public void PR05() {
 		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
@@ -163,7 +250,7 @@ public class SDIWallapopApplicationTests {
 		PO_LoginView.checkKey(driver, "Error.login.incorrect",
 		PO_Properties.getSPANISH() );
 	}
-	
+
 	//logout
 	@Test
 	public void PR10() {
@@ -186,10 +273,10 @@ public class SDIWallapopApplicationTests {
 		elementos.get(0).click();
 		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/list')]");
 		elementos.get(0).click();
-	
+
 		List<WebElement> elementos2 = SeleniumUtils.EsperaCargaPagina(driver, "free",
 		"//tbody/tr", PO_View.getTimeout());
-		assertEquals(elementos2.size() , 7);
+		assertEquals(6 , elementos2.size());
 	}
 	@Test
 	public void PR13() {
@@ -199,10 +286,10 @@ public class SDIWallapopApplicationTests {
 		elementos.get(0).click();
 		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/list')]");
 		elementos.get(0).click();
-	
+
 		List<WebElement> elementos2 = SeleniumUtils.EsperaCargaPagina(driver, "free",
 		"//tbody/tr", PO_View.getTimeout());
-		assertEquals(elementos2.size() , 7);
+		assertEquals(6 , elementos2.size());
 		PO_View.checkElement(driver, "text", "lucas@gmail.com");
 		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/delete/1')]");
 		elementos.get(0).click();
@@ -251,11 +338,12 @@ public class SDIWallapopApplicationTests {
 		PO_PrivateView.fillFormAddOffer(driver, "Prueba", "Descripción de prueba", "150");
 
 		PO_View.checkElement(driver, "text", "Mis ofertas");
-		PO_View.checkElement(driver, "id", "deleteButton17");
+		PO_View.checkElement(driver, "text", "Prueba");
 	}
 	@Test
 	public void PR17() {
-		/*
+	    assertTrue(false);
+		/*  FUNCTIONALITY MISSING
 		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
 		PO_LoginView.fillForm(driver, "lucas@gmail.com" , "123456" );
 		List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'addOffer')]/a");
@@ -291,6 +379,8 @@ public class SDIWallapopApplicationTests {
 		elementos = PO_View.checkElement(driver, "text", "Eliminar");
 		int temp = elementos.size();
 		elementos.get(0).click(); //Borramos el primero
+        PO_View.checkElement(driver, "text", "Mis ofertas");
+        elementos = PO_View.checkElement(driver, "text", "Eliminar");
 		assertTrue(elementos.size() == temp-1);
 	}
 	@Test
@@ -303,11 +393,16 @@ public class SDIWallapopApplicationTests {
 		PO_View.checkElement(driver, "text", "Mis ofertas");
 		elementos = PO_View.checkElement(driver, "text", "Eliminar");
 		int temp = elementos.size();
-		elementos.get(elementos.size()).click(); //Borramos el ultimo
+		elementos.get(elementos.size()-1).click(); //Borramos el ultimo
+        PO_View.checkElement(driver, "text", "Mis ofertas");
+        elementos = PO_View.checkElement(driver, "text", "Eliminar");
 		assertTrue(elementos.size() == temp-1);
 	}
-	
-//	
+	@Test
+    public void PR21() {
+	    
+    }
+//
 //	//PR06. Prueba del formulario de registro. DNI repetido en la BD, Nombre corto, .... pagination  pagination-centered, Error.signup.dni.length
 //	@Test
 //	public void PR06() {
@@ -324,14 +419,14 @@ public class SDIWallapopApplicationTests {
 //	PO_RegisterView.fillForm(driver, "99999990B", "Jose", "Perez", "77777",
 //	"77777");
 //	//COmprobamos el error de Nombre corto .
-//	
+//
 //	PO_RegisterView.checkKey(driver, "Error.signup.name.length",
 //	PO_Properties.getSPANISH() );
 //	//Rellenamos el formulario.
 //	PO_RegisterView.fillForm(driver, "99999990B", "Josefo", "Per", "77777",
 //	"77777");
 //	}
-//	
+//
 //	//PRN. Loguearse con exito desde el ROl de Usuario, 99999990D, 123456
 //	@Test
 //	public void PR07() {
@@ -395,7 +490,7 @@ public class SDIWallapopApplicationTests {
 //	//Ahora nos desconectamos
 //	PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
 //	}
-//	
+//
 //	//PR13. Loguearse como estudiante y ver los detalles de la nota con Descripcion = Nota A2.
 //	//P13. Ver la lista de Notas.
 //	@Test
@@ -418,7 +513,7 @@ public class SDIWallapopApplicationTests {
 //
 //	PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
 //	}
-//	
+//
 //	//P14. Loguearse como profesor y Agregar Nota A2.
 //	//P14. Esta prueba podría encapsularse mejor ...
 //	@Test
@@ -481,7 +576,7 @@ public class SDIWallapopApplicationTests {
 //	//Ahora nos desconectamos
 //	PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
 //}
-	
+
 	
 	
 }

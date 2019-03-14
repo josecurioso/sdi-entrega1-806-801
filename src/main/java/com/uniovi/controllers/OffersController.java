@@ -44,6 +44,7 @@ public class OffersController {
 			offers = offersService.getOffers(pageable);
 		}
 		model.addAttribute("offersList", offers.getContent());
+		model.addAttribute("error", false);
 		model.addAttribute("page", offers);
 
 		return "offer/list";
@@ -145,8 +146,9 @@ public class OffersController {
 			} else {
 				System.out.println("The offer is already sold"); // error offer sold
 			}
+			System.out.println("Sold");
 		} else {
-			// not enough money
+			System.out.println("Not enough money");
 		}
 		return "redirect:/offer/list";
 	}

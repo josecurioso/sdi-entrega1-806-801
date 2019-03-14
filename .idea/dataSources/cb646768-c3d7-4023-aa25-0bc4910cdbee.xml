@@ -2,7 +2,7 @@
 <dataSource name="HSQLDB (Local)">
   <database-model serializer="dbm" dbms="HSQLDB" family-id="HSQLDB" format-version="4.15">
     <root id="1">
-      <ServerVersion>2.4.0</ServerVersion>
+      <ServerVersion>2.4.1</ServerVersion>
     </root>
     <database id="2" parent="1" name="PUBLIC">
       <Current>1</Current>
