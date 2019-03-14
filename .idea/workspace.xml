@@ -5,16 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90b97fb4-9265-4d70-80b8-03a66bbf6624" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/errors/403.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/uniovi/tests/pageobject/PO_OfferListView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cb646768-c3d7-4023-aa25-0bc4910cdbee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cb646768-c3d7-4023-aa25-0bc4910cdbee.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniovi/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniovi/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniovi/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniovi/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniovi/repositories/OffersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniovi/repositories/OffersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniovi/services/InsertSampleDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniovi/services/InsertSampleDataService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/uniovi/services/OffersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniovi/services/OffersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniovi/services/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniovi/services/UsersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/messages_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_es.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/offer/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/offer/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/offer/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/offer/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/messages_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/messages_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/messages_es.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/controllers/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/controllers/UsersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/entities/Offer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/entities/Offer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/UsersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/UsersService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,13 +84,6 @@
         <item name="PUBLIC: database" type="5208c322:HsqlImplModel$Database" />
         <item name="PUBLIC: schema" type="d266ad14:HsqlImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="HSQLDB (Local)" type="feb32156:DbDataSourceImpl" />
-        <item name="PUBLIC: database" type="5208c322:HsqlImplModel$Database" />
-        <item name="PUBLIC: schema" type="d266ad14:HsqlImplModel$Schema" />
-        <item name="USER: table" type="a936b57e:HsqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -65,42 +91,88 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="DockManager">
-    <window id="1">
+    <window id="9">
       <content type="file-editors">
         <state>
           <leaf>
             <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/main/resources/templates/offer/list.html">
+              <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/services/OffersService.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="85">
-                    <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+                  <state relative-caret-position="1275">
+                    <caret line="90" column="5" lean-forward="true" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
                   </state>
                 </provider>
               </entry>
             </file>
             <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/main/resources/templates/offer/listbuys.html">
+              <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.4.RELEASE/spring-data-commons-2.1.4.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="102">
-                    <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+                  <state relative-caret-position="1288">
+                    <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
                   </state>
                 </provider>
               </entry>
             </file>
             <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/main/resources/templates/offer/listown.html">
+              <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/tests/pageobject/PO_OfferListView.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="204">
-                    <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+                  <state relative-caret-position="425">
+                    <caret line="25" selection-start-line="25" selection-end-line="25" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                    </folding>
                   </state>
                 </provider>
               </entry>
             </file>
             <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/validators/AddOfferValidator.java">
+              <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/services/InsertSampleDataService.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="204">
-                    <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+                  <state relative-caret-position="1180">
+                    <caret line="118" column="76" selection-start-line="118" selection-start-column="68" selection-end-line="118" selection-end-column="76" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/entities/User.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="493">
+                    <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+                    <folding>
+                      <element signature="e#750#757#0" expanded="true" />
+                      <element signature="e#859#866#0" expanded="true" />
+                      <element signature="e#1234#1235#0" expanded="true" />
+                      <element signature="e#1253#1254#0" expanded="true" />
+                      <element signature="e#2392#2393#0" expanded="true" />
+                      <element signature="e#2407#2408#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/repositories/OffersRepository.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="408">
+                    <caret line="32" column="46" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="46" />
+                    <folding>
+                      <element signature="e#0#57#0" expanded="true" />
+                      <element signature="e#0#58#1" expanded="true" />
+                      <element signature="e#0#97#1" expanded="true" />
+                      <element signature="e#0#113#0" expanded="true" />
+                      <element signature="e#0#114#1" expanded="true" />
+                      <element signature="e#0#113#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/entities/Offer.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="595">
+                    <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
                   </state>
                 </provider>
               </entry>
@@ -108,8 +180,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="867">
-                    <caret line="51" column="89" selection-start-line="51" selection-start-column="85" selection-end-line="51" selection-end-column="89" />
+                  <state relative-caret-position="1088">
+                    <caret line="64" column="70" lean-forward="true" selection-start-line="64" selection-start-column="70" selection-end-line="64" selection-end-column="70" />
                     <folding>
                       <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
                     </folding>
@@ -123,129 +195,119 @@
     </window>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.8638046">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="518">
-                  <caret line="440" column="77" lean-forward="true" selection-start-line="440" selection-start-column="77" selection-end-line="440" selection-end-column="77" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/validators/SignUpFormValidator.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="8" selection-start-column="8" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/services/OffersService.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="552">
-                  <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/UsersController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="416">
-                  <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/signup.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="22" column="67" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
-              <provider editor-type-id="ResourceBundle" />
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="41" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/HomeController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="93">
-                  <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/services/InsertSampleDataService.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/offer/add.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="595">
-                  <caret line="35" column="40" lean-forward="true" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="612">
-                  <caret line="179" column="36" selection-start-line="179" selection-start-column="36" selection-end-line="179" selection-end-column="36" />
-                  <folding>
-                    <element signature="method#getList#0;class#OffersController#0" />
-                    <element signature="method#getListForUser#0;class#OffersController#0" />
-                    <element signature="method#getBuysListForUser#0;class#OffersController#0" />
-                    <element signature="method#updateListForUser#0;class#OffersController#0" />
-                    <element signature="method#setOfferAdd#0;class#OffersController#0" />
-                    <element signature="method#getOfferAdd#0;class#OffersController#0" />
-                    <element signature="method#deleteOffer#0;class#OffersController#0" />
-                    <element signature="method#buyOffer#0;class#OffersController#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
+          <provider editor-type-id="ResourceBundle" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="806">
+              <caret line="97" column="42" selection-start-line="97" selection-start-column="42" selection-end-line="97" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="573">
+              <caret line="238" column="5" selection-start-line="238" selection-start-column="5" selection-end-line="238" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/signup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="50" column="71" selection-start-line="50" selection-start-column="71" selection-end-line="50" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="65" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/messages_en.properties">
+          <provider editor-type-id="ResourceBundle" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/messages_es.properties">
+          <provider editor-type-id="ResourceBundle" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1241">
+              <caret line="73" column="20" lean-forward="true" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="542">
+              <caret line="147" column="75" selection-start-line="147" selection-start-column="75" selection-end-line="147" selection-end-column="75" />
+              <folding>
+                <element signature="method#getList#0;class#OffersController#0" />
+                <element signature="method#getListForUser#0;class#OffersController#0" />
+                <element signature="method#getBuysListForUser#0;class#OffersController#0" />
+                <element signature="method#updateListForUser#0;class#OffersController#0" />
+                <element signature="method#getOfferAdd#0;class#OffersController#0" />
+                <element signature="method#buyOffer#0;class#OffersController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cb646768-c3d7-4023-aa25-0bc4910cdbee/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://cb646768-c3d7-4023-aa25-0bc4910cdbee/database/PUBLIC/schema/PUBLIC/table/OFFER">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -260,25 +322,37 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/UsersController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/user/list.html" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/cb646768-c3d7-4023-aa25-0bc4910cdbee/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/uniovi/validators/AddOfferValidator.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/offer/listbuys.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/offer/listown.html" />
         <option value="$PROJECT_DIR$/src/test/java/com/uniovi/tests/pageobject/PO_PrivateView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/uniovi/CustomConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/messages_es.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/messages_en.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/uniovi/services/OffersService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/offer/list.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/offer/add.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/uniovi/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/uniovi/services/UsersService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/errors/403.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/user/list.html" />
+        <option value="$PROJECT_DIR$/src/test/java/com/uniovi/tests/pageobject/PO_OfferListView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/uniovi/repositories/OffersRepository.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/cb646768-c3d7-4023-aa25-0bc4910cdbee/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/uniovi/entities/Offer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/uniovi/services/InsertSampleDataService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/HomeController.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/offer/add.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/UsersController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/uniovi/services/OffersService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/uniovi/entities/User.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/signup.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/messages_es.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/messages.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/messages_en.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java" />
       </list>
     </option>
   </component>
@@ -299,8 +373,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1225" />
-    <option name="width" value="2625" />
+    <option name="x" value="1278" />
+    <option name="width" value="2573" />
     <option name="height" value="2111" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -402,6 +476,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="errors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="fragments" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -412,6 +495,15 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="offer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
@@ -457,9 +549,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="uniovi" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="pageobject" type="462c0819:PsiDirectoryNode" />
+              <item name="Resource Bundle 'messages'" type="a6c14932:ResourceBundleNode" />
             </path>
           </expand>
           <select />
@@ -503,7 +593,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SDIWallapopApplicationTests.PR17">
+  <component name="RunManager" selected="Spring Boot.SDIWallapopApplication">
     <configuration name="SDIWallapopApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sdi-entrega1-806-801" />
       <extension name="coverage">
@@ -519,7 +609,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SDIWallapopApplicationTests.PR16" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SDIWallapopApplicationTests.PR13" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sdi-entrega1-806-801" />
       <extension name="coverage">
         <pattern>
@@ -529,13 +619,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.uniovi.tests" />
       <option name="MAIN_CLASS_NAME" value="com.uniovi.tests.SDIWallapopApplicationTests" />
-      <option name="METHOD_NAME" value="PR16" />
+      <option name="METHOD_NAME" value="PR13" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SDIWallapopApplicationTests.PR17" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SDIWallapopApplicationTests.PR14" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sdi-entrega1-806-801" />
       <extension name="coverage">
         <pattern>
@@ -545,13 +635,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.uniovi.tests" />
       <option name="MAIN_CLASS_NAME" value="com.uniovi.tests.SDIWallapopApplicationTests" />
-      <option name="METHOD_NAME" value="PR17" />
+      <option name="METHOD_NAME" value="PR14" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SDIWallapopApplicationTests.PR22" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SDIWallapopApplicationTests.PR15" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sdi-entrega1-806-801" />
       <extension name="coverage">
         <pattern>
@@ -561,13 +651,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.uniovi.tests" />
       <option name="MAIN_CLASS_NAME" value="com.uniovi.tests.SDIWallapopApplicationTests" />
-      <option name="METHOD_NAME" value="PR22" />
+      <option name="METHOD_NAME" value="PR15" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SDIWallapopApplicationTests.PR23" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SDIWallapopApplicationTests.PR19" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sdi-entrega1-806-801" />
       <extension name="coverage">
         <pattern>
@@ -577,7 +667,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.uniovi.tests" />
       <option name="MAIN_CLASS_NAME" value="com.uniovi.tests.SDIWallapopApplicationTests" />
-      <option name="METHOD_NAME" value="PR23" />
+      <option name="METHOD_NAME" value="PR19" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -592,11 +682,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SDIWallapopApplicationTests.PR17" />
-        <item itemvalue="JUnit.SDIWallapopApplicationTests.PR23" />
-        <item itemvalue="JUnit.SDIWallapopApplicationTests.PR22" />
         <item itemvalue="JUnit.SDIWallapopApplicationTests" />
-        <item itemvalue="JUnit.SDIWallapopApplicationTests.PR16" />
+        <item itemvalue="JUnit.SDIWallapopApplicationTests.PR19" />
+        <item itemvalue="JUnit.SDIWallapopApplicationTests.PR15" />
+        <item itemvalue="JUnit.SDIWallapopApplicationTests.PR13" />
+        <item itemvalue="JUnit.SDIWallapopApplicationTests.PR14" />
       </list>
     </recent_temporary>
   </component>
@@ -613,44 +703,44 @@
       <workItem from="1552495672072" duration="13986000" />
       <workItem from="1552525110544" duration="13000" />
       <workItem from="1552551368661" duration="5956000" />
-      <workItem from="1552564735548" duration="12795000" />
+      <workItem from="1552564735548" duration="28896000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SDIWallapopApplicationTests_PR22 - 2019.03.14 at 13h 28m 26s.xml">
-      <configuration name="SDIWallapopApplicationTests.PR22" configurationId="JUnit" />
+    <history-entry file="SDIWallapopApplicationTests_PR16 - 2019.03.14 at 20h 19m 45s.xml">
+      <configuration name="SDIWallapopApplicationTests.PR16" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SDIWallapopApplicationTests_PR22 - 2019.03.14 at 13h 29m 58s.xml">
-      <configuration name="SDIWallapopApplicationTests.PR22" configurationId="JUnit" />
+    <history-entry file="SDIWallapopApplicationTests_PR15 - 2019.03.14 at 20h 20m 28s.xml">
+      <configuration name="SDIWallapopApplicationTests.PR15" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SDIWallapopApplicationTests_PR22 - 2019.03.14 at 14h 07m 12s.xml">
-      <configuration name="SDIWallapopApplicationTests.PR22" configurationId="JUnit" />
+    <history-entry file="SDIWallapopApplicationTests_PR15 - 2019.03.14 at 20h 23m 37s.xml">
+      <configuration name="SDIWallapopApplicationTests.PR15" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SDIWallapopApplicationTests_PR23 - 2019.03.14 at 16h 40m 41s.xml">
-      <configuration name="SDIWallapopApplicationTests.PR23" configurationId="JUnit" />
+    <history-entry file="SDIWallapopApplicationTests_PR15 - 2019.03.14 at 20h 23m 45s.xml">
+      <configuration name="SDIWallapopApplicationTests.PR15" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SDIWallapopApplicationTests_PR22 - 2019.03.14 at 16h 42m 00s.xml">
-      <configuration name="SDIWallapopApplicationTests.PR22" configurationId="JUnit" />
+    <history-entry file="SDIWallapopApplicationTests_PR14 - 2019.03.14 at 20h 24m 59s.xml">
+      <configuration name="SDIWallapopApplicationTests.PR14" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SDIWallapopApplicationTests_PR22 - 2019.03.14 at 16h 42m 29s.xml">
-      <configuration name="SDIWallapopApplicationTests.PR22" configurationId="JUnit" />
+    <history-entry file="SDIWallapopApplicationTests_PR13 - 2019.03.14 at 20h 25m 36s.xml">
+      <configuration name="SDIWallapopApplicationTests.PR13" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SDIWallapopApplicationTests_PR23 - 2019.03.14 at 16h 43m 09s.xml">
-      <configuration name="SDIWallapopApplicationTests.PR23" configurationId="JUnit" />
+    <history-entry file="SDIWallapopApplicationTests_PR15 - 2019.03.14 at 20h 26m 06s.xml">
+      <configuration name="SDIWallapopApplicationTests.PR15" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SDIWallapopApplicationTests_PR23 - 2019.03.14 at 16h 48m 32s.xml">
-      <configuration name="SDIWallapopApplicationTests.PR23" configurationId="JUnit" />
+    <history-entry file="SDIWallapopApplicationTests - 2019.03.14 at 20h 46m 01s.xml">
+      <configuration name="SDIWallapopApplicationTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SDIWallapopApplicationTests_PR23 - 2019.03.14 at 16h 49m 48s.xml">
-      <configuration name="SDIWallapopApplicationTests.PR23" configurationId="JUnit" />
+    <history-entry file="SDIWallapopApplicationTests_PR19 - 2019.03.14 at 20h 47m 30s.xml">
+      <configuration name="SDIWallapopApplicationTests.PR19" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SDIWallapopApplicationTests_PR23 - 2019.03.14 at 16h 52m 36s.xml">
-      <configuration name="SDIWallapopApplicationTests.PR23" configurationId="JUnit" />
+    <history-entry file="SDIWallapopApplicationTests - 2019.03.14 at 23h 20m 41s.xml">
+      <configuration name="SDIWallapopApplicationTests" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32750000" />
+    <option name="totallyTimeSpent" value="48851000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -662,7 +752,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="817" y="0" width="1750" height="1407" extended-state="0" />
+    <frame x="852" y="0" width="1715" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Capture Tool" order="0" />
@@ -671,27 +761,27 @@
       <window_info id="Image Layers" order="3" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.1928994" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.2205438" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="0" weight="0.32969603" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32969603" />
       <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.32969603" />
+      <window_info anchor="bottom" id="Messages" order="4" weight="0.32941177" />
       <window_info anchor="bottom" id="Java Enterprise" order="5" weight="0.32969603" />
       <window_info anchor="bottom" id="Database Changes" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32969603" />
       <window_info anchor="bottom" id="Message" order="8" />
-      <window_info anchor="bottom" id="Database Console" order="9" weight="0.32719395" />
-      <window_info anchor="bottom" id="Find" order="10" weight="0.32941177" />
-      <window_info anchor="bottom" id="Run" order="11" visible="true" weight="0.36235294" />
-      <window_info anchor="bottom" id="Debug" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="Database Console" order="9" weight="0.3257989" />
+      <window_info anchor="bottom" id="Find" order="10" weight="0.3289166" />
+      <window_info anchor="bottom" id="Run" order="11" visible="true" weight="0.19529411" />
+      <window_info anchor="bottom" id="Debug" order="12" weight="0.3998441" />
       <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="15" weight="0.32969603" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Database" order="2" weight="0.36553672" />
+      <window_info anchor="right" id="Database" order="2" visible="true" weight="0.13534743" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Bean Validation" order="5" weight="0.32962227" />
@@ -741,150 +831,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/validator/hibernate-validator/6.0.14.Final/hibernate-validator-6.0.14.Final-sources.jar!/org/hibernate/validator/constraints/ISBN.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/validator/hibernate-validator/6.0.14.Final/hibernate-validator-6.0.14.Final-sources.jar!/org/hibernate/validator/constraints/URL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="90" column="18" selection-start-line="90" selection-start-column="18" selection-end-line="90" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE-sources.jar!/org/springframework/web/bind/annotation/RequestParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.14/tomcat-embed-core-9.0.14-sources.jar!/javax/servlet/http/HttpSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://cb646768-c3d7-4023-aa25-0bc4910cdbee/database/PUBLIC/schema/PUBLIC/table/OFFER" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/SDIWallapopApplication_Tests.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.2.RELEASE/spring-boot-autoconfigure-2.1.2.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="135" column="50" selection-start-line="135" selection-start-column="50" selection-end-line="135" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://SpringLocalModels/module=sdi806-lab-spring">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>SpringLocalModels</ID>
-          <OriginalElement>module=sdi806-lab-spring</OriginalElement>
-          <nodes>
-            <node x="" y="">module=sdi806-lab-spring</node>
-            <node x="" y="">fileset=sdi806-lab-spring/SDIWallapopApplication</node>
-            <node x="" y="">com.uniovi.SDIWallapopApplication</node>
-            <node x="" y="">com.uniovi.WebSecurityConfig</node>
-            <node x="" y="">org.springframework.security.config.annotation.web.configuration.EnableWebSecurity</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration.JdbcTemplateConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration.DataSourceTransactionManagerConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.EnableWebMvcConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration.CacheManagerJpaDependencyConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.aop.AopAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration.TomcatWebSocketConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration.DispatcherServletConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration.ThymeleafWebMvcConfiguration.ThymeleafViewResolverConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration.EnableTransactionManagementConfiguration.CglibAutoProxyConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration.TransactionTemplateConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration.TomcatWebServerFactoryCustomizerConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter.FaviconConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration.ParameterNamesModuleConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration.ThymeleafDefaultConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration.LoggingCodecConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration.JacksonObjectMapperConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration.DefaultTemplateResolverConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration</node>
-            <node x="" y="">com.uniovi.CustomConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration.ThymeleafWebMvcConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.XADataSourceAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration.EnableTransactionManagementConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.security.servlet.SecurityRequestMatcherProviderAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration.DispatcherServletRegistrationConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration.DefaultErrorViewResolverConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration.Jackson2ObjectMapperBuilderCustomizerConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration.ThymeleafJava8TimeDialect</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.security.servlet.SecurityRequestMatcherProviderAutoConfiguration.MvcRequestMatcherConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration.JacksonCodecConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration.NamedParameterJdbcTemplateConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.aop.AopAutoConfiguration.CglibAutoProxyConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration.JacksonObjectMapperBuilderConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration.StringHttpMessageConverterConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration</node>
-            <node x="" y="">org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration.PooledDataSourceConfiguration</node>
-            <node x="" y="">fileset=sdi806-lab-spring/SDIWallapopApplication MVC</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.1901913875598086" x="616.0" y="2080.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Show filesets as groups</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/SDIWallapopApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/tests/pageobject/PO_Properties.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -963,20 +909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cb646768-c3d7-4023-aa25-0bc4910cdbee/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/entities/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/pagination.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -991,43 +923,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://cb646768-c3d7-4023-aa25-0bc4910cdbee/database/PUBLIC/schema/PUBLIC/table/USER">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/messages_es.properties">
-      <provider editor-type-id="ResourceBundle" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="65" lean-forward="true" selection-start-line="23" selection-start-column="65" selection-end-line="28" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/messages_en.properties">
-      <provider editor-type-id="ResourceBundle" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/validators/AddOfferValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/UsersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1038,31 +937,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/offer/listown.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/offer/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/structural.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="593">
           <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/services/InsertSampleDataService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1073,30 +951,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="89" selection-start-line="51" selection-start-column="85" selection-end-line="51" selection-end-column="89" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/offer/add.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -1104,26 +958,238 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/signup.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/errors/403.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="67" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
+        <state relative-caret-position="238">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://cb646768-c3d7-4023-aa25-0bc4910cdbee/database/PUBLIC/schema/PUBLIC/table/OFFER">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://cb646768-c3d7-4023-aa25-0bc4910cdbee/database/PUBLIC/schema/PUBLIC/table/OFFER">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://cb646768-c3d7-4023-aa25-0bc4910cdbee/database/PUBLIC/schema/PUBLIC/table/OFFER">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/tests/pageobject/PO_OfferListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://cb646768-c3d7-4023-aa25-0bc4910cdbee/database/PUBLIC/schema/PUBLIC/table/OFFER">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/repositories/OffersRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="32" column="46" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+            <element signature="e#0#58#1" expanded="true" />
+            <element signature="e#0#97#1" expanded="true" />
+            <element signature="e#0#113#0" expanded="true" />
+            <element signature="e#0#114#1" expanded="true" />
+            <element signature="e#0#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://cb646768-c3d7-4023-aa25-0bc4910cdbee/database/PUBLIC/schema/PUBLIC/table/USER">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="47" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="38" column="41" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/UsersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="52" column="60" lean-forward="true" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
+          <folding>
+            <element signature="e#2071#2072#0" expanded="true" />
+            <element signature="e#2092#2093#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/entities/Offer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/services/InsertSampleDataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1180">
+          <caret line="118" column="76" selection-start-line="118" selection-start-column="68" selection-end-line="118" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/services/UsersService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1025#1026#0" expanded="true" />
+            <element signature="e#1147#1148#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/offer/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="77" column="40" lean-forward="true" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/offer/listown.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="67" column="38" lean-forward="true" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.4.RELEASE/spring-data-commons-2.1.4.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1288">
+          <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="147" column="75" selection-start-line="147" selection-start-column="75" selection-end-line="147" selection-end-column="75" />
+          <folding>
+            <element signature="method#getList#0;class#OffersController#0" />
+            <element signature="method#getListForUser#0;class#OffersController#0" />
+            <element signature="method#getBuysListForUser#0;class#OffersController#0" />
+            <element signature="method#updateListForUser#0;class#OffersController#0" />
+            <element signature="method#getOfferAdd#0;class#OffersController#0" />
+            <element signature="method#buyOffer#0;class#OffersController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cb646768-c3d7-4023-aa25-0bc4910cdbee/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/services/OffersService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+        <state relative-caret-position="1275">
+          <caret line="90" column="5" lean-forward="true" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java">
+    <entry file="das://cb646768-c3d7-4023-aa25-0bc4910cdbee/database/PUBLIC/schema/PUBLIC/table/OFFER">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="440" column="77" lean-forward="true" selection-start-line="440" selection-start-column="77" selection-end-line="440" selection-end-column="77" />
+        <state relative-caret-position="51">
+          <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="65" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="50" column="71" selection-start-line="50" selection-start-column="71" selection-end-line="50" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/entities/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#750#757#0" expanded="true" />
+            <element signature="e#859#866#0" expanded="true" />
+            <element signature="e#1234#1235#0" expanded="true" />
+            <element signature="e#1253#1254#0" expanded="true" />
+            <element signature="e#2392#2393#0" expanded="true" />
+            <element signature="e#2407#2408#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="64" column="70" lean-forward="true" selection-start-line="64" selection-start-column="70" selection-end-line="64" selection-end-column="70" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1131,8 +1197,34 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
       <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="41" />
+        <state relative-caret-position="806">
+          <caret line="97" column="42" selection-start-line="97" selection-start-column="42" selection-end-line="97" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/messages_es.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="73" column="20" lean-forward="true" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/messages_en.properties">
+      <provider editor-type-id="ResourceBundle" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="238" column="5" selection-start-line="238" selection-start-column="5" selection-end-line="238" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

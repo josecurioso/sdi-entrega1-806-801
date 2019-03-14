@@ -8,6 +8,8 @@ import org.springframework.data.repository.CrudRepository;
 import com.uniovi.entities.Offer;
 import com.uniovi.entities.User;
 
+import java.util.List;
+
 public interface OffersRepository extends CrudRepository<Offer, Long> {
 
 	Page<Offer> findAll(Pageable pageable);
@@ -26,4 +28,7 @@ public interface OffersRepository extends CrudRepository<Offer, Long> {
 
 	@Query("SELECT r FROM Offer r WHERE (LOWER(r.description) LIKE LOWER(?1) OR LOWER(r.name) LIKE LOWER(?1)) AND r.buyer = ?2")
 	Page<Offer> searchBuysByDescriptionNameAndUser(Pageable pageable, String searchText, User user);
+
+	@Query("SELECT r FROM Offer r WHERE (LOWER(r.description) LIKE LOWER(?1) OR LOWER(r.name) LIKE LOWER(?1)) AND r.user = ?2 ")
+	List<Offer> searchByDescriptionNameAndUser(String seachtext, User user);
 }

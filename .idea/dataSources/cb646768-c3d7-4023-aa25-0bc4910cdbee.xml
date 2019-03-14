@@ -49,20 +49,20 @@
       <Position>8</Position>
       <DataType>BIGINT|-5s</DataType>
     </column>
-    <index id="16" parent="6" name="SYS_IDX_SYS_PK_11244_11245">
+    <index id="16" parent="6" name="SYS_IDX_SYS_PK_37728_37729">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="17" parent="6" name="SYS_IDX_FKKETNOQDI3J8FVF9VPPHY84BIK_11254">
+    <index id="17" parent="6" name="SYS_IDX_FKKETNOQDI3J8FVF9VPPHY84BIK_37738">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>BUYER_ID</ColNames>
     </index>
-    <index id="18" parent="6" name="SYS_IDX_FKO0RDVEXLXMYAKCVW8B5AQIDLK_11257">
+    <index id="18" parent="6" name="SYS_IDX_FKO0RDVEXLXMYAKCVW8B5AQIDLK_37741">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>USER_ID</ColNames>
     </index>
-    <key id="19" parent="6" name="SYS_PK_11244">
+    <key id="19" parent="6" name="SYS_PK_37728">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
@@ -70,13 +70,13 @@
     <foreign-key id="20" parent="6" name="FKKETNOQDI3J8FVF9VPPHY84BIK">
       <ColNames>BUYER_ID</ColNames>
       <RefTableName>USER</RefTableName>
-      <RefKeyName>SYS_PK_11248</RefKeyName>
+      <RefKeyName>SYS_PK_37732</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
     <foreign-key id="21" parent="6" name="FKO0RDVEXLXMYAKCVW8B5AQIDLK">
       <ColNames>USER_ID</ColNames>
       <RefTableName>USER</RefTableName>
-      <RefKeyName>SYS_PK_11248</RefKeyName>
+      <RefKeyName>SYS_PK_37732</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
     <column id="22" parent="7" name="ID">
@@ -108,22 +108,22 @@
       <Position>7</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <index id="29" parent="7" name="SYS_IDX_SYS_PK_11248_11249">
+    <index id="29" parent="7" name="SYS_IDX_SYS_PK_37732_37733">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="30" parent="7" name="SYS_IDX_UK_OB8KQYQQGMEFL0ACO34AKDTPE_11251">
+    <index id="30" parent="7" name="SYS_IDX_UK_OB8KQYQQGMEFL0ACO34AKDTPE_37735">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>EMAIL</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="31" parent="7" name="SYS_PK_11248">
+    <key id="31" parent="7" name="SYS_PK_37732">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="32" parent="7" name="SYS_IDX_UK_OB8KQYQQGMEFL0ACO34AKDTPE_11251">
+    <key id="32" parent="7" name="SYS_IDX_UK_OB8KQYQQGMEFL0ACO34AKDTPE_37735">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>EMAIL</ColNames>
     </key>

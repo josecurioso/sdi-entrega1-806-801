@@ -128,9 +128,9 @@ public class OffersController {
 
 		addOfferValidator.validate(offer, result);
 		if (result.hasErrors()) {
-			model.addAttribute("user", user);
 			return "offer/add";
 		}
+		model.addAttribute("user", user);
 		return "redirect:/user/offer/list";
 	}
 

@@ -28,21 +28,28 @@ public class HomeController {
 	
 	@RequestMapping("/")
 	public String index(Model model, Principal principal) {
-
+		User user;
 		try{
 			String email = principal.getName(); // Es el email
-			User user = usersService.getUserByEmail(email);
-			model.addAttribute("user", user);
+			user = usersService.getUserByEmail(email);
 		}
-		catch (Exception e){}
+		catch (Exception e){
+			user = new User("", "", "");
+		}
+		model.addAttribute("user", user);
 		return "index";
 	}
 
 	@RequestMapping(value = { "/home" }, method = RequestMethod.GET)
 	public String home(Model model, Pageable pageable, Principal principal) {
-
-		String email = principal.getName(); // Es el email
-		User user = usersService.getUserByEmail(email);
+		User user;
+		try{
+			String email = principal.getName(); // Es el email
+			user = usersService.getUserByEmail(email);
+		}
+		catch (Exception e){
+			user = new User("", "", "");
+		}
 		Page<Offer> offers = new PageImpl<Offer>(new LinkedList<Offer>());
 		offers = offersService.getOffers(pageable);
 		model.addAttribute("offersList", offers.getContent());
