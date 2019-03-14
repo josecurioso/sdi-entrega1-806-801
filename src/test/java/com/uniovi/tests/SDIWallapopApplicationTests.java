@@ -17,6 +17,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.server.handler.GetPageSource;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,6 +25,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.uniovi.tests.pageobject.PO_LoginView;
 import com.uniovi.tests.pageobject.PO_NavView;
+import com.uniovi.tests.pageobject.PO_OfferListView;
 import com.uniovi.tests.pageobject.PO_Properties;
 import com.uniovi.tests.pageobject.PO_RegisterView;
 import com.uniovi.tests.pageobject.PO_View;
@@ -85,28 +87,32 @@ public class SDIWallapopApplicationTests {
 	public void PR01() {
 		PO_NavView.clickOption(driver, "signup", "class", "btn btn-primary");
 		PO_RegisterView.fillForm(driver, "UO257809@uniovi.es", "Luis", "pastrana", "77777", "77777");
-		PO_View.checkElement(driver, "text", "Bienvenido a WallapopSDI");
+		//PO_View.checkElement(driver, "text", "Bienvenido a WallapopSDI");
+		PO_LoginView.checkKey(driver, "login.message", PO_Properties.getSPANISH());
 	}
 
 	@Test
 	public void PR02() {
 		PO_NavView.clickOption(driver, "signup", "class", "btn btn-primary");
 		PO_RegisterView.fillForm(driver, "", "", "", "77777", "77777");
-		PO_View.checkElement(driver, "text", "Registrate");
+	//	PO_View.checkElement(driver, "text", "Registrate");
+		PO_RegisterView.checkKey(driver, "signup.message", PO_Properties.getSPANISH());
 	}
 
 	@Test
 	public void PR03() {
 		PO_NavView.clickOption(driver, "signup", "class", "btn btn-primary");
 		PO_RegisterView.fillForm(driver, "UO257809@uniovi.es", "Luis", "pastrana", "77777", "777773434");
-		PO_View.checkElement(driver, "text", "Registrate");
+		//PO_View.checkElement(driver, "text", "Registrate");
+		PO_RegisterView.checkKey(driver, "signup.message", PO_Properties.getSPANISH());
 	}
 
 	@Test
 	public void PR04() {
 		PO_NavView.clickOption(driver, "signup", "class", "btn btn-primary");
 		PO_RegisterView.fillForm(driver, "marta@gmail.com", "marta", "pastrana", "77777", "77777");
-		PO_View.checkElement(driver, "text", "Registrate");
+		//PO_View.checkElement(driver, "text", "Registrate");
+		PO_RegisterView.checkKey(driver, "signup.message", PO_Properties.getSPANISH());
 	}
 
 	@Test
@@ -151,7 +157,8 @@ public class SDIWallapopApplicationTests {
 		PO_LoginView.fillForm(driver, "marta@gmail.com", "123456");
 		PO_View.checkElement(driver, "id", "offers-menu");
 		PO_NavView.clickOption(driver, "logout", "class", "btn btn-primary");
-		PO_View.checkElement(driver, "text", "Identificate");
+		//PO_View.checkElement(driver, "text", "Identificate");
+		PO_LoginView.checkKey(driver, "login.message", PO_Properties.getSPANISH());
 	}
 
 	@Test
@@ -220,6 +227,7 @@ public class SDIWallapopApplicationTests {
 	public void PR15() {
 		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
 		PO_LoginView.fillForm(driver, "admin@gmail.com", "admin");
+		//probar PO_View clickOption
 		List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'users-menu')]/a");
 		elementos.get(0).click();
 		elementos = PO_View.checkElement(driver, "free", "//a[contains(@href, 'user/list')]");
@@ -235,10 +243,117 @@ public class SDIWallapopApplicationTests {
 
 		List<WebElement> listPage = PO_View.checkElement(driver, "free", "//*[contains(@id,'btnDelete')]");
 		listPage.get(0).click();
-		assertTrue(usersList.size() == 5);// esto seria 1 menos
+		assertTrue(usersList.size() == 5);// esto seria  3 menos
 
 	}
 
+	@Test
+	public void PR23() {
+
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "marta@gmail.com", "123456");
+		PO_NavView.clickOption(driver, "/offer/list", "id", "updateButton"); //reconoce el boton actualizar
+		double moneyBefore=PO_OfferListView.getUserMoney(driver);
+		PO_OfferListView.buyItem(driver,2);
+		double moneyAfter=PO_OfferListView.getUserMoney(driver);
+		assertEquals(moneyBefore, moneyAfter-20,0.1); //suponemos q cuesta 20 la oferta
+
+	}
+	@Test
+	public void PR24() {
+
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "marta@gmail.com", "123456");
+		PO_NavView.clickOption(driver, "offer/list", "id", "updateButton"); //reconoce el boton actualizar
+		PO_OfferListView.buyItem(driver,2);
+		double moneyAfter=PO_OfferListView.getUserMoney(driver);
+		assertEquals(moneyAfter, 0,0.1); 
+
+	}
+	
+	@Test
+	public void PR25() {
+
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "marta@gmail.com", "123456");
+		PO_NavView.clickOption(driver, "offer/list", "id", "updateButton"); //reconoce el boton actualizar
+		double moneyBefore=PO_OfferListView.getUserMoney(driver);
+		PO_OfferListView.buyItem(driver,2);
+		double moneyAfter=PO_OfferListView.getUserMoney(driver);
+		assertEquals(moneyBefore, moneyAfter,0.1);
+		PO_OfferListView.checkElement(driver, "text", "Saldo no suficiente"); //cambiar esto a id mejor
+
+	}
+	
+	@Test
+	public void PR26() {
+
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "marta@gmail.com", "123456");
+		PO_NavView.clickOption(driver, "user/offer/list", "id", "updateButton"); //reconoce el boton actualizar
+		List<WebElement> offerList = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
+				PO_View.getTimeout());
+		assertTrue(offerList.size() == 2); //igual falla el num de ofertas
+
+
+	}
+	@Test
+	public void PR27() {
+
+		//Pag. Principal
+		PO_NavView.changeIdiom(driver, "Spanish");
+		PO_NavView.checkKey(driver, "welcome.message",PO_Properties.getSPANISH() );
+		PO_NavView.checkKey(driver, "signup.message",PO_Properties.getSPANISH() );
+		PO_NavView.changeIdiom(driver, "English");
+		PO_NavView.checkKey(driver, "welcome.message",PO_Properties.getENGLISH() );
+		PO_NavView.checkKey(driver, "signup.message",PO_Properties.getENGLISH() );
+		
+		//opciones user
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "marta@gmail.com", "123456");
+		
+		PO_NavView.changeIdiom(driver, "Spanish");
+		PO_NavView.checkKey(driver, "list.offers.user",PO_Properties.getSPANISH() );
+		PO_NavView.checkKey(driver, "list.buys.user",PO_Properties.getSPANISH() );
+		
+		PO_NavView.changeIdiom(driver, "English");
+		PO_NavView.checkKey(driver, "list.offers.user",PO_Properties.getENGLISH() );
+		PO_NavView.checkKey(driver, "list.buys.user",PO_Properties.getENGLISH() );
+		
+		PO_NavView.clickOption(driver, "user/offer/add", "class", "btn btn-primary");
+		//ADD OFFER
+		
+		PO_NavView.changeIdiom(driver, "Spanish");
+		PO_NavView.checkKey(driver, "add.offers",PO_Properties.getSPANISH() );
+		PO_NavView.checkKey(driver, "name",PO_Properties.getSPANISH() );
+		
+		PO_NavView.changeIdiom(driver, "English");
+		PO_NavView.checkKey(driver, "add.offers",PO_Properties.getENGLISH() );
+		PO_NavView.checkKey(driver, "name",PO_Properties.getENGLISH() );
+		
+		
+		PO_NavView.clickOption(driver, "logout", "class", "btn btn-primary");
+
+		//admin list user
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "admin@gmail.com", "admin");
+		
+		PO_NavView.changeIdiom(driver, "Spanish");
+		PO_NavView.checkKey(driver, "list.users",PO_Properties.getSPANISH() );
+		PO_NavView.changeIdiom(driver, "English");
+		PO_NavView.checkKey(driver, "list.users",PO_Properties.getENGLISH() );
+		
+		PO_NavView.clickOption(driver, "/user/list", "id", "btnDelete");
+		
+		PO_NavView.changeIdiom(driver, "Spanish");
+		PO_NavView.checkKey(driver, "users.system.registered",PO_Properties.getSPANISH() );
+		PO_NavView.checkKey(driver, "users",PO_Properties.getSPANISH() );
+		PO_NavView.changeIdiom(driver, "English");
+		PO_NavView.checkKey(driver, "users.system.registered",PO_Properties.getENGLISH() );
+		PO_NavView.checkKey(driver, "users",PO_Properties.getENGLISH() );
+		
+		
+	}
 	@Test
 	public void PR28() {
 
@@ -263,95 +378,7 @@ public class SDIWallapopApplicationTests {
 		driver.navigate().to(URL + "/user/list");
 	}
 
-//	
-//	//PR06. Prueba del formulario de registro. DNI repetido en la BD, Nombre corto, .... pagination  pagination-centered, Error.signup.dni.length
-//	@Test
-//	public void PR06() {
-//	//Vamos al formulario de registro
-//	PO_NavView.clickOption(driver, "signup", "class", "btn btn-primary");
-//	//Rellenamos el formulario.
-//	PO_RegisterView.fillForm(driver, "99999990A", "Josefo", "Perez", "77777",
-//	"77777");
-//	PO_View.getP();
-//	//COmprobamos el error de DNI repetido.
-//	PO_RegisterView.checkKey(driver, "Error.signup.dni.duplicate",
-//	PO_Properties.getSPANISH() );
-//	//Rellenamos el formulario.
-//	PO_RegisterView.fillForm(driver, "99999990B", "Jose", "Perez", "77777",
-//	"77777");
-//	//COmprobamos el error de Nombre corto .
-//	
-//	PO_RegisterView.checkKey(driver, "Error.signup.name.length",
-//	PO_Properties.getSPANISH() );
-//	//Rellenamos el formulario.
-//	PO_RegisterView.fillForm(driver, "99999990B", "Josefo", "Per", "77777",
-//	"77777");
-//	}
-//	
-//	//PRN. Loguearse con exito desde el ROl de Usuario, 99999990D, 123456
-//	@Test
-//	public void PR07() {
-//	//Vamos al formulario de logueo.
-//	PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
-//	//Rellenamos el formulario
-//	PO_LoginView.fillForm(driver, "99999990A" , "123456" );
-//	//COmprobamos que entramos en la pagina privada de Alumno
-//	PO_View.checkElement(driver, "text", "Notas del usuario");
-//	}
-//	@Test
-//	public void PR08() {
-//	//Vamos al formulario de logueo.
-//	PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
-//	//Rellenamos el formulario
-//	PO_LoginView.fillForm(driver, "99999993D" , "123456" );
-//	//COmprobamos que entramos en la pagina privada de Alumno
-//	PO_View.checkElement(driver, "text", "Notas del usuario");
-//	}
-//	@Test
-//	public void PR09() {
-//	//Vamos al formulario de logueo.
-//	PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
-//	//Rellenamos el formulario
-//	PO_LoginView.fillForm(driver, "99999988F" , "123456" );
-//	//COmprobamos que entramos en la pagina privada de Alumno
-//	PO_View.checkElement(driver, "text", "Notas del usuario");
-//	}
-//	@Test
-//	public void PR10() {
-//	//Vamos al formulario de logueo.
-//	PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
-//	//Rellenamos el formulario
-//	PO_LoginView.fillForm(driver, "99999990A" , "12" );
-//	//COmprobamos que entramos en la pagina privada de Alumno
-//	PO_View.checkElement(driver, "text", "Identifícate");
-//	}
-//	@Test
-//	public void PR11() {
-//	//Vamos al formulario de logueo.
-//	PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
-//	//Rellenamos el formulario
-//	PO_LoginView.fillForm(driver, "99999990A" , "123456" );
-//	//COmprobamos que entramos en la pagina privada de Alumno
-//	PO_View.checkElement(driver, "text", "Notas del usuario");
-//	PO_NavView.clickOption(driver, "logout", "class", "btn btn-primary");
-//	PO_View.checkElement(driver, "text", "Identifícate");
-//	}
-//	@Test
-//	public void PR12() {
-//	//Vamos al formulario de logueo.
-//	PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
-//	//Rellenamos el formulario
-//	PO_LoginView.fillForm(driver, "99999990A" , "123456" );
-//	//COmprobamos que entramos en la pagina privada de Alumno
-//	PO_View.checkElement(driver, "text", "Notas del usuario");
-//	//Contamos el número de filas de notas
-//	List<WebElement> elementos = SeleniumUtils.EsperaCargaPagina(driver, "free",
-//	"//tbody/tr", PO_View.getTimeout());
-//	assertTrue(elementos.size() == 4);
-//	//Ahora nos desconectamos
-//	PO_PrivateView.clickOption(driver, "logout", "text", "Identifícate");
-//	}
-//	
+
 //	//PR13. Loguearse como estudiante y ver los detalles de la nota con Descripcion = Nota A2.
 //	//P13. Ver la lista de Notas.
 //	@Test

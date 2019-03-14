@@ -1,5 +1,6 @@
 package com.uniovi.tests.pageobject;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
@@ -27,7 +28,7 @@ public class PO_NavView extends PO_View {
 		// Registro.
 		List<WebElement> elementos = SeleniumUtils.EsperaCargaPagina(driver, "@href", textOption, getTimeout());
 		// Tiene que haber un sólo elemento.
-		assertTrue(elementos.size() == 1);
+		assertEquals(elementos.size(),1);
 		// Ahora lo clickamos
 		elementos.get(0).click();
 		// Esperamos a que sea visible un elemento concreto
