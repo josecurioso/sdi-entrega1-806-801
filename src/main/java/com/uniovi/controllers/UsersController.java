@@ -66,6 +66,11 @@ public class UsersController {
 		return "login";
 	}
 
+	@RequestMapping(value = "/errors/403", method = RequestMethod.GET)
+	public String error403(Model model, String error) {
+		return "/errors/403";
+	}
+
 	@RequestMapping(value = "/signup", method = RequestMethod.GET)
 	public String signup(Model model) {
 		model.addAttribute("user", new User());

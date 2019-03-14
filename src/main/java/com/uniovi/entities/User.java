@@ -1,14 +1,9 @@
 package com.uniovi.entities;
 
+import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Transient;
+import javax.persistence.*;
 
 @Entity
 public class User {
@@ -26,18 +21,18 @@ public class User {
 	@Transient // propiedad que no se almacena e la tabla.
 	private String passwordConfirm;
 
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-	private Set<Offer> offers;
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private Set<Offer> offers = new HashSet<Offer>();
 
-	@OneToMany(mappedBy = "buyer", cascade = CascadeType.ALL)
-	private Set<Offer> buys;
+	@OneToMany(mappedBy = "buyer", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private Set<Offer> buys = new HashSet<Offer>();
 
 	public User(String email, String name, String lastName) {
 		super();
 		this.name = name;
 		this.lastName = lastName;
 		setEmail(email);
-		setMoney(100);
+		this.money = 100.0;
 		// setRole("ROLE_USER");
 	}
 
@@ -127,6 +122,10 @@ public class User {
 
 	public void setBuys(Set<Offer> buys) {
 		this.buys = buys;
+	}
+
+	public void addBuy(Offer o){
+		this.buys.add(o);
 	}
 
 }

@@ -91,19 +91,21 @@ public class OffersService {
 	}
 
 	public void deleteOffer(Long id) {
+		System.out.println("deleteando");
 		offersRepository.deleteById(id);
 	}
 
 	public void buyOffer(Offer offer, User user) {
-		user.setMoney(user.getMoney() - offer.getPrice());
 		offer.setSold(true);
 		offer.setBuyer(user);
-		user.getBuys().add(offer);
-		offer.getBuyer().setMoney(offer.getBuyer().getMoney() + offer.getPrice());
-
-		usersRepository.save(offer.getBuyer());
 		offersRepository.save(offer);
+
+		user.getBuys().add(offer);
+		user.setMoney(user.getMoney() - offer.getPrice());
 		usersRepository.save(user);
+
+		offer.getUser().setMoney(offer.getBuyer().getMoney() + offer.getPrice());
+		usersRepository.save(offer.getUser());
 	}
 
 }

@@ -26,13 +26,13 @@
 				
 				 -->
 				
-				<li id="offers-menu" sec:authorize="hasRole('ROLE_USER')"><a	href="/user/offer/add" th:text="#{add.offers}"></a></li>
-				<li><a href="/offer/list" th:text="#{list.offers}"></a></li>
-				<li sec:authorize="hasRole('ROLE_USER')"><a href="/user/offer/list" th:text="#{list.offers.user}"></a></li>
-				<li sec:authorize="hasRole('ROLE_USER')"><a href="/user/buys/list" th:text="#{list.buys.user}"></a></li>
+				<li id="addOffer" sec:authorize="hasRole('ROLE_USER')"><a	href="/user/offer/add" th:text="#{add.offers}"></a></li>
+				<li id="listOffers"><a href="/offer/list" th:text="#{list.offers}"></a></li>
+				<li id="listMyOffers" sec:authorize="hasRole('ROLE_USER')"><a href="/user/offer/list" th:text="#{list.offers.user}"></a></li>
+				<li id="listMyBuys" sec:authorize="hasRole('ROLE_USER')"><a href="/user/buys/list" th:text="#{list.buys.user}"></a></li>
 
 
-				<li id="users-menu"><a href="/user/list" th:text="#{list.users}">Ver
+				<li id="users-menu" sec:authorize="hasRole('ROLE_ADMIN')"><a href="/user/list" th:text="#{list.users}">Ver
 					Usuarios</a></li>
 
 				<!--
@@ -48,6 +48,11 @@
 				-->
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
+				<li id="txtSaldo" sec:authorize="hasRole('ROLE_USER')">
+					<a style="pointer-events: none; cursor: default;" href="">Saldo <span th:if="${user != null}" th:text="${user.money}">hola</span></a>
+				</li>
+
+
 				<li class="dropdown"><a id="btnLanguage" href=" #"
 					class="dropdown-toggle" data-toggle="dropdown" role="button"
 					aria-haspopup="true" aria-expanded="false"> <span

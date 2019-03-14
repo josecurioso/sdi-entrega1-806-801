@@ -8,20 +8,38 @@ import org.openqa.selenium.support.ui.Select;
 import com.uniovi.utils.SeleniumUtils;
 
 public class PO_PrivateView extends PO_NavView {
-	static public void fillFormAddMark(WebDriver driver, int userOrder, String descriptionp, String scorep) {
+	static public void fillFormAddOffer(WebDriver driver, String namep, String desriptionp, String pricep) {
+
 		// Esperamos 5 segundo a que carge el DOM porque en algunos equipos falla
 		SeleniumUtils.esperarSegundos(driver, 5);
-		// Seleccionamos el alumnos userOrder
-		new Select(driver.findElement(By.id("user"))).selectByIndex(userOrder);
+
 		// Rellenemos el campo de descripción
+		WebElement name = driver.findElement(By.name("name"));
+		name.clear();
+		name.sendKeys(namep);
+
 		WebElement description = driver.findElement(By.name("description"));
 		description.clear();
-		description.sendKeys(descriptionp);
-		WebElement score = driver.findElement(By.name("score"));
-		score.click();
-		score.clear();
-		score.sendKeys(scorep);
+		description.sendKeys(desriptionp);
+
+		WebElement price = driver.findElement(By.name("price"));
+		price.clear();
+		price.sendKeys(pricep);
+
 		By boton = By.className("btn");
+		driver.findElement(boton).click();
+	}
+	static public void fillFormSearchBox(WebDriver driver, String contentp) {
+
+		// Esperamos 5 segundo a que carge el DOM porque en algunos equipos falla
+		SeleniumUtils.esperarSegundos(driver, 5);
+
+		// Rellenemos el campo de descripción
+		WebElement searchText = driver.findElement(By.name("searchText"));
+		searchText.clear();
+		searchText.sendKeys(contentp);
+
+		By boton = By.id("searchBtn");
 		driver.findElement(boton).click();
 	}
 }

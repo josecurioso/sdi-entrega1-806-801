@@ -3,6 +3,7 @@ package com.uniovi.controllers;
 import java.security.Principal;
 import java.util.LinkedList;
 
+import com.uniovi.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -26,16 +27,34 @@ public class HomeController {
 	private OffersService offersService;
 	
 	@RequestMapping("/")
-	public String index() {
+	public String index(Model model, Principal principal) {
+		User user;
+		try{
+			String email = principal.getName(); // Es el email
+			user = usersService.getUserByEmail(email);
+		}
+		catch (Exception e){
+			user = new User("", "", "");
+		}
+		model.addAttribute("user", user);
 		return "index";
 	}
 
 	@RequestMapping(value = { "/home" }, method = RequestMethod.GET)
 	public String home(Model model, Pageable pageable, Principal principal) {
+		User user;
+		try{
+			String email = principal.getName(); // Es el email
+			user = usersService.getUserByEmail(email);
+		}
+		catch (Exception e){
+			user = new User("", "", "");
+		}
 		Page<Offer> offers = new PageImpl<Offer>(new LinkedList<Offer>());
 		offers = offersService.getOffers(pageable);
 		model.addAttribute("offersList", offers.getContent());
 		model.addAttribute("page", offers);
+		model.addAttribute("user", user);
 		return "/home";
 	}
 }
