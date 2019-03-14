@@ -51,12 +51,12 @@ public class SDIWallapopApplicationTests {
 	// automáticas)):
 
 	// Jose
-//	static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
-//	static String Geckdriver024 = "D:\\Escritorio\\geckodriver024win64.exe";
+	static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
+	static String Geckdriver024 = "D:\\Escritorio\\geckodriver024win64.exe";
 
     // Jose portatil
-	static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
-	static String Geckdriver024 = "D:\\Escritorio\\PL-SDI-Sesión5-material\\geckodriver024win64.exe";
+//	static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
+//	static String Geckdriver024 = "D:\\Escritorio\\PL-SDI-Sesión5-material\\geckodriver024win64.exe";
 
 
 	// Común a Windows y a MACOSX
@@ -399,9 +399,28 @@ public class SDIWallapopApplicationTests {
 		assertTrue(elementos.size() == temp-1);
 	}
 	@Test
-    public void PR21() {
-	    
-    }
+	public void PR21() {
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "lucas@gmail.com" , "123456" );
+		List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'listOffers')]/a");
+		elementos.get(0).click();
+
+		PO_View.checkElement(driver, "text", "Ofertas");
+		PO_PrivateView.fillFormSearchBox(driver, "");
+		elementos = PO_View.checkElement(driver, "free", "//td");
+		assertTrue(elementos.size() == 5);
+	}
+	@Test
+	public void PR22() {
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "lucas@gmail.com" , "123456" );
+		List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'listOffers')]/a");
+		elementos.get(0).click();
+
+		PO_View.checkElement(driver, "text", "Ofertas");
+		PO_PrivateView.fillFormSearchBox(driver, "supercalifragilisticoespialidoso");
+		(new WebDriverWait(driver, 200)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//td")));
+	}
 //
 //	//PR06. Prueba del formulario de registro. DNI repetido en la BD, Nombre corto, .... pagination  pagination-centered, Error.signup.dni.length
 //	@Test

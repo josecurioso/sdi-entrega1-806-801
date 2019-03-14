@@ -7,10 +7,10 @@
 		<h2 th:text="#{offers}">Ofertas</h2>
 		<form class="navbar-form" action="/offer/list">
 			<div class="form-group">
-				<input name="searchText" type="text" class="form-control" size="50"
+				<input id="searchBox" name="searchText" type="text" class="form-control" size="50"
 					th:placeholder="#{search.placeholder}">
 			</div>
-			<button type="submit" class="btn btn-default" th:text="#{search}">Buscar</button>
+			<button id="searchBtn" type="submit" class="btn btn-default" th:text="#{search}">Buscar</button>
 		</form>
 
 		<p th:text="#{offers.list.description}">Las ofertas que has hecho son las siguientes:</p>
@@ -61,11 +61,16 @@
 								 $( "#buyButton[[${offer.id}]]" ).click(function() {
 								 $.get( "/offer/buy/[[${offer.id}]]", function( data ) {
 								 	var numberPage = [[${param.page}]];
-								 	var urlUpdate = '/offer/list/update';
+									 var urlUpdate = '/offer/list/update';
 									 if ( numberPage != null ){
-									 	urlUpdate += "?page="+numberPage[0];
+										 urlUpdate += "?page="+numberPage[0];
 									 }
-									$("#tableOffers").load(urlUpdate);
+									 $("#tableOffers").load(urlUpdate);
+									 var urlUpdateCounter = '/updatecounter';
+									 $("#txtSaldo").load(urlUpdateCounter);
+
+
+
 								 });
 								 });
 								 /*]]>*/

@@ -7,10 +7,10 @@
 		<h2 th:text="#{mybuys}">Mis Ofertas</h2>
 		<form class="navbar-form" action="/user/buys/list">
 			<div class="form-group">
-				<input name="searchText" type="text" class="form-control" size="50"
+				<input id="searchBox" name="searchText" type="text" class="form-control" size="50"
 					th:placeholder="#{search.placeholder}">
 			</div>
-			<button type="submit" class="btn btn-default" th:text="#{search}">Buscar</button>
+			<button id="searchBtn" type="submit" class="btn btn-default" th:text="#{search}">Buscar</button>
 		</form>
 
 		<p th:text="#{buys.list.description}">Las ofertas que has hecho son las siguientes:</p>

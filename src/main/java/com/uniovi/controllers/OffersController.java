@@ -37,6 +37,8 @@ public class OffersController {
 	@RequestMapping("/offer/list") // List all the offers in the system
 	public String getList(Model model, Pageable pageable, Principal principal,
 			@RequestParam(value = "", required = false) String searchText) {
+		String email = principal.getName(); // Es el email
+		User user = usersService.getUserByEmail(email);
 		Page<Offer> offers = new PageImpl<Offer>(new LinkedList<Offer>());
 		if (searchText != null && !searchText.isEmpty()) {
 			offers = offersService.searchOffersByDescriptionAndName(pageable, searchText);
@@ -44,8 +46,8 @@ public class OffersController {
 			offers = offersService.getOffers(pageable);
 		}
 		model.addAttribute("offersList", offers.getContent());
-		model.addAttribute("error", false);
 		model.addAttribute("page", offers);
+		model.addAttribute("user", user);
 
 		return "offer/list";
 	}
@@ -53,7 +55,6 @@ public class OffersController {
 	@RequestMapping("/user/offer/list") // List all the offers for a user
 	public String getListForUser(Model model, Pageable pageable, Principal principal,
 			@RequestParam(value = "", required = false) String searchText) {
-
 		String email = principal.getName(); // Es el email
 		User user = usersService.getUserByEmail(email);
 		Page<Offer> offers = new PageImpl<Offer>(new LinkedList<Offer>());
@@ -64,6 +65,7 @@ public class OffersController {
 		}
 		model.addAttribute("offersList", offers.getContent());
 		model.addAttribute("page", offers);
+		model.addAttribute("user", user);
 
 		return "offer/listown";
 	}
@@ -82,6 +84,7 @@ public class OffersController {
 		}
 		model.addAttribute("offersList", offers.getContent());
 		model.addAttribute("page", offers);
+		model.addAttribute("user", user);
 
 		return "offer/listbuys";
 	}
@@ -120,8 +123,11 @@ public class OffersController {
 	}
 
 	@RequestMapping(value = "/user/offer/add") // Returns the page where you add an offer
-	public String getOfferAdd(Model model) {
+	public String getOfferAdd(Model model, Principal principal) {
+		String email = principal.getName(); // Es el email
+		User user = usersService.getUserByEmail(email);
 		model.addAttribute("usersList", usersService.getUsers());
+		model.addAttribute("user", user);
 		return "offer/add";
 	}
 
@@ -151,5 +157,10 @@ public class OffersController {
 			System.out.println("Not enough money");
 		}
 		return "redirect:/offer/list";
+	}
+
+	@RequestMapping("/updatecounter")
+	public String updaetCounter(){
+		return "offer/list :: txtSaldo";
 	}
 }

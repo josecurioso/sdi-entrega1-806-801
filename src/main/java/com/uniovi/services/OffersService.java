@@ -95,15 +95,21 @@ public class OffersService {
 	}
 
 	public void buyOffer(Offer offer, User user) {
-		user.setMoney(user.getMoney() - offer.getPrice());
 		offer.setSold(true);
 		offer.setBuyer(user);
-		user.getBuys().add(offer);
-		offer.getBuyer().setMoney(offer.getBuyer().getMoney() + offer.getPrice());
-
-		usersRepository.save(offer.getBuyer());
 		offersRepository.save(offer);
-		usersRepository.save(user);
+
+		user.getBuys().add(offer);
+		System.out.println(user.getMoney());
+		System.out.println(offer.getPrice());
+		user.setMoney(user.getMoney() - offer.getPrice());
+		System.out.println(user.getMoney());
+		user  =usersRepository.save(user);
+
+		offer.getBuyer().setMoney(offer.getBuyer().getMoney() + offer.getPrice());
+		usersRepository.save(offer.getBuyer());
+
+		System.out.println(user.getMoney());
 	}
 
 }

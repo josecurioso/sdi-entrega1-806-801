@@ -32,7 +32,7 @@
 				<li id="listMyBuys" sec:authorize="hasRole('ROLE_USER')"><a href="/user/buys/list" th:text="#{list.buys.user}"></a></li>
 
 
-				<li id="users-menu"><a href="/user/list" th:text="#{list.users}">Ver
+				<li id="users-menu" sec:authorize="hasRole('ROLE_ADMIN')"><a href="/user/list" th:text="#{list.users}">Ver
 					Usuarios</a></li>
 
 				<!--
@@ -48,6 +48,11 @@
 				-->
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
+				<li id=txtSaldo sec:authorize="hasRole('ROLE_USER')">
+					<a style="pointer-events: none; cursor: default;" href="">Saldo <span th:text="${user.money}">hola</span></a>
+				</li>
+
+
 				<li class="dropdown"><a id="btnLanguage" href=" #"
 					class="dropdown-toggle" data-toggle="dropdown" role="button"
 					aria-haspopup="true" aria-expanded="false"> <span

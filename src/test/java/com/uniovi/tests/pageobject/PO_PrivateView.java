@@ -13,9 +13,6 @@ public class PO_PrivateView extends PO_NavView {
 		// Esperamos 5 segundo a que carge el DOM porque en algunos equipos falla
 		SeleniumUtils.esperarSegundos(driver, 5);
 
-		// Seleccionamos el alumnos userOrder
-		//new Select(driver.findElement(By.id("user"))).selectByIndex(userOrder);
-
 		// Rellenemos el campo de descripción
 		WebElement name = driver.findElement(By.name("name"));
 		name.clear();
@@ -30,6 +27,19 @@ public class PO_PrivateView extends PO_NavView {
 		price.sendKeys(pricep);
 
 		By boton = By.className("btn");
+		driver.findElement(boton).click();
+	}
+	static public void fillFormSearchBox(WebDriver driver, String contentp) {
+
+		// Esperamos 5 segundo a que carge el DOM porque en algunos equipos falla
+		SeleniumUtils.esperarSegundos(driver, 5);
+
+		// Rellenemos el campo de descripción
+		WebElement searchText = driver.findElement(By.name("searchText"));
+		searchText.clear();
+		searchText.sendKeys(contentp);
+
+		By boton = By.id("searchBtn");
 		driver.findElement(boton).click();
 	}
 }

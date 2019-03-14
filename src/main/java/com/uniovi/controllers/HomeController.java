@@ -3,6 +3,7 @@ package com.uniovi.controllers;
 import java.security.Principal;
 import java.util.LinkedList;
 
+import com.uniovi.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -32,10 +33,14 @@ public class HomeController {
 
 	@RequestMapping(value = { "/home" }, method = RequestMethod.GET)
 	public String home(Model model, Pageable pageable, Principal principal) {
+
+		String email = principal.getName(); // Es el email
+		User user = usersService.getUserByEmail(email);
 		Page<Offer> offers = new PageImpl<Offer>(new LinkedList<Offer>());
 		offers = offersService.getOffers(pageable);
 		model.addAttribute("offersList", offers.getContent());
 		model.addAttribute("page", offers);
+		model.addAttribute("user", user);
 		return "/home";
 	}
 }
