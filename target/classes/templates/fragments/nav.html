@@ -48,7 +48,7 @@
 				-->
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li id=txtSaldo sec:authorize="hasRole('ROLE_USER')">
+				<li id="txtSaldo" sec:authorize="hasRole('ROLE_USER')">
 					<a style="pointer-events: none; cursor: default;" href="">Saldo <span th:text="${user.money}">hola</span></a>
 				</li>
 

@@ -27,7 +27,14 @@ public class HomeController {
 	private OffersService offersService;
 	
 	@RequestMapping("/")
-	public String index() {
+	public String index(Model model, Principal principal) {
+
+		try{
+			String email = principal.getName(); // Es el email
+			User user = usersService.getUserByEmail(email);
+			model.addAttribute("user", user);
+		}
+		catch (Exception e){}
 		return "index";
 	}
 

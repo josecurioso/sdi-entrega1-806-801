@@ -100,16 +100,11 @@ public class OffersService {
 		offersRepository.save(offer);
 
 		user.getBuys().add(offer);
-		System.out.println(user.getMoney());
-		System.out.println(offer.getPrice());
 		user.setMoney(user.getMoney() - offer.getPrice());
-		System.out.println(user.getMoney());
-		user  =usersRepository.save(user);
+		usersRepository.save(user);
 
-		offer.getBuyer().setMoney(offer.getBuyer().getMoney() + offer.getPrice());
-		usersRepository.save(offer.getBuyer());
-
-		System.out.println(user.getMoney());
+		offer.getUser().setMoney(offer.getBuyer().getMoney() + offer.getPrice());
+		usersRepository.save(offer.getUser());
 	}
 
 }

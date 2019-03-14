@@ -5,12 +5,15 @@ import java.util.LinkedList;
 
 import javax.servlet.http.HttpSession;
 
+import com.uniovi.validators.AddOfferValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,6 +36,9 @@ public class OffersController {
 
 	@Autowired
 	private UsersService usersService;
+
+	@Autowired
+	private AddOfferValidator addOfferValidator;
 
 	@RequestMapping("/offer/list") // List all the offers in the system
 	public String getList(Model model, Pageable pageable, Principal principal,
@@ -115,10 +121,16 @@ public class OffersController {
 	}
 
 	@RequestMapping(value = "/user/offer/add", method = RequestMethod.POST) // Adds the offer
-	public String setOfferAdd(@ModelAttribute Offer offer, Principal principal) {
+	public String setOfferAdd(Model model, @Validated Offer offer, BindingResult result, Principal principal) {
 		String email = principal.getName(); // Es el email
 		User user = usersService.getUserByEmail(email);
 		offersService.addOffer(offer, user);
+
+		addOfferValidator.validate(offer, result);
+		if (result.hasErrors()) {
+			model.addAttribute("user", user);
+			return "offer/add";
+		}
 		return "redirect:/user/offer/list";
 	}
 
@@ -128,6 +140,7 @@ public class OffersController {
 		User user = usersService.getUserByEmail(email);
 		model.addAttribute("usersList", usersService.getUsers());
 		model.addAttribute("user", user);
+		model.addAttribute("offer", new Offer());
 		return "offer/add";
 	}
 
@@ -160,7 +173,10 @@ public class OffersController {
 	}
 
 	@RequestMapping("/updatecounter")
-	public String updaetCounter(){
-		return "offer/list :: txtSaldo";
+	public String updateCounter(Model model, Principal principal) {
+		String email = principal.getName(); // Es el email
+		User user = usersService.getUserByEmail(email);
+		model.addAttribute("user", user);
+		return "offer/list :: topNav";
 	}
 }

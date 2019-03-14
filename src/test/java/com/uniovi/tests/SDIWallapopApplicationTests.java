@@ -342,19 +342,14 @@ public class SDIWallapopApplicationTests {
 	}
 	@Test
 	public void PR17() {
-	    assertTrue(false);
-		/*  FUNCTIONALITY MISSING
 		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
 		PO_LoginView.fillForm(driver, "lucas@gmail.com" , "123456" );
 		List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'addOffer')]/a");
 		elementos.get(0).click();
 
-		elementos = PO_View.checkElement(driver, "text", "Agregar Oferta");
-		PO_PrivateView.fillFormAddOffer(driver, "Prueba", "Descripción de prueba", "150");
-
-		elementos = PO_View.checkElement(driver, "text", "Mis ofertas");
-		PO_View.checkElement(driver, "id", "deleteButton17");
-		*/
+		PO_View.checkElement(driver, "text", "Agregar Oferta");
+		PO_PrivateView.fillFormAddOffer(driver, "", "Descripción de prueba", "150");
+		PO_View.checkElement(driver, "text", "Este campo no puede ser vacío");
 	}
 	@Test
 	public void PR18() {
@@ -420,6 +415,19 @@ public class SDIWallapopApplicationTests {
 		PO_View.checkElement(driver, "text", "Ofertas");
 		PO_PrivateView.fillFormSearchBox(driver, "supercalifragilisticoespialidoso");
 		(new WebDriverWait(driver, 200)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//td")));
+	}
+	@Test
+	public void PR23() {
+		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+		PO_LoginView.fillForm(driver, "lucas@gmail.com" , "123456" );
+		List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'listOffers')]/a");
+		elementos.get(0).click();
+
+		PO_View.checkElement(driver, "text", "Ofertas");
+		PO_PrivateView.fillFormSearchBox(driver, "Hitchikers guide to the galaxy");
+		elementos = PO_View.checkElement(driver, "text", "Comprar");
+		elementos.get(0).click();
+		PO_View.checkElement(driver, "free", "//*[contains(text(),'Saldo')]//span[contains(text(),'80.0')]");
 	}
 //
 //	//PR06. Prueba del formulario de registro. DNI repetido en la BD, Nombre corto, .... pagination  pagination-centered, Error.signup.dni.length
