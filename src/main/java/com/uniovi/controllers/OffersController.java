@@ -24,6 +24,7 @@ import com.uniovi.entities.Offer;
 import com.uniovi.entities.User;
 import com.uniovi.services.OffersService;
 import com.uniovi.services.UsersService;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class OffersController {
@@ -155,19 +156,29 @@ public class OffersController {
 	}
 
 	@RequestMapping("/offer/buy/{id}") // Deletes an offer
-	public String buyOffer(@PathVariable Long id, Principal principal) {
+	public String buyOffer(RedirectAttributes redir, @PathVariable Long id, Principal principal) {
 		String email = principal.getName(); // Es el email
 		User user = usersService.getUserByEmail(email);
 		Offer offer = offersService.getOffer(id);
-		if (user.getMoney() >= offer.getPrice()) {
+		redir.addAttribute("user", user);
+		if (user.getMoney() >= offer.getPrice() ) {
 			if (!offer.getSold()) {
-				offersService.buyOffer(offer, user);
+				if(!offer.getUser().equals(user)){
+					offersService.buyOffer(offer, user);
+					System.out.println("Sold");
+				}
+				else{
+					System.out.println("The offer is yours"); // error offer sold
+					redir.addFlashAttribute("errormsg", "error.buy.yours");
+				}
 			} else {
 				System.out.println("The offer is already sold"); // error offer sold
+				redir.addFlashAttribute("errormsg", "error.buy.noavailable");
 			}
-			System.out.println("Sold");
 		} else {
 			System.out.println("Not enough money");
+			redir.addFlashAttribute("errormsg", "error.buy.nomoney");
+			return "redirect:/offer/list";
 		}
 		return "redirect:/offer/list";
 	}

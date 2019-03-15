@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Set;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,7 @@ import com.uniovi.entities.Offer;
 import com.uniovi.entities.User;
 import com.uniovi.repositories.OffersRepository;
 import com.uniovi.repositories.UsersRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class OffersService {
@@ -86,7 +89,6 @@ public class OffersService {
 	public void addOffer(Offer offer, User user) {
 		// Si en Id es null le asignamos el ultimo + 1 de la lista
 		offer.setUser(user);
-		user.getOffers().add(offer);
 		offersRepository.save(offer);
 	}
 
@@ -96,16 +98,17 @@ public class OffersService {
 	}
 
 	public void buyOffer(Offer offer, User user) {
-		offer.setSold(true);
+
+		double price = offer.getPrice();
+		double newUserAmount = user.getMoney() - price;
 		offer.setBuyer(user);
+		user.setMoney(newUserAmount);
+
+
+		offer.getUser().setMoney(offer.getUser().getMoney() + price);
+
 		offersRepository.save(offer);
-
-		user.getBuys().add(offer);
-		user.setMoney(user.getMoney() - offer.getPrice());
 		usersRepository.save(user);
-
-		offer.getUser().setMoney(offer.getBuyer().getMoney() + offer.getPrice());
-		usersRepository.save(offer.getUser());
 	}
 
 }

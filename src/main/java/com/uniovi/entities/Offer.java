@@ -1,6 +1,7 @@
 package com.uniovi.entities;
 
 import java.util.Date;
+import java.util.Objects;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,9 +17,9 @@ public class Offer {
 	private Long id;
 	private String name;
 	private String description;
-	private Date date;
+	private Date date = new Date();
 	private Double price;
-	private Boolean sold;
+	private Boolean sold = false;
 
 	@ManyToOne
 	@JoinColumn(name = "user_id")
@@ -37,7 +38,6 @@ public class Offer {
 		this.description = description;
 		this.price = price;
 		this.user = user;
-		this.date = new Date();
 		this.sold = false;
 	}
 
@@ -87,6 +87,7 @@ public class Offer {
 
 	public void setBuyer(User buyer) {
 		this.buyer = buyer;
+		this.sold = true;
 	}
 
 	public Date getDate() {
@@ -108,5 +109,18 @@ public class Offer {
 	@Override
 	public String toString() {
 		return "Offer [name=" + name + ", description=" + description + ", price=" + price + ", date=" + date + "]";
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Offer offer = (Offer) o;
+		return name.equals(offer.name);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(name);
 	}
 }

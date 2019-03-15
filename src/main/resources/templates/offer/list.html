@@ -31,6 +31,7 @@
 				 });
 				 /*]]>*/
 		</script>
+		<p style="color: red;" th:if="${errormsg != null}" th:text="#{${errormsg}}"></p>
 		<div class="table-responsive">
 			<table class="table table-hover" th:fragment="tableOffers"
 				id="tableOffers">
@@ -56,27 +57,13 @@
 								<p th:text="#{sold}">Vendido</p>
 							</div>
 							<div th:unless="${offer.sold}">
-								<button type="button" th:id="${'buyButton' + offer.id}"
-											class="btn btn-default" th:text="#{buy}">Comprar</button>
-								<script th:inline="javascript">
-								/*<![CDATA[*/
-								 $( "#buyButton[[${offer.id}]]" ).click(function() {
-								 $.get( "/offer/buy/[[${offer.id}]]", function( data ) {
-								 	var numberPage = [[${param.page}]];
-									 var urlUpdate = '/offer/list/update';
-									 if ( numberPage != null ){
-										 urlUpdate += "?page="+numberPage[0];
-									 }
-									 $("#tableOffers").load(urlUpdate);
-									 var urlUpdateCounter = '/updatecounter';
-									 $("#topNav").load(urlUpdateCounter);
 
 
+								<form method="get" th:action="${'/offer/buy/' + offer.id}">
+									<button th:id="${'buyButton' + offer.id}" class="btn btn-default" type="submit" th:text="#{buy}">Continue</button>
+								</form>
 
-								 });
-								 });
-								 /*]]>*/
-								</script>
+
 							</div>
 						</td>			
 					</tr>

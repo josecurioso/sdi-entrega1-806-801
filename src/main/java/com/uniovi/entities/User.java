@@ -1,6 +1,7 @@
 package com.uniovi.entities;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -19,13 +20,13 @@ public class User {
 	private String password;
 	private double money;
 	private boolean isDeleted = false;
-	@Transient // propiedad que no se almacena e la tabla.
+	@Transient
 	private String passwordConfirm;
 
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)//, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Set<Offer> offers = new HashSet<Offer>();
 
-	@OneToMany(mappedBy = "buyer", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "buyer", cascade = CascadeType.ALL)//, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Set<Offer> buys = new HashSet<Offer>();
 
 	public User(String email, String name, String lastName) {
@@ -34,7 +35,6 @@ public class User {
 		this.lastName = lastName;
 		setEmail(email);
 		this.money = 100.0;
-		// setRole("ROLE_USER");
 	}
 
 	public User() {
@@ -137,5 +137,16 @@ public class User {
 		this.isDeleted = isDeleted;
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		User user = (User) o;
+		return Objects.equals(email, user.email);
+	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(email);
+	}
 }

@@ -202,11 +202,8 @@ public class SDIWallapopApplicationTests {
 	}
 
 	public void buy(Offer offer, User user){
-		offer.setSold(true);
 		offer.setBuyer(user);
 		offersRepository.save(offer);
-		user.addBuy(offer);
-		usersRepository.save(user);
 	}
 
 
@@ -523,7 +520,7 @@ public class SDIWallapopApplicationTests {
 		double moneyAfter = PO_OfferListView.getUserMoney(driver);
 		assertEquals(moneyBefore, moneyAfter,0.1);
 
-		//PO_OfferListView.checkElement(driver, "text", "Saldo no suficiente"); //cambiar esto a id mejor
+		PO_OfferListView.checkElement(driver, "text", "No puedes comprarlo, falta dinero"); //cambiar esto a id mejor
 
 	}
 	@Test

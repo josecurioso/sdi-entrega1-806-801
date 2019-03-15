@@ -137,10 +137,7 @@ public class InsertSampleDataService {
 	}
 
 	public void buy(Offer offer, User user){
-		offer.setSold(true);
 		offer.setBuyer(user);
 		offersRepository.save(offer);
-		user.addBuy(offer);
-		usersRepository.save(user);
 	}
 }

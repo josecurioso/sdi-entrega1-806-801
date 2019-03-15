@@ -41,9 +41,11 @@ public class UsersService {
 	}
 
 	public void deleteUser(Long id) {
-		User u = getUser(id);
-		u.setIsDeleted(true);
-		usersRepository.save(u);
+		usersRepository.deleteById(id);
+		// Only mark as deleted with the commented code
+//		User u = getUser(id);
+//		u.setIsDeleted(true);
+//		usersRepository.save(u);
 	}
 
 	public User getUserByEmail(String email) {
