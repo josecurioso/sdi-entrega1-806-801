@@ -34,6 +34,7 @@ public class HomeController {
 			user = usersService.getUserByEmail(email);
 		}
 		catch (Exception e){
+			System.out.println("error raro");
 			user = new User("", "", "");
 		}
 		model.addAttribute("user", user);
@@ -48,6 +49,7 @@ public class HomeController {
 			user = usersService.getUserByEmail(email);
 		}
 		catch (Exception e){
+			System.out.println("error raro");
 			user = new User("", "", "");
 		}
 		Page<Offer> offers = new PageImpl<Offer>(new LinkedList<Offer>());

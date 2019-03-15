@@ -26,9 +26,7 @@ public class UsersService {
 	}
 
 	public List<User> getUsers() {
-		List<User> users = new ArrayList<User>();
-		usersRepository.findAll().forEach(users::add);
-		return users;
+		return usersRepository.getUsersNotDeleted();
 	}
 
 	public User getUser(Long id) {
@@ -38,11 +36,14 @@ public class UsersService {
 	public void addUser(User user) {
 
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+		user.setMoney(100.0);
 		usersRepository.save(user);
 	}
 
 	public void deleteUser(Long id) {
-		usersRepository.deleteById(id);
+		User u = getUser(id);
+		u.setIsDeleted(true);
+		usersRepository.save(u);
 	}
 
 	public User getUserByEmail(String email) {
@@ -53,4 +54,5 @@ public class UsersService {
 	public void deleteAll() {
 		usersRepository.deleteAll();
 	}
+
 }

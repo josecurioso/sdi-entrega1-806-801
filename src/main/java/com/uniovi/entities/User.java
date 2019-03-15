@@ -17,7 +17,8 @@ public class User {
 	private String lastName;
 	private String role;
 	private String password;
-	private Double money;
+	private double money;
+	private boolean isDeleted = false;
 	@Transient // propiedad que no se almacena e la tabla.
 	private String passwordConfirm;
 
@@ -127,5 +128,14 @@ public class User {
 	public void addBuy(Offer o){
 		this.buys.add(o);
 	}
+
+	public boolean getIsDeleted() {
+		return isDeleted;
+	}
+
+	public void setIsDeleted(boolean isDeleted) {
+		this.isDeleted = isDeleted;
+	}
+
 
 }

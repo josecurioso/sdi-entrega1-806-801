@@ -91,8 +91,10 @@ public class OffersService {
 	}
 
 	public void deleteOffer(Long id) {
-		System.out.println("deleteando");
-		offersRepository.deleteById(id);
+		System.out.println("deleteando id " + id);
+		//offersRepository.deleteById(id);
+		int num = offersRepository.deleteManually(id);
+		System.out.println("Borrados " + num);
 	}
 
 	public void buyOffer(Offer offer, User user) {
