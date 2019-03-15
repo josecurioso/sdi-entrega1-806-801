@@ -32,6 +32,8 @@ public class HomeController {
 		try{
 			String email = principal.getName(); // Es el email
 			user = usersService.getUserByEmail(email);
+			model.addAttribute("user", user);
+			return "redirect:/home";
 		}
 		catch (Exception e){
 			System.out.println("error raro");

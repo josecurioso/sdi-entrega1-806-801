@@ -36,7 +36,7 @@ public interface OffersRepository extends CrudRepository<Offer, Long> {
 
 	@Modifying
 	@Transactional
-	@Query("DELETE FROM User r WHERE r.id = ?1")
+	@Query("DELETE FROM Offer WHERE id = ?1")
 	int deleteManually(Long id);
 
 }

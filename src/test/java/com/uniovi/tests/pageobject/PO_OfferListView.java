@@ -16,7 +16,7 @@ public class PO_OfferListView extends PO_View {
     }
 
     public static double getUserMoney(WebDriver driver) {
-        List<WebElement> money = SeleniumUtils.EsperaCargaPagina(driver, "free", "//*[contains(text(),'Saldo')]//span",
+        List<WebElement> money = SeleniumUtils.EsperaCargaPagina(driver, "free", "//span[@id='moneyAmount']",
                 PO_View.getTimeout());
 
         return Double.parseDouble(money.get(0).getText());

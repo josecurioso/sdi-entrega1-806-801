@@ -48,8 +48,11 @@
 				-->
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
+				<li id="txtEmail" sec:authorize="hasRole('ROLE_USER')">
+					<a style="pointer-events: none; cursor: default;" href=""><span th:if="${user != null}" th:text="${user.email}"></span></a>
+				</li>
 				<li id="txtSaldo" sec:authorize="hasRole('ROLE_USER')">
-					<a style="pointer-events: none; cursor: default;" href="">Saldo <span th:if="${user != null}" th:text="${user.money}">hola</span></a>
+					<a style="pointer-events: none; cursor: default;" href="" ><span th:text="#{money}"></span> <span id="moneyAmount" th:if="${user != null}" th:text="${user.money}"></span></a>
 				</li>
 
 
