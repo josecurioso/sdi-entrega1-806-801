@@ -27,7 +27,7 @@
 				 -->
 				
 				<li id="addOffer" sec:authorize="hasRole('ROLE_USER')"><a	href="/user/offer/add" th:text="#{add.offers}"></a></li>
-				<li id="listOffers"><a href="/offer/list" th:text="#{list.offers}"></a></li>
+				<li id="listOffers" sec:authorize="hasRole('ROLE_USER')"><a href="/offer/list" th:text="#{list.offers}"></a></li>
 				<li id="listMyOffers" sec:authorize="hasRole('ROLE_USER')"><a href="/user/offer/list" th:text="#{list.offers.user}"></a></li>
 				<li id="listMyBuys" sec:authorize="hasRole('ROLE_USER')"><a href="/user/buys/list" th:text="#{list.buys.user}"></a></li>
 
