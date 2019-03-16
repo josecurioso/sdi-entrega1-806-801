@@ -36,7 +36,6 @@ public class HomeController {
 			return "redirect:/home";
 		}
 		catch (Exception e){
-			System.out.println("error raro");
 			user = new User("", "", "");
 		}
 		model.addAttribute("user", user);
