@@ -44,7 +44,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.and()
 				.formLogin().loginPage("/login").permitAll().defaultSuccessUrl("/home")
 				.and()
-				.exceptionHandling().accessDeniedPage("/errors/403")
+				.exceptionHandling().accessDeniedPage("/errors/403.html")
 				.and()
 				.logout().permitAll();
 

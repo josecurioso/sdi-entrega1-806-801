@@ -110,5 +110,8 @@ public class OffersService {
 		offersRepository.save(offer);
 		usersRepository.save(user);
 	}
+	
+	
+	
 
 }

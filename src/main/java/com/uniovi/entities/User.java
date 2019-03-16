@@ -29,6 +29,10 @@ public class User {
 	@OneToMany(mappedBy = "buyer", cascade = CascadeType.ALL)//, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Set<Offer> buys = new HashSet<Offer>();
 
+	@OneToMany(mappedBy = "author", cascade = CascadeType.ALL)//, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private Set<Message> messages = new HashSet<Message>();
+
+	
 	public User(String email, String name, String lastName) {
 		super();
 		this.name = name;

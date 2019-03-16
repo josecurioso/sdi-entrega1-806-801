@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="fragments/head" />
+<body>
+	<nav th:replace="fragments/nav" />
+	<div class="container" style="text-align: center">
+		<h2 th:text="#{welcome.message}"></h2>
+		
+		
+		<div class="table-responsive">
+			<table class="table table-hover" th:fragment="tableMsg"
+				id="tableMsg">
+				<thead>
+					<tr>
+						<th >autor --placeholder</th>
+						<th >mensaje --placeholder</th>
+						<th th:text="#{date}">Date</th>
+						<th class="col-md-1"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="msg : ${messagesList}">
+						<td th:text="${msg.author.email}"></td>
+						<td th:text="${msg.text}"></td>
+						<td th:text="${msg.date}"></td>
+						
+				
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<form class="form-horizontal" method="post" th:action="'/user/offer/message/add/'+${offerId}" th:object="${message}">
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="text" th:text="#{name}">Nombre:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" name="text"  />
+						<span class="text-danger"  />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-primary" th:text="#{send}">Enviar</button>
+					</div>
+				</div>
+		</form>
+	</div>
+	<footer th:replace="fragments/footer" />
+</body>
+</html>

@@ -1,13 +1,17 @@
 package com.uniovi.entities;
 
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Offer {
@@ -25,6 +29,9 @@ public class Offer {
 	@JoinColumn(name = "user_id")
 	private User user;
 
+	@OneToMany(mappedBy = "offer", cascade = CascadeType.ALL)
+	private Set<Message> messages=new HashSet<Message>();
+	
 	@ManyToOne
 	@JoinColumn(name = "buyer_id")
 	private User buyer;
@@ -39,6 +46,16 @@ public class Offer {
 		this.price = price;
 		this.user = user;
 		this.sold = false;
+	}
+
+	
+	
+	public Set<Message> getMessages() {
+		return messages;
+	}
+
+	public void setMessages(Set<Message> messages) {
+		this.messages = messages;
 	}
 
 	public Long getId() {
