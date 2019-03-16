@@ -1,18 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="sdi-entrega1-806-801:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="BeansEndpointTabSettings">
     <option name="showLibraryBeans" value="false" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90b97fb4-9265-4d70-80b8-03a66bbf6624" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniovi/entities/Offer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniovi/entities/Offer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniovi/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniovi/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniovi/services/InsertSampleDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniovi/services/InsertSampleDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniovi/services/OffersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniovi/services/OffersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniovi/services/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniovi/services/UsersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/offer/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/offer/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/sdi_entrega1_806_801_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hsqldb_hsqldb_2_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hsqldb_hsqldb_2_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_0_0_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_1_2_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_1_3_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_1_2_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_0_0_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_1_2_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_springsecurity4_3_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_springsecurity4_3_0_4_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sdi-entrega1-806-801.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sdi-entrega1-806-801.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/CustomConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/CustomConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/SDIWallapopApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/SDIWallapopApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/controllers/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/controllers/OffersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/controllers/OffersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/controllers/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/controllers/UsersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/entities/Offer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/entities/Offer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/entities/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/repositories/OffersRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/repositories/OffersRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/repositories/UsersRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/repositories/UsersRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/InsertSampleDataService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/OffersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/OffersService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/RolesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/RolesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/SecurityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/SecurityService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/UserDetailsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/services/UsersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/services/UsersService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/validators/AddOfferValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/validators/AddOfferValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/validators/LoginValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/validators/LoginValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/uniovi/validators/SignUpFormValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/uniovi/validators/SignUpFormValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/SDIWallapopApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_HomeView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_HomeView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_LoginView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_LoginView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_NavView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_NavView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_OfferListView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_OfferListView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_PrivateView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_PrivateView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_Properties.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_Properties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_RegisterView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_RegisterView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_View.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/tests/pageobject/PO_View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/uniovi/utils/SeleniumUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/uniovi/utils/SeleniumUtils.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -69,170 +118,45 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/entities/User.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="884">
-                    <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
-                    <folding>
-                      <element signature="e#2659#2660#0" expanded="true" />
-                      <element signature="e#2692#2693#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/entities/Offer.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="544">
-                    <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-                    <folding>
-                      <element signature="e#2123#2124#0" expanded="true" />
-                      <element signature="e#2155#2156#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/repositories/UsersRepository.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="153">
-                    <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-                    <folding>
-                      <element signature="e#0#46#1" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/repositories/OffersRepository.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="510">
-                    <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-                    <folding>
-                      <element signature="e#0#57#0" expanded="true" />
-                      <element signature="e#0#58#1" expanded="true" />
-                      <element signature="e#0#97#1" expanded="true" />
-                      <element signature="e#0#113#0" expanded="true" />
-                      <element signature="e#0#114#1" expanded="true" />
-                      <element signature="e#0#113#0" expanded="true" />
-                      <element signature="e#0#31#1" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="597">
-                  <caret line="522" column="88" selection-start-line="522" selection-start-column="88" selection-end-line="522" selection-end-column="88" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="458">
-                  <caret line="176" column="13" lean-forward="true" selection-start-line="176" selection-start-column="13" selection-end-line="176" selection-end-column="13" />
-                  <folding>
-                    <element signature="e#1653#1660#0" expanded="true" />
-                    <element signature="e#2403#2410#0" expanded="true" />
-                    <element signature="e#3184#3191#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/messages_en.properties">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="544">
-                  <caret line="32" column="63" selection-start-line="32" selection-start-column="63" selection-end-line="32" selection-end-column="63" />
-                </state>
-              </provider>
-              <provider editor-type-id="ResourceBundle" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/messages_es.properties">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="544">
-                  <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
-                </state>
-              </provider>
-              <provider editor-type-id="ResourceBundle" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="das://cb646768-c3d7-4023-aa25-0bc4910cdbee/database/PUBLIC/schema/PUBLIC/table/USER">
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/offer/list.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="578">
-                  <caret line="34" column="38" lean-forward="true" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-                  <folding>
-                    <element signature="n#style#0;n#p#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="132">
-                  <caret line="28" column="63" lean-forward="true" selection-start-line="28" selection-start-column="63" selection-end-line="32" selection-end-column="58" />
-                </state>
-              </provider>
-              <provider editor-type-id="ResourceBundle" />
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="354">
-                  <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="51" />
-                </state>
-              </provider>
-              <provider editor-type-id="ResourceBundle" />
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1275">
+              <caret line="86" column="31" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/selenium-server-standalone-3.141.59.jar!/META-INF/MANIFEST.MF">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/tests/pageobject/PO_RegisterView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -258,7 +182,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/UsersController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/uniovi/repositories/UsersRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/HomeController.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/cb646768-c3d7-4023-aa25-0bc4910cdbee/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/uniovi/repositories/OffersRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/nav.html" />
@@ -274,7 +197,17 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/offer/list.html" />
         <option value="$PROJECT_DIR$/src/main/resources/messages.properties" />
         <option value="$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/uniovi/controllers/HomeController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -282,20 +215,28 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sdi806-lab-spring" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Wallapop" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sdi806-lab-spring" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Wallapop" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Wallapop" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1555" />
-    <option name="width" value="2294" />
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-11" />
+    <option name="width" value="3089" />
     <option name="height" value="2111" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -353,42 +294,6 @@
               <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="uniovi" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="uniovi" type="462c0819:PsiDirectoryNode" />
-              <item name="repositories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="uniovi" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="uniovi" type="462c0819:PsiDirectoryNode" />
-              <item name="validators" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -398,88 +303,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="errors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="fragments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="offer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="Resource Bundle 'messages'" type="a6c14932:ResourceBundleNode" />
-            </path>
-            <path>
-              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="uniovi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="uniovi" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sdi806-lab-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdi-entrega1-806-801" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Resource Bundle 'messages'" type="a6c14932:ResourceBundleNode" />
             </path>
           </expand>
           <select />
@@ -489,6 +312,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="hsqldb" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="sdi806-lab-spring" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -497,14 +324,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/selenium-server-standalone-3.141.59.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -523,7 +350,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SDIWallapopApplicationTests.PR25">
+  <component name="RunManager" selected="Spring Boot.SDIWallapopApplication">
     <configuration name="SDIWallapopApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sdi-entrega1-806-801" />
       <extension name="coverage">
@@ -602,8 +429,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SDIWallapopApplicationTests.PR25" />
         <item itemvalue="Spring Boot.SDIWallapopApplication" />
+        <item itemvalue="JUnit.SDIWallapopApplicationTests.PR25" />
         <item itemvalue="JUnit.SDIWallapopApplicationTests" />
         <item itemvalue="JUnit.SDIWallapopApplicationTests.PR23" />
         <item itemvalue="JUnit.SDIWallapopApplicationTests.PR15" />
@@ -624,14 +451,11 @@
       <workItem from="1552525110544" duration="13000" />
       <workItem from="1552551368661" duration="5956000" />
       <workItem from="1552564735548" duration="37199000" />
-      <workItem from="1552666963369" duration="10226000" />
+      <workItem from="1552666963369" duration="21143000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SDIWallapopApplicationTests_PR13 - 2019.03.15 at 00h 34m 16s.xml">
-      <configuration name="SDIWallapopApplicationTests.PR13" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SDIWallapopApplicationTests_PR14 - 2019.03.15 at 00h 34m 38s.xml">
       <configuration name="SDIWallapopApplicationTests.PR14" configurationId="JUnit" />
     </history-entry>
@@ -659,9 +483,12 @@
     <history-entry file="SDIWallapopApplicationTests - 2019.03.15 at 19h 28m 00s.xml">
       <configuration name="SDIWallapopApplicationTests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SDIWallapopApplicationTests_PR25 - 2019.03.15 at 20h 14m 00s.xml">
+      <configuration name="SDIWallapopApplicationTests.PR25" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67380000" />
+    <option name="totallyTimeSpent" value="78297000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -673,8 +500,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="2575" height="1415" extended-state="7" />
     <layout>
       <window_info id="Capture Tool" order="0" />
       <window_info id="UI Designer" order="1" />
@@ -682,7 +508,7 @@
       <window_info id="Image Layers" order="3" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.14632207" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.29821074" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="0" weight="0.32969603" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32735777" />
@@ -695,18 +521,18 @@
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Database Console" order="9" weight="0.3257989" />
       <window_info anchor="bottom" id="Find" order="10" weight="0.3289166" />
-      <window_info anchor="bottom" id="Run" order="11" sideWeight="0.4998012" visible="true" weight="0.30085737" />
+      <window_info active="true" anchor="bottom" id="Run" order="11" sideWeight="0.4998012" visible="true" weight="0.49493375" />
       <window_info anchor="bottom" id="Debug" order="12" weight="0.3998441" />
       <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="15" weight="0.32969603" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Database" order="2" weight="0.45949626" />
+      <window_info anchor="right" id="Database" order="2" weight="0.22664016" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Bean Validation" order="5" weight="0.32962227" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.20477137" />
+      <window_info anchor="right" id="Maven" order="6" visible="true" weight="0.41749504" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
@@ -785,13 +611,6 @@
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="ResourceBundle" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/CustomConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -855,13 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -904,13 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="52" lean-forward="true" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.4.RELEASE/spring-data-commons-2.1.4.RELEASE-sources.jar!/org/springframework/data/repository/Repository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -922,13 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="26" column="53" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -952,7 +750,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/repositories/OffersRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
             <element signature="e#0#58#1" expanded="true" />
@@ -968,7 +766,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/repositories/UsersRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
           <folding>
             <element signature="e#0#46#1" expanded="true" />
           </folding>
@@ -997,13 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://cb646768-c3d7-4023-aa25-0bc4910cdbee/database/PUBLIC/schema/PUBLIC/table/OFFER">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/services/OffersService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
@@ -1018,13 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="30" selection-start-column="30" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1053,17 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/entities/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="e#2659#2660#0" expanded="true" />
-            <element signature="e#2692#2693#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://cb646768-c3d7-4023-aa25-0bc4910cdbee/database/PUBLIC/schema/PUBLIC/table/USER">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1087,10 +860,178 @@
       </provider>
       <provider editor-type-id="ResourceBundle" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/offer/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#p#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="523" selection-start-line="523" selection-end-line="523" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/entities/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="e#2659#2660#0" expanded="true" />
+            <element signature="e#2692#2693#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MAVEN/com.uniovi:sdi-entrega1-806-801:0.0.1-SNAPSHOT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>com.uniovi:sdi-entrega1-806-801:0.0.1-SNAPSHOT</OriginalElement>
+          <nodes>
+            <node x="" y="">com.uniovi:sdi-entrega1-806-801:0.0.1-SNAPSHOT</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot:jar:2.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-autoconfigure:jar:2.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.2.RELEASE/ch.qos.logback:logback-classic:jar:1.2.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.2.RELEASE/ch.qos.logback:logback-classic:jar:1.2.3/ch.qos.logback:logback-core:jar:1.2.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.2.RELEASE/org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.2.RELEASE/org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.1/org.apache.logging.log4j:log4j-api:jar:2.11.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.2.RELEASE/org.slf4j:jul-to-slf4j:jar:1.7.25</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.2.RELEASE/javax.annotation:javax.annotation-api:jar:1.3.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter:jar:2.1.2.RELEASE/org.yaml:snakeyaml:jar:1.23</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.2.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.9.8</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.2.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.9.8/com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.2.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.9.8/com.fasterxml.jackson.core:jackson-core:jar:2.9.8</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.2.RELEASE/com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.9.8</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.2.RELEASE/com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.8</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.2.RELEASE/com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.9.8</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.1.2.RELEASE/org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.14</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.1.2.RELEASE/org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.14</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.1.2.RELEASE/org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.14</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.14.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.14.Final/javax.validation:validation-api:jar:2.0.1.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.14.Final/org.jboss.logging:jboss-logging:jar:3.3.2.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.14.Final/com.fasterxml:classmate:jar:1.4.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework:spring-web:jar:5.1.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework:spring-web:jar:5.1.4.RELEASE/org.springframework:spring-beans:jar:5.1.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework:spring-webmvc:jar:5.1.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework:spring-webmvc:jar:5.1.4.RELEASE/org.springframework:spring-context:jar:5.1.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:2.1.2.RELEASE/org.springframework:spring-webmvc:jar:5.1.4.RELEASE/org.springframework:spring-expression:jar:5.1.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-test:jar:2.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-test-autoconfigure:jar:2.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0/net.minidev:json-smart:jar:2.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0/net.minidev:json-smart:jar:2.3/net.minidev:accessors-smart:jar:1.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0/net.minidev:json-smart:jar:2.3/net.minidev:accessors-smart:jar:1.2/org.ow2.asm:asm:jar:5.0.4</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/junit:junit:jar:4.12</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/org.assertj:assertj-core:jar:3.11.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/org.mockito:mockito-core:jar:2.23.4</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/org.mockito:mockito-core:jar:2.23.4/net.bytebuddy:byte-buddy:jar:1.9.7</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/org.mockito:mockito-core:jar:2.23.4/net.bytebuddy:byte-buddy-agent:jar:1.9.7</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/org.mockito:mockito-core:jar:2.23.4/org.objenesis:objenesis:jar:2.6</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/org.hamcrest:hamcrest-core:jar:1.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/org.hamcrest:hamcrest-library:jar:1.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/org.skyscreamer:jsonassert:jar:1.5.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/org.skyscreamer:jsonassert:jar:1.5.0/com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/org.springframework:spring-core:jar:5.1.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/org.springframework:spring-core:jar:5.1.4.RELEASE/org.springframework:spring-jcl:jar:5.1.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/org.springframework:spring-test:jar:5.1.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:2.1.2.RELEASE/org.xmlunit:xmlunit-core:jar:2.6.2</node>
+            <node x="" y="">javax.servlet:jstl:jar:1.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-aop:jar:2.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-aop:jar:2.1.2.RELEASE/org.aspectj:aspectjweaver:jar:1.9.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.2.RELEASE/com.zaxxer:HikariCP:jar:3.2.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.2.RELEASE/org.springframework:spring-jdbc:jar:5.1.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/javax.transaction:javax.transaction-api:jar:1.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/javax.xml.bind:jaxb-api:jar:2.3.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/javax.xml.bind:jaxb-api:jar:2.3.1/javax.activation:javax.activation-api:jar:1.2.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/org.hibernate:hibernate-core:jar:5.3.7.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/org.hibernate:hibernate-core:jar:5.3.7.Final/javax.persistence:javax.persistence-api:jar:2.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/org.hibernate:hibernate-core:jar:5.3.7.Final/org.javassist:javassist:jar:3.23.1-GA</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/org.hibernate:hibernate-core:jar:5.3.7.Final/antlr:antlr:jar:2.7.7</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/org.hibernate:hibernate-core:jar:5.3.7.Final/org.jboss:jandex:jar:2.0.5.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/org.hibernate:hibernate-core:jar:5.3.7.Final/org.dom4j:dom4j:jar:2.1.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/org.hibernate:hibernate-core:jar:5.3.7.Final/org.hibernate.common:hibernate-commons-annotations:jar:5.0.4.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/org.springframework.data:spring-data-jpa:jar:2.1.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/org.springframework.data:spring-data-jpa:jar:2.1.4.RELEASE/org.springframework.data:spring-data-commons:jar:2.1.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/org.springframework.data:spring-data-jpa:jar:2.1.4.RELEASE/org.springframework:spring-orm:jar:5.1.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/org.springframework.data:spring-data-jpa:jar:2.1.4.RELEASE/org.springframework:spring-tx:jar:5.1.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.2.RELEASE/org.springframework:spring-aspects:jar:5.1.4.RELEASE</node>
+            <node x="" y="">org.hsqldb:hsqldb:jar:2.4.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.2.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:3.0.11.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.2.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:3.0.11.RELEASE/org.thymeleaf:thymeleaf:jar:3.0.11.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.2.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:3.0.11.RELEASE/org.thymeleaf:thymeleaf:jar:3.0.11.RELEASE/org.attoparser:attoparser:jar:2.0.5.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.2.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:3.0.11.RELEASE/org.thymeleaf:thymeleaf:jar:3.0.11.RELEASE/org.unbescape:unbescape:jar:1.1.6.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.2.RELEASE/org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:2.1.2.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:2.1.2.RELEASE/org.springframework:spring-aop:jar:5.1.4.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:2.1.2.RELEASE/org.springframework.security:spring-security-config:jar:5.1.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:2.1.2.RELEASE/org.springframework.security:spring-security-config:jar:5.1.3.RELEASE/org.springframework.security:spring-security-core:jar:5.1.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-security:jar:2.1.2.RELEASE/org.springframework.security:spring-security-web:jar:5.1.3.RELEASE</node>
+            <node x="" y="">org.thymeleaf.extras:thymeleaf-extras-springsecurity4:jar:3.0.4.RELEASE</node>
+            <node x="" y="">org.thymeleaf.extras:thymeleaf-extras-springsecurity4:jar:3.0.4.RELEASE/org.slf4j:slf4j-api:jar:1.7.25</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.15073053449232476" x="2693.5" y="600.0" />
+          <SelectedNodes />
+          <Categories />
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://cb646768-c3d7-4023-aa25-0bc4910cdbee/database/PUBLIC/schema/PUBLIC/table/OFFER">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/uniovi/controllers/OffersController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="176" column="13" lean-forward="true" selection-start-line="176" selection-start-column="13" selection-end-line="176" selection-end-column="13" />
+        <state relative-caret-position="635">
+          <caret line="176" column="13" selection-start-line="176" selection-start-column="13" selection-end-line="176" selection-end-column="13" />
           <folding>
             <element signature="e#1653#1660#0" expanded="true" />
             <element signature="e#2403#2410#0" expanded="true" />
@@ -1099,31 +1040,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/offer/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="38" lean-forward="true" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#p#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/messages.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="28" column="63" lean-forward="true" selection-start-line="28" selection-start-column="63" selection-end-line="32" selection-end-column="58" />
+          <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="32" selection-end-column="58" />
         </state>
       </provider>
       <provider editor-type-id="ResourceBundle" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/tests/SDIWallapopApplicationTests.java">
+    <entry file="jar://$PROJECT_DIR$/lib/selenium-server-standalone-3.141.59.jar!/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="522" column="88" selection-start-line="522" selection-start-column="88" selection-end-line="522" selection-end-column="88" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="402">
+          <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/uniovi/tests/pageobject/PO_RegisterView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="86" column="31" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -1133,10 +1082,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>sdi-entrega1-806-801:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1179,7 +1130,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|sdi-entrega1-806-801</last-edited>
+          <last-edited>sdi-entrega1-806-801</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

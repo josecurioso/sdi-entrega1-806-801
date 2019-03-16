@@ -45,6 +45,7 @@ public class HomeController {
 
 	@RequestMapping(value = { "/home" }, method = RequestMethod.GET)
 	public String home(Model model, Pageable pageable, Principal principal) {
+		System.out.println("requested home");
 		User user;
 		try{
 			String email = principal.getName(); // Es el email
@@ -59,6 +60,6 @@ public class HomeController {
 		model.addAttribute("offersList", offers.getContent());
 		model.addAttribute("page", offers);
 		model.addAttribute("user", user);
-		return "/home";
+		return "home";
 	}
 }

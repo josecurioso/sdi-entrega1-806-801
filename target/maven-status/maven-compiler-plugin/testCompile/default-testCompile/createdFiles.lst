@@ -1,0 +1,15 @@
+com\uniovi\tests\pageobject\PO_RegisterView.class
+com\uniovi\utils\SeleniumUtils.class
+com\uniovi\tests\pageobject\PO_Properties.class
+com\uniovi\tests\SDIWallapopApplicationTests$2.class
+com\uniovi\tests\SDIWallapopApplicationTests.class
+com\uniovi\tests\SDIWallapopApplicationTests$3.class
+com\uniovi\tests\pageobject\PO_OfferListView.class
+com\uniovi\tests\pageobject\PO_HomeView.class
+com\uniovi\tests\SDIWallapopApplicationTests$4.class
+com\uniovi\tests\SDIWallapopApplicationTests$5.class
+com\uniovi\tests\pageobject\PO_PrivateView.class
+com\uniovi\tests\pageobject\PO_LoginView.class
+com\uniovi\tests\pageobject\PO_View.class
+com\uniovi\tests\pageobject\PO_NavView.class
+com\uniovi\tests\SDIWallapopApplicationTests$1.class
