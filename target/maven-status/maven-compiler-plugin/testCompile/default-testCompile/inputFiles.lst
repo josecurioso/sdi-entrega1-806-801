@@ -1,10 +1,12 @@
 D:\Documentos\Git\sdi-entrega1-806-801\src\test\java\com\uniovi\tests\pageobject\PO_LoginView.java
 D:\Documentos\Git\sdi-entrega1-806-801\src\test\java\com\uniovi\tests\pageobject\PO_HomeView.java
-D:\Documentos\Git\sdi-entrega1-806-801\src\test\java\com\uniovi\tests\SDIWallapopApplicationTests.java
 D:\Documentos\Git\sdi-entrega1-806-801\src\test\java\com\uniovi\tests\pageobject\PO_OfferListView.java
 D:\Documentos\Git\sdi-entrega1-806-801\src\test\java\com\uniovi\tests\pageobject\PO_RegisterView.java
 D:\Documentos\Git\sdi-entrega1-806-801\src\test\java\com\uniovi\tests\pageobject\PO_View.java
+D:\Documentos\Git\sdi-entrega1-806-801\src\test\java\com\uniovi\tests\SDIWallapopApplicationTestsAbstract.java
+D:\Documentos\Git\sdi-entrega1-806-801\src\test\java\com\uniovi\tests\SDIWallapopApplicationTestsLocal.java
 D:\Documentos\Git\sdi-entrega1-806-801\src\test\java\com\uniovi\tests\pageobject\PO_NavView.java
+D:\Documentos\Git\sdi-entrega1-806-801\src\test\java\com\uniovi\tests\SDIWallapopApplicationTestsRemote.java
 D:\Documentos\Git\sdi-entrega1-806-801\src\test\java\com\uniovi\tests\pageobject\PO_PrivateView.java
 D:\Documentos\Git\sdi-entrega1-806-801\src\test\java\com\uniovi\tests\pageobject\PO_Properties.java
 D:\Documentos\Git\sdi-entrega1-806-801\src\test\java\com\uniovi\utils\SeleniumUtils.java

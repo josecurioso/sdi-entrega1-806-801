@@ -1,114 +1,103 @@
 package com.uniovi.services;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Set;
-
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.servlet.http.HttpSession;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Service;
-
 import com.uniovi.entities.Offer;
 import com.uniovi.entities.User;
 import com.uniovi.repositories.OffersRepository;
 import com.uniovi.repositories.UsersRepository;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import javax.servlet.http.HttpSession;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 public class OffersService {
 
-	@Autowired
-	private HttpSession httpSession;
+    @Autowired
+    private HttpSession httpSession;
 
-	@Autowired
-	private OffersRepository offersRepository;
+    @Autowired
+    private OffersRepository offersRepository;
 
-	@Autowired
-	private UsersRepository usersRepository;
+    @Autowired
+    private UsersRepository usersRepository;
 
-	public Page<Offer> getOffers(Pageable pageable) {
-		Page<Offer> offers = offersRepository.findAll(pageable);
-		return offers;
-	}
+    public Page<Offer> getOffers(Pageable pageable) {
+        Page<Offer> offers = offersRepository.findAll(pageable);
+        return offers;
+    }
 
-	public Offer getOffer(Long id) {
-		Set<Offer> consultedList = (Set<Offer>) httpSession.getAttribute("consultedList");
-		if (consultedList == null) {
-			consultedList = new HashSet<Offer>();
-		}
-		Offer offerObtained = offersRepository.findById(id).get();
-		consultedList.add(offerObtained);
-		httpSession.setAttribute("consultedList", consultedList);
-		return offerObtained;
-	}
+    public Offer getOffer(Long id) {
+        Set<Offer> consultedList = (Set<Offer>) httpSession.getAttribute("consultedList");
+        if (consultedList == null) {
+            consultedList = new HashSet<>();
+        }
+        Offer offerObtained = offersRepository.findById(id).get();
+        consultedList.add(offerObtained);
+        httpSession.setAttribute("consultedList", consultedList);
+        return offerObtained;
+    }
 
-	public Page<Offer> getOffersForUser(Pageable pageable, User user) {
-		Page<Offer> offers = new PageImpl<Offer>(new LinkedList<Offer>());
+    public Page<Offer> getOffersForUser(Pageable pageable, User user) {
+        Page<Offer> offers = offersRepository.findAllByUser(pageable, user);
+        return offers;
+    }
 
-		offers = offersRepository.findAllByUser(pageable, user);
-		return offers;
-	}
+    public Page<Offer> getBuysForUser(Pageable pageable, User user) {
+        Page<Offer> offers = offersRepository.findAllBuysByUser(pageable, user);
+        return offers;
+    }
 
-	public Page<Offer> getBuysForUser(Pageable pageable, User user) {
-		Page<Offer> offers = new PageImpl<Offer>(new LinkedList<Offer>());
+    public Page<Offer> searchOffersByDescriptionAndNameForUser(Pageable pageable, String searchText, User user) {
+        searchText = "%" + searchText + "%";
+        Page<Offer> offers = offersRepository.searchByDescriptionNameAndUser(pageable, searchText, user);
+        return offers;
+    }
 
-		offers = offersRepository.findAllBuysByUser(pageable, user);
-		return offers;
-	}
+    public Page<Offer> searchOffersByDescriptionAndName(Pageable pageable, String searchText) {
+        searchText = "%" + searchText + "%";
+        Page<Offer> offers = offersRepository.searchByDescriptionAndName(pageable, searchText);
+        return offers;
+    }
 
-	public Page<Offer> searchOffersByDescriptionAndNameForUser(Pageable pageable, String searchText, User user) {
-		Page<Offer> offers = new PageImpl<Offer>(new LinkedList<Offer>());
+    public Page<Offer> searchBuysByDescriptionAndNameForUser(Pageable pageable, String searchText, User user) {
+        searchText = "%" + searchText + "%";
+        Page<Offer> offers = offersRepository.searchBuysByDescriptionNameAndUser(pageable, searchText, user);
+        return offers;
+    }
 
-		searchText = "%" + searchText + "%";
-		offers = offersRepository.searchByDescriptionNameAndUser(pageable, searchText, user);
-		return offers;
-	}
+    public void addOffer(Offer offer, User user) {
+        offer.setUser(user);
+        offersRepository.save(offer);
+    }
 
-	public Page<Offer> searchOffersByDescriptionAndName(Pageable pageable, String searchText) {
-		Page<Offer> offers = new PageImpl<Offer>(new LinkedList<Offer>());
+    public void deleteOffer(Long id) {
+        offersRepository.deleteById(id);
+        //int num = offersRepository.deleteManually(id);
+    }
 
-		searchText = "%" + searchText + "%";
-		offers = offersRepository.searchByDescriptionAndName(pageable, searchText);
-		return offers;
-	}
+    public int buyOffer(Offer offer, User user) {
+        if (user.getMoney() < offer.getPrice())
+            return 1;
+        if(offer.getSold())
+            return 2;
+        if (offer.getUser().equals(user))
+            return 3;
 
-	public Page<Offer> searchBuysByDescriptionAndNameForUser(Pageable pageable, String searchText, User user) {
-		Page<Offer> offers = new PageImpl<Offer>(new LinkedList<Offer>());
-
-		searchText = "%" + searchText + "%";
-		offers = offersRepository.searchBuysByDescriptionNameAndUser(pageable, searchText, user);
-		return offers;
-	}
-
-	public void addOffer(Offer offer, User user) {
-		// Si en Id es null le asignamos el ultimo + 1 de la lista
-		offer.setUser(user);
-		offersRepository.save(offer);
-	}
-
-	public void deleteOffer(Long id) {
-		//offersRepository.deleteById(id);
-		int num = offersRepository.deleteManually(id);
-	}
-
-	public void buyOffer(Offer offer, User user) {
-
-		double price = offer.getPrice();
-		double newUserAmount = user.getMoney() - price;
-		offer.setBuyer(user);
-		user.setMoney(newUserAmount);
+        double price = offer.getPrice();
+        double newUserAmount = user.getMoney() - price;
+        offer.setBuyer(user);
+        user.setMoney(newUserAmount);
 
 
-		offer.getUser().setMoney(offer.getUser().getMoney() + price);
+        offer.getUser().setMoney(offer.getUser().getMoney() + price);
 
-		offersRepository.save(offer);
-		usersRepository.save(user);
-	}
+        offersRepository.save(offer);
+        usersRepository.save(user);
+        return 0;
+    }
 
 }

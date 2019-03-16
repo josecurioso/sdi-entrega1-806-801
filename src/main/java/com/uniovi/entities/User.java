@@ -1,152 +1,151 @@
 package com.uniovi.entities;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-import javax.persistence.*;
-
 @Entity
 public class User {
-	
-	@Id
-	@GeneratedValue
-	private long id;
-	@Column(unique = true)
-	private String email;
-	private String name;
-	private String lastName;
-	private String role;
-	private String password;
-	private double money;
-	private boolean isDeleted = false;
-	@Transient
-	private String passwordConfirm;
 
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)//, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private Set<Offer> offers = new HashSet<Offer>();
+    @Id
+    @GeneratedValue
+    private long id;
+    @Column(unique = true)
+    private String email;
+    private String name;
+    private String lastName;
+    private String role;
+    private String password;
+    private double money;
+    private boolean isDeleted = false;
+    @Transient
+    private String passwordConfirm;
 
-	@OneToMany(mappedBy = "buyer", cascade = CascadeType.ALL)//, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private Set<Offer> buys = new HashSet<Offer>();
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)//, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<Offer> offers = new HashSet<Offer>();
 
-	public User(String email, String name, String lastName) {
-		super();
-		this.name = name;
-		this.lastName = lastName;
-		setEmail(email);
-		this.money = 100.0;
-	}
+    @OneToMany(mappedBy = "buyer", cascade = CascadeType.ALL)//, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<Offer> buys = new HashSet<Offer>();
 
-	public User() {
-	}
+    public User(String email, String name, String lastName) {
+        super();
+        this.name = name;
+        this.lastName = lastName;
+        setEmail(email);
+        this.money = 100.0;
+    }
 
-	public long getId() {
-		return id;
-	}
+    public User() {
+    }
 
-	public void setId(long id) {
-		this.id = id;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	public void setEmail(String email) {
+    public String getEmail() {
+        return email;
+    }
 
-		this.email = email;
-	}
+    public void setEmail(String email) {
 
-	public double getMoney() {
-		return money;
-	}
+        this.email = email;
+    }
 
-	public void setMoney(double money) {
-		this.money = money;
-	}
+    public double getMoney() {
+        return money;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public void setMoney(double money) {
+        this.money = money;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getLastName() {
-		return lastName;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public String getFullName() {
-		return this.name + " " + this.lastName;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public String getFullName() {
+        return this.name + " " + this.lastName;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	public String getPasswordConfirm() {
-		return passwordConfirm;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-	public void setPasswordConfirm(String passwordConfirm) {
-		this.passwordConfirm = passwordConfirm;
-	}
+    public String getPasswordConfirm() {
+        return passwordConfirm;
+    }
 
-	public String getRole() {
-		return role;
-	}
+    public void setPasswordConfirm(String passwordConfirm) {
+        this.passwordConfirm = passwordConfirm;
+    }
 
-	public void setRole(String role) {
-		this.role = role;
-	}
+    public String getRole() {
+        return role;
+    }
 
-	public Set<Offer> getOffers() {
-		return this.offers;
-	}
+    public void setRole(String role) {
+        this.role = role;
+    }
 
-	public void setOffers(Set<Offer> offers) {
-		this.offers = offers;
-	}
+    public Set<Offer> getOffers() {
+        return this.offers;
+    }
 
-	public Set<Offer> getBuys() {
-		return this.buys;
-	}
+    public void setOffers(Set<Offer> offers) {
+        this.offers = offers;
+    }
 
-	public void setBuys(Set<Offer> buys) {
-		this.buys = buys;
-	}
+    public Set<Offer> getBuys() {
+        return this.buys;
+    }
 
-	public void addBuy(Offer o){
-		this.buys.add(o);
-	}
+    public void setBuys(Set<Offer> buys) {
+        this.buys = buys;
+    }
 
-	public boolean getIsDeleted() {
-		return isDeleted;
-	}
+    public void addBuy(Offer o) {
+        this.buys.add(o);
+    }
 
-	public void setIsDeleted(boolean isDeleted) {
-		this.isDeleted = isDeleted;
-	}
+    public boolean getIsDeleted() {
+        return isDeleted;
+    }
 
-	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
-		User user = (User) o;
-		return Objects.equals(email, user.email);
-	}
+    public void setIsDeleted(boolean isDeleted) {
+        this.isDeleted = isDeleted;
+    }
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(email);
-	}
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(email, user.email);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(email);
+    }
 }

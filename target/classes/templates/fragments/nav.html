@@ -1,6 +1,5 @@
 <!-- nav.html -->
 <nav class="navbar navbar-inverse">
-	<link rel="stylesheet" href="/css/custom.css" />
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -13,19 +12,6 @@
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav" sec:authorize="isAuthenticated()">
 				<li><a href="/home" th:text="#{home}"></a></li>
-				<!-- 
-				<li id="offers-menu" class="dropdown"><a class="dropdown-toggle"
-					data-toggle="dropdown" href="#" th:text="#{offers}"> <span
-						class="caret"></span>
-				</a>
-					<ul class="dropdown-menu">
-						<li sec:authorize="hasRole('ROLE_USER')"><a	href="/user/offer/add" th:text="#{add.offers}"></a></li>
-						<li><a href="/offer/list" th:text="#{list.offers}"></a></li>
-						<li sec:authorize="hasRole('ROLE_USER')"><a href="/user/offer/list" th:text="#{list.offers.user}"></a></li>
-						<li sec:authorize="hasRole('ROLE_USER')"><a href="/user/buys/list" th:text="#{list.buys.user}"></a></li>
-					</ul></li>
-				
-				 -->
 				
 				<li id="addOffer" sec:authorize="hasRole('ROLE_USER')"><a	href="/user/offer/add" th:text="#{add.offers}"></a></li>
 				<li id="listOffers" sec:authorize="hasRole('ROLE_USER')"><a href="/offer/list" th:text="#{list.offers}"></a></li>
@@ -35,18 +21,6 @@
 
 				<li id="users-menu" sec:authorize="hasRole('ROLE_ADMIN')"><a href="/user/list" th:text="#{list.users}">Ver
 					Usuarios</a></li>
-
-				<!--
-				<li id="admin-menu" class="dropdown"><a class="dropdown-toggle"
-					data-toggle="dropdown" href="#"
-					sec:authorize="hasRole('ROLE_ADMIN')" th:text="#{manage.users}">
-						<span class="caret"></span>
-				</a>
-					<ul class="dropdown-menu">
-						<li><a id="listUsers" href="/user/list" th:text="#{list.users}">Ver
-								Usuarios</a></li>
-					</ul></li>
-				-->
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li id="txtEmail" sec:authorize="hasRole('ROLE_USER')">
