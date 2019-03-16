@@ -26,7 +26,18 @@ public class UsersService {
 	}
 
 	public List<User> getUsers() {
-		return usersRepository.getUsersNotDeleted();
+		List<User> users = new ArrayList<>();
+		usersRepository.findAll().forEach(users::add);
+		return users;
+	}
+
+	public List<User> getUsersExcludeAdmin() {
+		List<User> users = new ArrayList<>();
+		usersRepository.findAll().forEach((User u) -> {
+			if(!u.getEmail().equals("admin@gmail.com"))
+				users.add(u);
+		});
+		return users;
 	}
 
 	public User getUser(Long id) {

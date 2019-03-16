@@ -41,7 +41,7 @@ public class UsersController {
 
 	@RequestMapping("/user/list")
 	public String getListado(Model model) {
-		List<User> listaUsers = usersService.getUsers();
+		List<User> listaUsers = usersService.getUsersExcludeAdmin();
 		model.addAttribute("usersList", listaUsers);
 		Page<User> usersPage = new PageImpl<User>(new LinkedList<User>());
 

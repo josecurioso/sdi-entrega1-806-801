@@ -61,8 +61,8 @@ public class SDIWallapopApplicationTests {
 
 	// Común a Windows y a MACOSX
 	static WebDriver driver = getDriver(PathFirefox65, Geckdriver024);
-	static String URL = "http://localhost:8090";
-
+	//static String URL = "http://localhost:8080";
+	static String URL = "http://ec2-3-95-230-31.compute-1.amazonaws.com:8080";
 
     @Autowired
     private UsersService usersService;
@@ -312,7 +312,7 @@ public class SDIWallapopApplicationTests {
 
 		List<WebElement> elementos2 = SeleniumUtils.EsperaCargaPagina(driver, "free",
 		"//tbody/tr", PO_View.getTimeout());
-		assertEquals(6 , elementos2.size());
+		assertEquals(5 , elementos2.size());
 	}
 	@Test
 	public void PR13() {
@@ -325,7 +325,7 @@ public class SDIWallapopApplicationTests {
 
 		List<WebElement> usersList = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
 				PO_View.getTimeout());
-		assertEquals(6, usersList.size());// igual el num esta mal
+		assertEquals(5, usersList.size());// igual el num esta mal
 
 		usersList.get(0).findElement(By.id("idsUsers")).click();
 
@@ -333,7 +333,7 @@ public class SDIWallapopApplicationTests {
 		listPage.get(0).click();
 		usersList = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
 				PO_View.getTimeout());
-		assertEquals(5, usersList.size());// esto seria 1 menos
+		assertEquals(4, usersList.size());// esto seria 1 menos
 
 	}
 	@Test
@@ -347,7 +347,7 @@ public class SDIWallapopApplicationTests {
 
 		List<WebElement> usersList = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
 				PO_View.getTimeout());
-		assertEquals(6, usersList.size());// igual el num esta mal
+		assertEquals(5, usersList.size());// igual el num esta mal
 
 		usersList.get(usersList.size() - 1).findElement(By.id("idsUsers")).click();
 
@@ -355,7 +355,7 @@ public class SDIWallapopApplicationTests {
 		listPage.get(0).click();
 		usersList = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
 				PO_View.getTimeout());
-		assertEquals(5, usersList.size());// igual el num esta mal
+		assertEquals(4, usersList.size());// igual el num esta mal
 
 	}
 	@Test
@@ -370,7 +370,7 @@ public class SDIWallapopApplicationTests {
 
 		List<WebElement> usersList = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
 				PO_View.getTimeout());
-		assertEquals(6, usersList.size());// igual el num esta mal
+		assertEquals(5, usersList.size());// igual el num esta mal
 
 		usersList.get(usersList.size() - 1).findElement(By.id("idsUsers")).click();
 		usersList.get(usersList.size() - 2).findElement(By.id("idsUsers")).click();
@@ -380,7 +380,7 @@ public class SDIWallapopApplicationTests {
 		listPage.get(0).click();
 		usersList = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
 				PO_View.getTimeout());
-		assertEquals(3, usersList.size());// esto seria  3 menos
+		assertEquals(2, usersList.size());// esto seria  3 menos
 
 	}
 	@Test
