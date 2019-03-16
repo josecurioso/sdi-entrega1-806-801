@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpSession;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -27,6 +28,11 @@ public class OffersService {
 
     public Page<Offer> getOffers(Pageable pageable) {
         Page<Offer> offers = offersRepository.findAll(pageable);
+        return offers;
+    }
+
+    public List<Offer> getHighlightedOffers() {
+        List<Offer> offers = offersRepository.getHighlightedOffers();
         return offers;
     }
 
@@ -82,7 +88,7 @@ public class OffersService {
     public int buyOffer(Offer offer, User user) {
         if (user.getMoney() < offer.getPrice())
             return 1;
-        if(offer.getSold())
+        if (offer.getSold())
             return 2;
         if (offer.getUser().equals(user))
             return 3;
@@ -100,4 +106,19 @@ public class OffersService {
         return 0;
     }
 
+    public int highlightOffer(Offer offer, User user) {
+        if (user.getMoney() < 20)
+            return 1;
+        if (offer.getHighlighted())
+            return 2;
+        if (!offer.getUser().equals(user))
+            return 3;
+
+        offer.setHighlighted(true);
+        user.setMoney(user.getMoney() - 20);
+
+        offersRepository.save(offer);
+        usersRepository.save(user);
+        return 0;
+    }
 }

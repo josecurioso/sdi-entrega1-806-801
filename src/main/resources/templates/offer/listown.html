@@ -29,6 +29,7 @@
 				 });
 				 /*]]>*/
 		</script>
+		<p style="color: red;" th:if="${errormsg != null}" th:text="#{${errormsg}}"></p>
 		<div class="table-responsive">
 			<table class="table table-hover" th:fragment="tableOffers"
 				id="tableOffers">
@@ -72,8 +73,21 @@
 								 /*]]>*/
 								</script>
 							</div>
-						
-						
+						</td>
+						<td>
+							<div th:if="${offer.sold}">
+								<p th:text="#{highlight.cant}">No se puede destacar</p>
+							</div>
+							<div th:unless="${offer.sold}">
+								<div th:if="${offer.highlighted}">
+									<p th:text="#{highlight.done}">Destacada</p>
+								</div>
+								<div th:unless="${offer.highlighted}">
+									<form method="get" th:action="${'/offer/highlight/' + offer.id}">
+										<button th:id="${'highlightButton' + offer.id}" class="btn btn-default" type="submit" th:text="#{highlight}">Destacar</button>
+									</form>
+								</div>
+							</div>
 						</td>
 					</tr>
 				</tbody>

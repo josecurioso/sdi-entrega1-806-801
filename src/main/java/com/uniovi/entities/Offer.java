@@ -15,6 +15,7 @@ public class Offer {
     private Date date = new Date();
     private Double price;
     private Boolean sold = false;
+    private Boolean highlighted = false;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -99,6 +100,14 @@ public class Offer {
 
     public void setSold(boolean sold) {
         this.sold = sold;
+    }
+
+    public boolean getHighlighted() {
+        return highlighted;
+    }
+
+    public void setHighlighted(boolean highlighted) {
+        this.highlighted = highlighted;
     }
 
     @Override

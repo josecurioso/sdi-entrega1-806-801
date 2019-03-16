@@ -167,7 +167,7 @@ public class OffersController {
             case 1:
                 logger.warn("User " + user.getName() + " tried to buy Offer " + offer.getName() + " but he doesn't have enough money");
                 redir.addFlashAttribute("errormsg", "error.buy.nomoney");
-                return "redirect:/offer/list";
+                break;
             case 2:
                 logger.warn("User " + user.getName() + " tried to buy Offer " + offer.getName() + " but it is not available");
                 redir.addFlashAttribute("errormsg", "error.buy.noavailable");
@@ -189,5 +189,32 @@ public class OffersController {
         User user = usersService.getUserByEmail(email);
         model.addAttribute("user", user);
         return "offer/list :: topNav";
+    }
+
+    @RequestMapping("/offer/highlight/{id}") // Highlights an offer
+    public String highlightOffer(RedirectAttributes redir, @PathVariable Long id, Principal principal) {
+        String email = principal.getName();
+        User user = usersService.getUserByEmail(email);
+        Offer offer = offersService.getOffer(id);
+        redir.addAttribute("user", user);
+
+        switch(offersService.highlightOffer(offer, user)){
+            case 1:
+                logger.warn("User " + user.getName() + " tried to highlight Offer " + offer.getName() + " but he doesn't have enough money");
+                redir.addFlashAttribute("errormsg", "error.highlight.nomoney");
+                break;
+            case 2:
+                logger.warn("User " + user.getName() + " tried to highlight Offer " + offer.getName() + " but it is already highlighted");
+                redir.addFlashAttribute("errormsg", "error.highlight.alreadyhighlighted");
+                break;
+            case 3:
+                logger.warn("User " + user.getName() + " tried to highlight Offer " + offer.getName() + " but it is not his own");
+                redir.addFlashAttribute("errormsg", "error.highlight.notyours");
+                break;
+            case 0:
+                logger.info("User " + user.getName() + " highlighted Offer " + offer.getName());
+                break;
+        }
+        return "redirect:/user/offer/list";
     }
 }

@@ -33,6 +33,9 @@ public interface OffersRepository extends CrudRepository<Offer, Long> {
     @Query("SELECT r FROM Offer r WHERE (LOWER(r.description) LIKE LOWER(?1) OR LOWER(r.name) LIKE LOWER(?1)) AND r.user = ?2 ")
     List<Offer> searchByDescriptionNameAndUser(String seachtext, User user);
 
+    @Query("SELECT r FROM Offer r WHERE r.highlighted = true")
+    List<Offer> getHighlightedOffers();
+
     @Modifying
     @Transactional
     @Query("DELETE FROM Offer WHERE id = ?1")

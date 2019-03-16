@@ -10,7 +10,40 @@
 				Autenticado como : </span> <span sec:authentication="principal.username"
 				th:inline="text"> </span>
 		</p>
-		<p th:text="#{home.description}"></p>
+		<div th:if="${hOffersList.size()>0}">
+			<h3 th:text="#{highlighted.offers}"></h3>
+			<div class="table-responsive">
+				<table class="table table-hover" th:fragment="tableHighlightedOffers"
+					   id="tableHighlightedOffers">
+					<thead>
+					<tr>
+						<th class="col-md-1">Id</th>
+						<th th:text="#{name}">Name</th>
+						<th th:text="#{date}">Date</th>
+						<th th:text="#{price}">Price</th>
+						<th class="col-md-1"></th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr th:each="offer : ${hOffersList}">
+						<td th:text="${offer.id}"></td>
+						<td th:text="${offer.name}"></td>
+						<td th:text="${offer.date}"></td>
+						<td th:text="${offer.price}"></td>
+						<td>
+							<div th:if="${offer.sold}">
+								<p th:text="#{sold}">Vendido</p>
+							</div>
+							<div th:unless="${offer.sold}">
+								<p th:text="#{available}">Disponible</p>
+							</div>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<h4 th:text="#{home.description}"></h4>
 		<div class="table-responsive">
 			<table class="table table-hover" th:fragment="tableOffers"
 				id="tableOffers">

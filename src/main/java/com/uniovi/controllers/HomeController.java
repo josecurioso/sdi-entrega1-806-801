@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.security.Principal;
+import java.util.List;
 
 @Controller
 public class HomeController {
@@ -52,7 +53,9 @@ public class HomeController {
             user = new User("", "", "");
         }
         Page<Offer> offers = offersService.getOffers(pageable);
+        List<Offer> hOffers = offersService.getHighlightedOffers();
         model.addAttribute("offersList", offers.getContent());
+        model.addAttribute("hOffersList", hOffers);
         model.addAttribute("page", offers);
         model.addAttribute("user", user);
         return "home";
