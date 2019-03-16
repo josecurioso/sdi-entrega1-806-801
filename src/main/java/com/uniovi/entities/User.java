@@ -30,9 +30,20 @@ public class User {
 	private Set<Offer> buys = new HashSet<Offer>();
 
 	@OneToMany(mappedBy = "author", cascade = CascadeType.ALL)//, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private Set<Message> messages = new HashSet<Message>();
+	private Set<Conversation> conversation = new HashSet<Conversation>();
+	
+	@OneToMany(mappedBy = "authorMsg", cascade = CascadeType.ALL)//, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private Set<Message> messagesAuthored = new HashSet<Message>();
 
 	
+	public Set<Conversation> getConversation() {
+		return new HashSet<>(conversation);
+	}
+
+	public void setConversation(Set<Conversation> conversation) {
+		this.conversation = conversation;
+	}
+
 	public User(String email, String name, String lastName) {
 		super();
 		this.name = name;

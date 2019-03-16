@@ -18,16 +18,35 @@ public class Message {
 	private String text;
 	private Date date = new Date();
 	
-	@ManyToOne
-	@JoinColumn(name = "author_id")
-	private User author;
 
 	@ManyToOne
-	@JoinColumn(name = "offer_id")
-	private Offer offer;
+	@JoinColumn(name = "conver_id")
+	private Conversation conversation;
+
+	@ManyToOne
+	@JoinColumn(name = "authorMsg_id")
+	private User authorMsg;
 	
+	public Conversation getConversation() {
+		return conversation;
+	}
+
+	public void setConversation(Conversation conversation) {
+		this.conversation = conversation;
+	}
+
 	public Message() {
 		
+	}
+
+	
+	
+	public User getAuthorMsg() {
+		return authorMsg;
+	}
+
+	public void setAuthorMsg(User authorMsg) {
+		this.authorMsg = authorMsg;
 	}
 
 	public Long getId() {
@@ -54,29 +73,14 @@ public class Message {
 		this.date = date;
 	}
 
-	public User getAuthor() {
-		return author;
-	}
-
-	public void setAuthor(User author) {
-		this.author = author;
-	}
-
-	public Offer getOffer() {
-		return offer;
-	}
-
-	public void setOffer(Offer offer) {
-		this.offer = offer;
-	}
+	
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((author == null) ? 0 : author.hashCode());
+		result = prime * result + ((conversation == null) ? 0 : conversation.hashCode());
 		result = prime * result + ((date == null) ? 0 : date.hashCode());
-		result = prime * result + ((offer == null) ? 0 : offer.hashCode());
 		return result;
 	}
 
@@ -89,20 +93,15 @@ public class Message {
 		if (getClass() != obj.getClass())
 			return false;
 		Message other = (Message) obj;
-		if (author == null) {
-			if (other.author != null)
+		if (conversation == null) {
+			if (other.conversation != null)
 				return false;
-		} else if (!author.equals(other.author))
+		} else if (!conversation.equals(other.conversation))
 			return false;
 		if (date == null) {
 			if (other.date != null)
 				return false;
 		} else if (!date.equals(other.date))
-			return false;
-		if (offer == null) {
-			if (other.offer != null)
-				return false;
-		} else if (!offer.equals(other.offer))
 			return false;
 		return true;
 	}

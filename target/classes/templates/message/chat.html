@@ -20,7 +20,7 @@
 				</thead>
 				<tbody>
 					<tr th:each="msg : ${messagesList}">
-						<td th:text="${msg.author.email}"></td>
+						<td th:text="${msg.authorMsg.email}"></td>
 						<td th:text="${msg.text}"></td>
 						<td th:text="${msg.date}"></td>
 						
@@ -30,15 +30,7 @@
 			</table>
 		</div>
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			
 		
 		<form class="form-horizontal" method="post" th:action="'/user/offer/message/add/'+${offerId}" th:object="${message}">
 				<div class="form-group">

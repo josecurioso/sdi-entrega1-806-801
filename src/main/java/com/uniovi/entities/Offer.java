@@ -30,7 +30,7 @@ public class Offer {
 	private User user;
 
 	@OneToMany(mappedBy = "offer", cascade = CascadeType.ALL)
-	private Set<Message> messages=new HashSet<Message>();
+	private Set<Conversation> conversation=new HashSet<Conversation>();
 	
 	@ManyToOne
 	@JoinColumn(name = "buyer_id")
@@ -39,6 +39,9 @@ public class Offer {
 	public Offer() {
 	}
 
+	
+	
+	
 	public Offer(String name, String description, Double price, User user) {
 		super();
 		this.name = name;
@@ -50,12 +53,13 @@ public class Offer {
 
 	
 	
-	public Set<Message> getMessages() {
-		return messages;
+	
+	public Set<Conversation> getConversation() {
+		return new HashSet<Conversation>(conversation);
 	}
 
-	public void setMessages(Set<Message> messages) {
-		this.messages = messages;
+	public void setConversation(Set<Conversation> conversation) {
+		this.conversation = conversation;
 	}
 
 	public Long getId() {
