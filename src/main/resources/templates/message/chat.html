@@ -32,7 +32,7 @@
 		
 			
 		
-		<form class="form-horizontal" method="post" th:action="'/user/offer/message/add/'+${offerId}" th:object="${message}">
+		<form class="form-horizontal" method="post" th:action="'/user/offer/message/add/'+${conversationId}" th:object="${message}">
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="text" th:text="#{name}">Nombre:</label>
 					<div class="col-sm-10">

@@ -8,8 +8,8 @@ import org.openqa.selenium.WebElement;
 public class PO_ConversationsView extends PO_View{
 
 	
-	public static void clickOnMsg(WebDriver driver,long id) {
-		List<WebElement> elementos = PO_View.checkElement(driver, "href", "msgButton"+id);
+	public static void clickOnMsg(WebDriver driver) {
+		List<WebElement> elementos = PO_View.checkElement(driver, "href", "/user/offer/message");
 		elementos.get(0).click();
 	}
 }

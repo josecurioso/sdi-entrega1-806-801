@@ -36,13 +36,6 @@ public class User {
 	private Set<Message> messagesAuthored = new HashSet<Message>();
 
 	
-	public Set<Conversation> getConversation() {
-		return new HashSet<>(conversation);
-	}
-
-	public void setConversation(Set<Conversation> conversation) {
-		this.conversation = conversation;
-	}
 
 	public User(String email, String name, String lastName) {
 		super();
@@ -152,16 +145,46 @@ public class User {
 		this.isDeleted = isDeleted;
 	}
 
-	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
-		User user = (User) o;
-		return Objects.equals(email, user.email);
+	public Set<Conversation> getConversation() {
+		return new HashSet<>(conversation);
+	}
+
+	public void setConversation(Set<Conversation> conversation) {
+		this.conversation = new HashSet<Conversation>(conversation);
+	}
+
+	public Set<Message> getMessagesAuthored() {
+		return new HashSet<Message>(messagesAuthored);
+	}
+
+	public void setMessagesAuthored(Set<Message> messagesAuthored) {
+		this.messagesAuthored = new HashSet<Message>(messagesAuthored);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(email);
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((email == null) ? 0 : email.hashCode());
+		return result;
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User other = (User) obj;
+		if (email == null) {
+			if (other.email != null)
+				return false;
+		} else if (!email.equals(other.email))
+			return false;
+		return true;
+	}
+
+	
 }

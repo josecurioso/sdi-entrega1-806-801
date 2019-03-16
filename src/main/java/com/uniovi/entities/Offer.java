@@ -59,7 +59,7 @@ public class Offer {
 	}
 
 	public void setConversation(Set<Conversation> conversation) {
-		this.conversation = conversation;
+		this.conversation = new HashSet<Conversation>(conversation);
 	}
 
 	public Long getId() {

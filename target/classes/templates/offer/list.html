@@ -64,7 +64,7 @@
 							</div>
 						</td>	
 						<td>
-						<form method="get" th:action="${'/user/offer/message/' + offer.id}">
+						<form method="get" th:action="${'/user/offer/conversation/add/' + offer.id}">
 									<button th:id="${'msgButton' + offer.id}" class="btn btn-default" type="submit" th:text="#{msg}">Continue</button>
 								</form>		
 						</td>

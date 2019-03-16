@@ -21,7 +21,7 @@
 					<tr th:each="conversation : ${conversationList}">
 						<td th:text="${conversation.offer.user.email}"></td>
 						<td th:text="${conversation.offer.name}"></td>
-						<td ><a th:href="${'/user/offer/message/' + conversation.offer.id}" th:text="#{msg}"></td>
+						<td ><a th:href="${'/user/offer/message/' + conversation.id}" th:text="#{msg}"></td>
 						<td ><a th:href="${'/user/offer/message/delete/' + conversation.id}" th:text="#{delete}"></td>
 						
 				

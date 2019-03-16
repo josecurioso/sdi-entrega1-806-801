@@ -28,13 +28,8 @@ public class MessageService {
 	@Autowired
 	MessageRepository messageRepository;
 	
-	public void addMsg(Message message, User author, Long offerId) {
-		Offer offer=offerRepository.findById(offerId).get();
-		Conversation conv=conversationRepository.findByUserAndOffer(author,offer);
-		if(conv==null) {
-			conv=new Conversation(author,offer);
-			conversationRepository.save(conv);
-		}
+	public void addMsg(Message message,User author ,Conversation conv) {
+		
 		message.setConversation(conv);
 		message.setAuthorMsg(author);
 		
@@ -42,6 +37,16 @@ public class MessageService {
 		conversationRepository.save(conv);
 		System.out.println("Mensaje enviado por:"+"---->"+message.toString());
 		System.out.println("Mensaje enviado por:"+conv.getAuthor().getEmail()+"---->"+message.toString());
+	}
+
+	public Conversation getCoversation(User author, Long offerId) {
+		Offer offer=offerRepository.findById(offerId).get();
+		Conversation conv=conversationRepository.findByUserAndOffer(author,offer);
+		if(conv==null) {
+			conv=new Conversation(author,offer);
+			conversationRepository.save(conv);
+		}
+		return conv;
 	}
 
 	public List<Message> getMessagesByIdAndUser(Long idOffer, long idUser) {
@@ -59,5 +64,14 @@ public class MessageService {
 		
 	}
 
+	public List<Message> findMessagesByConversationById(Long id) {
+		return messageRepository.findMessagesByConversationById(id);
+		
+	}
+	
+	public Conversation findConversationById(Long id) {
+		return conversationRepository.findById(id).get();
+		
+	}
 
 }

@@ -3,19 +3,10 @@ package com.uniovi.tests;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import com.uniovi.entities.Offer;
-import com.uniovi.entities.User;
-import com.uniovi.repositories.OffersRepository;
-import com.uniovi.repositories.UsersRepository;
-
-import com.uniovi.services.RolesService;
-import com.uniovi.services.UsersService;
-import com.uniovi.tests.pageobject.*;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -30,11 +21,31 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.uniovi.utils.SeleniumUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import com.uniovi.entities.Conversation;
+import com.uniovi.entities.Message;
+import com.uniovi.entities.Offer;
+import com.uniovi.entities.User;
+import com.uniovi.repositories.ConversationRepository;
+import com.uniovi.repositories.MessageRepository;
+import com.uniovi.repositories.OffersRepository;
+import com.uniovi.repositories.UsersRepository;
+import com.uniovi.services.MessageService;
+import com.uniovi.services.RolesService;
+import com.uniovi.services.UsersService;
+import com.uniovi.tests.pageobject.PO_ChatView;
+import com.uniovi.tests.pageobject.PO_ConversationsView;
+import com.uniovi.tests.pageobject.PO_LoginView;
+import com.uniovi.tests.pageobject.PO_NavView;
+import com.uniovi.tests.pageobject.PO_OfferListView;
+import com.uniovi.tests.pageobject.PO_PrivateView;
+import com.uniovi.tests.pageobject.PO_Properties;
+import com.uniovi.tests.pageobject.PO_RegisterView;
+import com.uniovi.tests.pageobject.PO_View;
+import com.uniovi.utils.SeleniumUtils;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 @RunWith(SpringRunner.class)
@@ -66,16 +77,24 @@ public class SDIWallapopApplicationTests {
 
     @Autowired
     private UsersService usersService;
-
+    
     @Autowired
     private RolesService rolesService;
-
+    
+    @Autowired
+    private MessageService messageService;
+    
     @Autowired
     private UsersRepository usersRepository;
 
     @Autowired
     private OffersRepository offersRepository;
 
+    @Autowired
+    private ConversationRepository conversationRepository;
+    
+    @Autowired
+    private MessageRepository messageRepository;
 
 	public static WebDriver getDriver(String PathFirefox, String Geckdriver) {
 		System.setProperty("webdriver.firefox.bin", PathFirefox);
@@ -95,6 +114,8 @@ public class SDIWallapopApplicationTests {
     public void initDb() {
 		usersRepository.deleteAll();
 		offersRepository.deleteAll();
+		conversationRepository.deleteAll();
+		messageRepository.deleteAll();
 
 		User user1 = new User("admin@gmail.com", "admin", "istrador");
 		user1.setPassword("admin");
@@ -186,7 +207,14 @@ public class SDIWallapopApplicationTests {
 		Offer o7 = offersRepository.searchByDescriptionNameAndUser("Hunger Games", u5).get(0);
 		Offer o8 = offersRepository.searchByDescriptionNameAndUser("BB8 Droid", u5).get(0);
 		Offer o9 = offersRepository.searchByDescriptionNameAndUser("Josecurioso", u6).get(0);
-		Offer o10 = offersRepository.searchByDescriptionNameAndUser("Network Switch", u6).get(0);
+		Offer o10 = offersRepository.searchByDescriptionNameAndUser("Portátil", u2).get(0);
+		Offer o11 = offersRepository.searchByDescriptionNameAndUser("Cristiano Ronaldo", u3).get(0);
+		Offer o12 = offersRepository.searchByDescriptionNameAndUser("Clean Code", u4).get(0);
+		Offer o13 = offersRepository.searchByDescriptionNameAndUser("Tesla Model  S", u5).get(0);
+		Offer o14 = offersRepository.searchByDescriptionNameAndUser("Network Switch", u6).get(0);
+		Offer o15 = offersRepository.searchByDescriptionNameAndUser("Starship", u6).get(0);
+
+		
 
 
 		buy(o1, u3);
@@ -199,14 +227,60 @@ public class SDIWallapopApplicationTests {
 		buy(o8, u6);
 		buy(o9, u2);
 		buy(o10, u2);
+		
+		Conversation c1_2 =messageService.getCoversation(u3,o1.getId());
+		Conversation c2_2 =messageService.getCoversation(u3,o2.getId());
+		Conversation c3_3 =messageService.getCoversation(u2,o3.getId());
+		Conversation c4_3 =messageService.getCoversation(u2,o4.getId());
+		Conversation c5_4 =messageService.getCoversation(u2,o5.getId());
+		Conversation c6_4 =messageService.getCoversation(u2,o6.getId());
+		Conversation c7_5 =messageService.getCoversation(u2,o7.getId());
+		Conversation c8_5 =messageService.getCoversation(u2,o8.getId());
+		Conversation c9_6 =messageService.getCoversation(u2,o9.getId());
+		Conversation c10_2 =messageService.getCoversation(u3,o10.getId());
+		Conversation c11_3 =messageService.getCoversation(u2,o11.getId());
+		Conversation c12_4 =messageService.getCoversation(u2,o12.getId());
+		Conversation c13_5 =messageService.getCoversation(u2,o13.getId());
+		Conversation c14_6 =messageService.getCoversation(u2,o14.getId());
+		Conversation c15_6 =messageService.getCoversation(u2,o15.getId());
+	
+		chatInteraction(u2, u6, c1_2);
+		chatInteraction(u2, u6, c2_2);
+		chatInteraction(u3, u6, c3_3);
+		chatInteraction(u3, u6, c4_3);
+		chatInteraction(u4, u6, c5_4);
+		
+		chatInteraction(u4, u6, c6_4);
+		chatInteraction(u5, u6, c7_5);
+		chatInteraction(u5, u6, c8_5);
+		chatInteraction(u6, u2, c9_6);
+		chatInteraction(u2, u6, c10_2);
+		
+		chatInteraction(u3, u6, c11_3);
+		chatInteraction(u4, u6, c12_4);
+		chatInteraction(u5, u6, c13_5);
+		chatInteraction(u6, u2, c14_6);
+		chatInteraction(u6, u2, c15_6);
+		
+	
+	}
+
+	public void chatInteraction(User u2, User u6, Conversation c1_2) {
+		messageService.addMsg(new Message("Mensaje de prueba"), u6,c1_2);
+		messageService.addMsg(new Message("Mensaje de prueba"), u2,c1_2);
+		messageService.addMsg(new Message("Mensaje de prueba"), u6,c1_2);
+		messageService.addMsg(new Message("Mensaje de prueba"), u2,c1_2);
 	}
 
 	public void buy(Offer offer, User user){
 		offer.setBuyer(user);
 		offersRepository.save(offer);
 	}
+	
 
 
+	
+	
 
 	// Después de cada prueba se borran las cookies del navegador
 	@After
@@ -635,8 +709,8 @@ public class SDIWallapopApplicationTests {
 		PO_LoginView.fillForm(driver, "ed@gmail.com", "123456");
 		PO_NavView.clickOption(driver, "/user/conversations", "id", "tableConvers");
 		
-		PO_ConversationsView.clickOnMsg(driver, 2);
-		
+		PO_ConversationsView.clickOnMsg(driver);
+		PO_ChatView.enterTextAndSend(driver, "mi mensaje 2 ");
 		List<WebElement> listMsg = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
 				PO_View.getTimeout());
 		assertTrue(listMsg.size()==1);
@@ -652,7 +726,7 @@ public class SDIWallapopApplicationTests {
 			
 		List<WebElement> listConver = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
 				PO_View.getTimeout());
-		assertTrue(listConver.size()==1);
+		assertEquals(listConver.size(),3);
 	}
 	
 	@Test
@@ -665,7 +739,7 @@ public class SDIWallapopApplicationTests {
 		List<WebElement> listConver = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
 				PO_View.getTimeout());
 		int initialSize=listConver.size();
-		listConver.get(0).findElement(By.name("a")).click();
+		listConver.get(0).findElement(By.tagName("a")).click();
 		List<WebElement> listConver2 = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
 				PO_View.getTimeout());
 		
@@ -681,7 +755,7 @@ public class SDIWallapopApplicationTests {
 		List<WebElement> listConver = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
 				PO_View.getTimeout());
 		int initialSize=listConver.size();
-		listConver.get(listConver.size()).findElement(By.name("a")).click();
+		listConver.get(listConver.size()-1).findElement(By.tagName("a")).click();
 		List<WebElement> listConver2 = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
 				PO_View.getTimeout());
 		
