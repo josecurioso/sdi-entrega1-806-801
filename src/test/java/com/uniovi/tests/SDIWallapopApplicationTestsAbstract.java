@@ -18,8 +18,8 @@ import static org.junit.Assert.assertTrue;
 public abstract class SDIWallapopApplicationTestsAbstract {
 
     // Luis
-	static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
-	static String Geckdriver024 = "C:\\Users\\Pedro\\Desktop\\SDI\\PL-SDI-Sesión5-material\\geckodriver024win64.exe";
+//	static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
+//	static String Geckdriver024 = "C:\\Users\\Pedro\\Desktop\\SDI\\PL-SDI-Sesión5-material\\geckodriver024win64.exe";
   
 
     // Jose portatil
@@ -27,8 +27,8 @@ public abstract class SDIWallapopApplicationTestsAbstract {
 //	static String Geckdriver024 = "D:\\Escritorio\\PL-SDI-Sesión5-material\\geckodriver024win64.exe";
 
     //Jose
-//    static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
-//    static String Geckdriver024 = "D:\\Escritorio\\geckodriver024win64.exe";
+    static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
+    static String Geckdriver024 = "D:\\Escritorio\\geckodriver024win64.exe";
 
 
 
@@ -287,7 +287,8 @@ public abstract class SDIWallapopApplicationTestsAbstract {
         elementos = PO_View.checkElement(driver, "text", "Eliminar");
         int temp = elementos.size();
         elementos.get(0).click(); //Borramos el primero
-        (new WebDriverWait(driver, PO_View.getTimeout())).until(ExpectedConditions.numberOfElementsToBe(By.className("btn"), 3));
+        int after = PO_NavView.checkElement(driver, "text", "Eliminar").size();
+        assertEquals(temp-1, after);
     }
 
     @Test
@@ -301,7 +302,8 @@ public abstract class SDIWallapopApplicationTestsAbstract {
         elementos = PO_View.checkElement(driver, "text", "Eliminar");
         int temp = elementos.size();
         elementos.get(elementos.size()-1).click(); //Borramos el ultimo
-        (new WebDriverWait(driver, PO_View.getTimeout())).until(ExpectedConditions.numberOfElementsToBe(By.className("btn"), 3));
+        int after = PO_NavView.checkElement(driver, "text", "Eliminar").size();
+        assertEquals(temp-1, after);
     }
 
     @Test
@@ -495,6 +497,7 @@ public abstract class SDIWallapopApplicationTestsAbstract {
 
         PO_View.checkElement(driver, "text", "Mis ofertas");
         double moneyBefore = PO_OfferListView.getUserMoney(driver);
+        PO_PrivateView.fillFormSearchBox(driver, "Portátil");
         elementos = PO_View.checkElement(driver, "text", "Destacar");
         elementos.get(0).click();
 

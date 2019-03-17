@@ -135,11 +135,11 @@ public class DatabaseResetService {
         Offer o7 = offersRepository.searchByDescriptionNameAndUser("Hunger Games", u5).get(0);
         Offer o8 = offersRepository.searchByDescriptionNameAndUser("BB8 Droid", u5).get(0);
         Offer o9 = offersRepository.searchByDescriptionNameAndUser("Josecurioso", u6).get(0);
-		Offer o10 = offersRepository.searchByDescriptionNameAndUser("Portátil", u2).get(0);
+		Offer o10 = offersRepository.searchByDescriptionNameAndUser("Network Switch", u6).get(0);
 		Offer o11 = offersRepository.searchByDescriptionNameAndUser("Cristiano Ronaldo", u3).get(0);
 		Offer o12 = offersRepository.searchByDescriptionNameAndUser("Clean Code", u4).get(0);
 		Offer o13 = offersRepository.searchByDescriptionNameAndUser("Tesla Model  S", u5).get(0);
-		Offer o14 = offersRepository.searchByDescriptionNameAndUser("Network Switch", u6).get(0);
+		Offer o14 = offersRepository.searchByDescriptionNameAndUser("Portátil", u2).get(0);
 		Offer o15 = offersRepository.searchByDescriptionNameAndUser("Starship", u6).get(0);
 
         buy(o1, u3);
@@ -162,11 +162,11 @@ public class DatabaseResetService {
 		Conversation c7_5 =messageService.getCoversation(u2,o7.getId());
 		Conversation c8_5 =messageService.getCoversation(u2,o8.getId());
 		Conversation c9_6 =messageService.getCoversation(u2,o9.getId());
-		Conversation c10_2 =messageService.getCoversation(u3,o10.getId());
+		Conversation c10_6 =messageService.getCoversation(u3,o10.getId());
 		Conversation c11_3 =messageService.getCoversation(u2,o11.getId());
 		Conversation c12_4 =messageService.getCoversation(u2,o12.getId());
 		Conversation c13_5 =messageService.getCoversation(u2,o13.getId());
-		Conversation c14_6 =messageService.getCoversation(u2,o14.getId());
+		Conversation c14_2 =messageService.getCoversation(u6,o14.getId());
 		Conversation c15_6 =messageService.getCoversation(u2,o15.getId());
 	
 		
@@ -181,12 +181,12 @@ public class DatabaseResetService {
 		chatInteraction(u5, u6, c7_5);
 		chatInteraction(u5, u6, c8_5);
 		chatInteraction(u6, u2, c9_6);
-		chatInteraction(u2, u6, c10_2);
+		chatInteraction(u6, u2, c10_6);
 		
 		chatInteraction(u3, u6, c11_3);
 		chatInteraction(u4, u6, c12_4);
 		chatInteraction(u5, u6, c13_5);
-		chatInteraction(u6, u2, c14_6);
+		chatInteraction(u2, u6, c14_2);
 		chatInteraction(u6, u2, c15_6);
 
     }
