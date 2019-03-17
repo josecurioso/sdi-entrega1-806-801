@@ -12,8 +12,8 @@
 				id="tableConvers">
 				<thead>
 					<tr>
-						<th >email ofertante --placeholder</th>
-						<th >titulo oferta --placeholder</th>
+						<th th:text="#{email}">email ofertante --placeholder</th>
+						<th th:text="#{offer.name}">nombre oferta --placeholder</th>
 						<th class="col-md-1"></th>
 					</tr>
 				</thead>
@@ -21,7 +21,7 @@
 					<tr th:each="conversation : ${conversationList}">
 						<td th:text="${conversation.offer.user.email}"></td>
 						<td th:text="${conversation.offer.name}"></td>
-						<td ><a th:href="${'/user/offer/message/' + conversation.id}" th:text="#{msg}"></td>
+						<td ><a th:href="${'/user/offer/message/' + conversation.id}" th:text="#{send.msg}"></td>
 						<td ><a th:href="${'/user/offer/message/delete/' + conversation.id}" th:text="#{delete}"></td>
 						
 				

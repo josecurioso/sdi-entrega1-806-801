@@ -98,7 +98,7 @@ public class MessageController {
 		
 		msgService.addMsg(message, autor,conv);
 
-
+		System.out.println("sendMessage Controller");
 		model.addAttribute("user", autor);
 		String url="redirect:/user/offer/message/"+conv.getId();
 		return url;

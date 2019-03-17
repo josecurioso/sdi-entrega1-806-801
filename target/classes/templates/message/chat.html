@@ -4,7 +4,7 @@
 <body>
 	<nav th:replace="fragments/nav" />
 	<div class="container" style="text-align: center">
-		<h2 th:text="#{welcome.message}"></h2>
+		<h2 th:text="#{chat}"></h2>
 		
 		
 		<div class="table-responsive">
@@ -12,9 +12,9 @@
 				id="tableMsg">
 				<thead>
 					<tr>
-						<th >autor --placeholder</th>
-						<th >mensaje --placeholder</th>
-						<th th:text="#{date}">Date</th>
+						<th class="col-md-1" th:text="#{author}">autor</th>
+						<th class="col-md-1" th:text="#{msg}">mensaje</th>
+						<th class="col-md-1" th:text="#{date}">Date</th>
 						<th class="col-md-1"></th>
 					</tr>
 				</thead>
@@ -34,7 +34,7 @@
 		
 		<form class="form-horizontal" method="post" th:action="'/user/offer/message/add/'+${conversationId}" th:object="${message}">
 				<div class="form-group">
-					<label class="control-label col-sm-2" for="text" th:text="#{name}">Nombre:</label>
+					<label class="control-label col-sm-2" for="text" th:text="#{introduce.msg}">Introduc msg</label>
 					<div class="col-sm-10">
 						<input id="textMessage" type="text" class="form-control" name="text"  />
 						<span class="text-danger"  />

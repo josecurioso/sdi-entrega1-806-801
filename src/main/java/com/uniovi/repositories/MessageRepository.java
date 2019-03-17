@@ -15,7 +15,7 @@ public interface  MessageRepository extends CrudRepository<Message, Long>{
 	List<Message> findMessagesByOfferAndUser(Long idOffer, long idUser);
 
 	
-	@Query("SELECT m FROM Conversation c ,Message m WHERE m.conversation.id=?1")
+	@Query("SELECT m FROM Message m WHERE m.conversation.id=?1")
 	List<Message> findMessagesByConversationById(Long id);
 
 	
