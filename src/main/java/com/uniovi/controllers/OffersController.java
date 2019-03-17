@@ -122,6 +122,8 @@ public class OffersController {
         User user = usersService.getUserByEmail(email);
         offersService.addOffer(offer, user);
 
+        offer.setUser(user);
+
         addOfferValidator.validate(offer, result);
         if (result.hasErrors()) {
             return "offer/add";

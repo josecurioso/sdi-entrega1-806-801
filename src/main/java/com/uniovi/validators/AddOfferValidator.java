@@ -35,5 +35,8 @@ public class AddOfferValidator implements Validator {
         if (offer.getPrice() < 0) {
             errors.rejectValue("price", "Error.offer.price.low");
         }
+        if (offer.getHighlighted() && offer.getUser().getMoney()<20) {
+            errors.rejectValue("highlighted", "error.highlight.nomoney");
+        }
     }
 }

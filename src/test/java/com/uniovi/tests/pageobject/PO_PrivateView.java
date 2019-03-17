@@ -1,14 +1,12 @@
 package com.uniovi.tests.pageobject;
 
+import com.uniovi.utils.SeleniumUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-
-import com.uniovi.utils.SeleniumUtils;
 
 public class PO_PrivateView extends PO_NavView {
-	static public void fillFormAddOffer(WebDriver driver, String namep, String desriptionp, String pricep) {
+	static public void fillFormAddOffer(WebDriver driver, String namep, String desriptionp, String pricep, boolean highlightp) {
 
 		// Esperamos 5 segundo a que carge el DOM porque en algunos equipos falla
 		SeleniumUtils.esperarSegundos(driver, 5);
@@ -25,6 +23,10 @@ public class PO_PrivateView extends PO_NavView {
 		WebElement price = driver.findElement(By.name("price"));
 		price.clear();
 		price.sendKeys(pricep);
+
+		WebElement highlight = driver.findElement(By.name("highlighted"));
+		if(highlightp)
+			highlight.click();
 
 		By boton = By.className("btn");
 		driver.findElement(boton).click();

@@ -77,6 +77,8 @@ public class OffersService {
 
     public void addOffer(Offer offer, User user) {
         offer.setUser(user);
+        user.setMoney(user.getMoney()-20);
+        usersRepository.save(user);
         offersRepository.save(offer);
     }
 

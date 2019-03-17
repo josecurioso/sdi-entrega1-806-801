@@ -245,7 +245,7 @@ public abstract class SDIWallapopApplicationTestsAbstract {
         elementos.get(0).click();
 
         PO_View.checkElement(driver, "text", "Agregar Oferta");
-        PO_PrivateView.fillFormAddOffer(driver, "Prueba", "Descripción de prueba", "150");
+        PO_PrivateView.fillFormAddOffer(driver, "Prueba", "Descripción de prueba", "150", false);
 
         PO_View.checkElement(driver, "text", "Mis ofertas");
         PO_View.checkElement(driver, "text", "Prueba");
@@ -259,7 +259,7 @@ public abstract class SDIWallapopApplicationTestsAbstract {
         elementos.get(0).click();
 
         PO_View.checkElement(driver, "text", "Agregar Oferta");
-        PO_PrivateView.fillFormAddOffer(driver, "", "Descripción de prueba", "150");
+        PO_PrivateView.fillFormAddOffer(driver, "", "Descripción de prueba", "150", false);
         PO_View.checkElement(driver, "text", "Este campo no puede ser vacío");
     }
 
@@ -465,5 +465,72 @@ public abstract class SDIWallapopApplicationTestsAbstract {
         PO_LoginView.fillForm(driver, "marta@gmail.com", "123456");
         driver.navigate().to(URL + "/user/list");
         (new WebDriverWait(driver, PO_View.getTimeout())).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[contains(text(),'Usuarios')]")));
+    }
+
+    @Test
+    public void PR36() {
+        PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+        PO_LoginView.fillForm(driver, "lucas@gmail.com" , "123456" );
+        List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'addOffer')]/a");
+        elementos.get(0).click();
+        double moneyBefore = PO_OfferListView.getUserMoney(driver);
+
+        PO_View.checkElement(driver, "text", "Agregar Oferta");
+        PO_PrivateView.fillFormAddOffer(driver, "Prueba", "Descripción de prueba", "150", true);
+
+        PO_View.checkElement(driver, "text", "Mis ofertas");
+        double moneyAfter = PO_OfferListView.getUserMoney(driver);
+        PO_PrivateView.fillFormSearchBox(driver, "Prueba");
+
+        assertEquals(moneyBefore-20, moneyAfter, 0.1);
+        PO_View.checkElement(driver, "text", "Destacada");
+    }
+
+    @Test
+    public void PR37() {
+        PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+        PO_LoginView.fillForm(driver, "lucas@gmail.com" , "123456" );
+        List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'listMyOffers')]/a");
+        elementos.get(0).click();
+
+        PO_View.checkElement(driver, "text", "Mis ofertas");
+        double moneyBefore = PO_OfferListView.getUserMoney(driver);
+        elementos = PO_View.checkElement(driver, "text", "Destacar");
+        elementos.get(0).click();
+
+        elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'home')]/a");
+        elementos.get(0).click();
+
+        elementos = PO_View.checkElement(driver, "text", "Portátil");
+        assertEquals(2, elementos.size());
+        double moneyAfter = PO_OfferListView.getUserMoney(driver);
+        assertEquals(moneyBefore-20, moneyAfter, 0.1);
+    }
+
+    @Test
+    public void PR38() {
+        PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+        PO_LoginView.fillForm(driver, "lucas@gmail.com" , "123456" );
+        List<WebElement> elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'listOffers')]/a");
+        elementos.get(0).click();
+
+        // Buy required items to be less than 20
+        PO_View.checkElement(driver, "text", "Ofertas");
+        String[] prod = new String[]{"Super Heavy", "Hitchikers guide to the galaxy", "Clean Code"};
+        for(String p : prod){
+            PO_PrivateView.fillFormSearchBox(driver, p);
+            elementos = PO_View.checkElement(driver, "text", "Comprar");
+            elementos.get(0).click();
+        }
+        // Try to highlight
+        elementos = PO_View.checkElement(driver, "free", "//li[contains(@id,'listMyOffers')]/a");
+        elementos.get(0).click();
+
+        PO_View.checkElement(driver, "text", "Mis ofertas");
+        elementos = PO_View.checkElement(driver, "text", "Destacar");
+        elementos.get(0).click();
+
+        //Buscar mensaje de error
+        PO_OfferListView.checkElement(driver, "text", "No tienes suficiente dinero para destacar la oferta");
     }
 }
