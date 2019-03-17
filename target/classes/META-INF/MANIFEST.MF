@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: Wallapop
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: jotaj
+Built-By: Pedro
 Implementation-Vendor-Id: com.uniovi
-Build-Jdk: 1.8.0_202
+Build-Jdk: 1.8.0_151
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
  ot-starter-parent/sdi-entrega1-806-801
 Created-By: Maven Integration for Eclipse

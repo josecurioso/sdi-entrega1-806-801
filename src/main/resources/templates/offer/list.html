@@ -57,14 +57,15 @@
 								<p th:text="#{sold}">Vendido</p>
 							</div>
 							<div th:unless="${offer.sold}">
-
-
 								<form method="get" th:action="${'/offer/buy/' + offer.id}">
 									<button th:id="${'buyButton' + offer.id}" class="btn btn-default" type="submit" th:text="#{buy}">Continue</button>
 								</form>
-
-
 							</div>
+						</td>
+						<td>
+						<form method="get" th:action="${'/user/offer/conversation/add/' + offer.id}">
+									<button th:id="${'msgButton' + offer.id}" class="btn btn-default" type="submit" th:text="#{send.msg}">Continue</button>
+								</form>		
 						</td>			
 					</tr>
 				</tbody>

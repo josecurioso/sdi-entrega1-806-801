@@ -18,17 +18,17 @@ import static org.junit.Assert.assertTrue;
 public abstract class SDIWallapopApplicationTestsAbstract {
 
     // Luis
-//	static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
-//	static String Geckdriver024 = "C:\\Users\\Pedro\\Desktop\\SDI\\PL-SDI-Sesión5-material\\geckodriver024win64.exe";
-    // automáticas)):
+	static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
+	static String Geckdriver024 = "C:\\Users\\Pedro\\Desktop\\SDI\\PL-SDI-Sesión5-material\\geckodriver024win64.exe";
+  
 
     // Jose portatil
 //	static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
 //	static String Geckdriver024 = "D:\\Escritorio\\PL-SDI-Sesión5-material\\geckodriver024win64.exe";
 
     //Jose
-    static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
-    static String Geckdriver024 = "D:\\Escritorio\\geckodriver024win64.exe";
+//    static String PathFirefox65 = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
+//    static String Geckdriver024 = "D:\\Escritorio\\geckodriver024win64.exe";
 
 
 
