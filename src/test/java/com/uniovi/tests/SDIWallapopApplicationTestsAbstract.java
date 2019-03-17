@@ -470,6 +470,86 @@ public abstract class SDIWallapopApplicationTestsAbstract {
     }
 
     @Test
+    public void PR31() {
+
+        PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+        PO_LoginView.fillForm(driver, "marta@gmail.com", "123456");
+        List<WebElement> elementos = SeleniumUtils.EsperaCargaPagina(driver, "@href", "/offer/list", PO_View.getTimeout());
+        elementos.get(0).click();
+        PO_ChatView.enterTextAndSend(driver, "mi mensaje ");
+        List<WebElement> listMsg = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
+                PO_View.getTimeout());
+        assertTrue(listMsg.size()==1);
+    }
+
+    @Test
+    public void PR32() {
+
+        PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+        PO_LoginView.fillForm(driver, "ed@gmail.com", "123456");
+        PO_NavView.clickOption(driver, "/user/conversations", "id", "tableConvers");
+
+        PO_ConversationsView.clickOnMsg(driver);
+
+
+
+        List<WebElement> textArea = PO_View.checkElement(driver, "id", "textMessage");
+        textArea.get(0).sendKeys("mi mensaje 2");
+        List<WebElement> sendButton = PO_View.checkElement(driver, "id", "sendButton");
+        sendButton.get(0).click();
+        List<WebElement> listMsg = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
+                PO_View.getTimeout());
+        assertEquals(5, listMsg.size());
+    }
+
+
+    @Test
+    public void PR33() {
+
+        PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+        PO_LoginView.fillForm(driver, "ed@gmail.com", "123456");
+        PO_NavView.clickOption(driver, "/user/conversations", "id", "tableConvers");
+
+        List<WebElement> listConver = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
+                PO_View.getTimeout());
+        assertEquals(4, listConver.size());
+    }
+
+    @Test
+    public void PR34() {
+
+        PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+        PO_LoginView.fillForm(driver, "ed@gmail.com", "123456");
+        PO_NavView.clickOption(driver, "/user/conversations", "id", "tableConvers");
+
+        List<WebElement> listConver = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
+                PO_View.getTimeout());
+        int initialSize=listConver.size();
+        PO_View.checkElement(driver, "text", "Eliminar").get(0).click();
+        listConver = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
+                PO_View.getTimeout());
+
+        assertEquals(initialSize-1, listConver.size());
+    }
+
+    @Test
+    public void PR35() {
+
+        PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
+        PO_LoginView.fillForm(driver, "ed@gmail.com", "123456");
+        PO_NavView.clickOption(driver, "/user/conversations", "id", "tableConvers");
+
+        List<WebElement> listConver = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
+                PO_View.getTimeout());
+        int initialSize=listConver.size();
+        PO_View.checkElement(driver, "text", "Eliminar").get(listConver.size()-1).click();
+        listConver = SeleniumUtils.EsperaCargaPagina(driver, "free", "//tbody/tr",
+                PO_View.getTimeout());
+
+        assertEquals(initialSize-1, listConver.size());
+    }
+
+    @Test
     public void PR36() {
         PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
         PO_LoginView.fillForm(driver, "lucas@gmail.com" , "123456" );

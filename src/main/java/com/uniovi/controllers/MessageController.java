@@ -1,8 +1,10 @@
 package com.uniovi.controllers;
 
-import java.security.Principal;
-import java.util.List;
-
+import com.uniovi.entities.Conversation;
+import com.uniovi.entities.Message;
+import com.uniovi.entities.User;
+import com.uniovi.services.MessageService;
+import com.uniovi.services.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,11 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.uniovi.entities.Conversation;
-import com.uniovi.entities.Message;
-import com.uniovi.entities.User;
-import com.uniovi.services.MessageService;
-import com.uniovi.services.UsersService;
+import java.security.Principal;
+import java.util.List;
 
 @Controller
 public class MessageController {
@@ -77,7 +76,7 @@ public class MessageController {
 	public String delete(@PathVariable Long id,Model model,Principal principal) {
 		msgService.deleteConversation(id);
 		
-		return "/message/conversations";
+		return "redirect:/user/conversations";
 	}
 	
 	/**

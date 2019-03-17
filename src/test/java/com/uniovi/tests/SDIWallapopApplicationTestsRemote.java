@@ -10,7 +10,7 @@ public class SDIWallapopApplicationTestsRemote extends SDIWallapopApplicationTes
 
 	@Override
 	void init() {
-		URL = "http://ec2-3-95-230-31.compute-1.amazonaws.com:8080";
+		URL = "http://ec2-18-234-187-87.compute-1.amazonaws.com:8080";
 		driver.navigate().to(URL);
 		PO_NavView.clickOption(driver, "login", "class", "btn btn-primary");
 		PO_LoginView.fillForm(driver, "admin@gmail.com", "admin");

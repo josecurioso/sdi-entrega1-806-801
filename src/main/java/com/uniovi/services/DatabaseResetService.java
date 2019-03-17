@@ -24,8 +24,9 @@ public class DatabaseResetService {
 	@Autowired
 	private UsersRepository usersRepository;
 
-	 @Autowired
-	    private MessageService messageService;
+	@Autowired
+	private MessageService messageService;
+
 	@Autowired
 	private OffersRepository offersRepository;
 
@@ -65,7 +66,7 @@ public class DatabaseResetService {
         user6.setRole(rolesService.getRoles()[1]);
 
 
-        Set user2Offers = new HashSet<Offer>() {
+        Set<Offer> user2Offers = new HashSet<Offer>() {
             {
                 add(new Offer("Nintendo", "consola", 100.0, user2));
                 add(new Offer("Portátil", "ordenador", 600.0, user2));
@@ -74,7 +75,7 @@ public class DatabaseResetService {
             }
         };
         user2.setOffers(user2Offers);
-        Set user3Offers = new HashSet<Offer>() {
+        Set<Offer> user3Offers = new HashSet<Offer>() {
             {
                 add(new Offer("Oneplus 5T", "movil", 400.0, user3));
                 add(new Offer("Cristiano Ronaldo", "sabe jugar al futbol", 100000000.0, user3));
@@ -83,7 +84,7 @@ public class DatabaseResetService {
             }
         };
         user3.setOffers(user3Offers);
-        Set user4Offers = new HashSet<Offer>() {
+        Set<Offer> user4Offers = new HashSet<Offer>() {
             {
                 add(new Offer("Hitchikers guide to the galaxy", "Douglas Adams book", 20.0, user4));
                 add(new Offer("Clean Code", "Robert C. Martin book", 40.0, user4));
@@ -92,7 +93,7 @@ public class DatabaseResetService {
             }
         };
         user4.setOffers(user4Offers);
-        Set user5Offers = new HashSet<Offer>() {
+        Set<Offer> user5Offers = new HashSet<Offer>() {
             {
                 add(new Offer("Tesla Model  S", "electric SUV", 90000.0, user5));
                 add(new Offer("Solid chat application", "fully decentralized as timbl likes it", 123.0, user5));
@@ -101,7 +102,7 @@ public class DatabaseResetService {
             }
         };
         user5.setOffers(user5Offers);
-        Set user6Offers = new HashSet<Offer>() {
+        Set<Offer> user6Offers = new HashSet<Offer>() {
             {
                 add(new Offer("Starship", "Rocket stage capable of propulsive landing on Mars", 10.0, user6));
                 add(new Offer("Super Heavy", "Booster suitable for the Starship second stage", 30.0, user6));
@@ -153,21 +154,21 @@ public class DatabaseResetService {
         buy(o9, u2);
         buy(o10, u2);
         
-        Conversation c1_2 =messageService.getCoversation(u3,o1.getId());
-		Conversation c2_2 =messageService.getCoversation(u3,o2.getId());
-		Conversation c3_3 =messageService.getCoversation(u2,o3.getId());
-		Conversation c4_3 =messageService.getCoversation(u2,o4.getId());
-		Conversation c5_4 =messageService.getCoversation(u2,o5.getId());
-		Conversation c6_4 =messageService.getCoversation(u2,o6.getId());
-		Conversation c7_5 =messageService.getCoversation(u2,o7.getId());
-		Conversation c8_5 =messageService.getCoversation(u2,o8.getId());
-		Conversation c9_6 =messageService.getCoversation(u2,o9.getId());
-		Conversation c10_6 =messageService.getCoversation(u3,o10.getId());
-		Conversation c11_3 =messageService.getCoversation(u2,o11.getId());
-		Conversation c12_4 =messageService.getCoversation(u2,o12.getId());
-		Conversation c13_5 =messageService.getCoversation(u2,o13.getId());
-		Conversation c14_2 =messageService.getCoversation(u6,o14.getId());
-		Conversation c15_6 =messageService.getCoversation(u2,o15.getId());
+        Conversation c1_2 = messageService.getCoversation(u3,o1.getId());
+		Conversation c2_2 = messageService.getCoversation(u3,o2.getId());
+		Conversation c3_3 = messageService.getCoversation(u2,o3.getId());
+		Conversation c4_3 = messageService.getCoversation(u2,o4.getId());
+		Conversation c5_4 = messageService.getCoversation(u2,o5.getId());
+		Conversation c6_4 = messageService.getCoversation(u2,o6.getId());
+		Conversation c7_5 = messageService.getCoversation(u2,o7.getId());
+		Conversation c8_5 = messageService.getCoversation(u2,o8.getId());
+		Conversation c9_6 = messageService.getCoversation(u2,o9.getId());
+		Conversation c10_6 = messageService.getCoversation(u3,o10.getId());
+		Conversation c11_3 = messageService.getCoversation(u2,o11.getId());
+		Conversation c12_4 = messageService.getCoversation(u2,o12.getId());
+		Conversation c13_5 = messageService.getCoversation(u2,o13.getId());
+		Conversation c14_2 = messageService.getCoversation(u6,o14.getId());
+		Conversation c15_6 = messageService.getCoversation(u2,o15.getId());
 	
 		
 		

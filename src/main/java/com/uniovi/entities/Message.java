@@ -1,12 +1,7 @@
 package com.uniovi.entities;
 
+import javax.persistence.*;
 import java.util.Date;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Message {
@@ -26,14 +21,8 @@ public class Message {
 	@ManyToOne
 	@JoinColumn(name = "authorMsg_id")
 	private User authorMsg;
-	
-	public Conversation getConversation() {
-		return conversation;
-	}
 
-	public void setConversation(Conversation conversation) {
-		this.conversation = conversation;
-	}
+
 
 	public Message() {
 		
@@ -42,8 +31,7 @@ public class Message {
 	public Message(String text) {
 		this.text=text;
 	}
-	
-	
+
 	public User getAuthorMsg() {
 		return authorMsg;
 	}
@@ -76,7 +64,13 @@ public class Message {
 		this.date = date;
 	}
 
-	
+	public Conversation getConversation() {
+		return conversation;
+	}
+
+	public void setConversation(Conversation conversation) {
+		this.conversation = conversation;
+	}
 
 	@Override
 	public int hashCode() {
